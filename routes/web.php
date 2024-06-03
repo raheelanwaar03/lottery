@@ -1,11 +1,16 @@
 <?php
 
+use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/',[LandingPageController::class,'welcome'])->name('Welcome');
+Route::get('/Contest',[LandingPageController::class,'contest'])->name('Contest');
+Route::get('/Winner',[LandingPageController::class,'winner'])->name('Winner');
+Route::get('/AboutUs',[LandingPageController::class,'aboutUs'])->name('AboutUs');
+Route::get('/Product/Detail',[LandingPageController::class,'detail'])->name('detail');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

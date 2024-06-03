@@ -1,100 +1,295 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
-    <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex">
-                <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
-                    </a>
-                </div>
+<!-- meta tags and other links -->
+<!DOCTYPE html>
+<html lang="en">
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                </div>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamDraw - Best Platform To Try Your Luck!</title>
+    <!-- site favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.png') }}" sizes="16x16">
+    <!-- bootstrap 4  -->
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/bootstrap.min.css') }}">
+    <!-- fontawesome 5  -->
+    <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
+    <!-- line-awesome webfont -->
+    <link rel="stylesheet" href="{{ asset('assets/css/line-awesome.min.css') }}">
+    <!-- custom select css -->
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/nice-select.css') }}">
+    <!-- animate css  -->
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/animate.min.css') }}">
+    <!-- lightcase css -->
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/lightcase.css') }}">
+    <!-- slick slider css -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <!-- jquery ui css -->
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/jquery-ui.min.css') }}">
+    <!-- datepicker css -->
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/datepicker.min.css') }}">
+    <!-- style main css -->
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
 
-            <!-- Settings Dropdown -->
-            <div class="hidden sm:flex sm:items-center sm:ms-6">
-                <x-dropdown align="right" width="48">
-                    <x-slot name="trigger">
-                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                            <div>{{ Auth::user()->name }}</div>
+    <style>
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 15px;
+            transition: transform 0.2s;
+            backdrop-filter: blur(10px);
+        }
 
-                            <div class="ms-1">
-                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                </svg>
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            border-radius: 15px 15px 0 0;
+            opacity: 0.9;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .slider {
+            width: 80%;
+            margin: 50px auto;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="preloader">
+        <svg class="mainSVG" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <path id="puff" d="M4.5,8.3C6,8.4,6.5,7,6.5,7s2,0.7,2.9-0.1C10,6.4,10.3,4.1,9.1,4c2-0.5,1.5-2.4-0.1-2.9c-1.1-0.3-1.8,0-1.8,0
+        s-1.5-1.6-3.4-1C2.5,0.5,2.1,2.3,2.1,2.3S0,2.3,0,4.4c0,1.1,1,2.1,2.2,2.1C2.2,7.9,3.5,8.2,4.5,8.3z"
+                    fill="#fff" />
+                <circle id="dot" cx="0" cy="0" r="5" fill="#fff" />
+            </defs>
+
+            <circle id="mainCircle" fill="none" stroke="none" stroke-width="2" stroke-miterlimit="10" cx="400"
+                cy="300" r="130" />
+            <circle id="circlePath" fill="none" stroke="none" stroke-width="2" stroke-miterlimit="10" cx="400"
+                cy="300" r="80" />
+
+            <g id="mainContainer">
+                <g id="car">
+                    <path id="carRot" fill="#FFF" d="M45.6,16.9l0-11.4c0-3-1.5-5.5-4.5-5.5L3.5,0C0.5,0,0,1.5,0,4.5l0,13.4c0,3,0.5,4.5,3.5,4.5l37.6,0
+      C44.1,22.4,45.6,19.9,45.6,16.9z M31.9,21.4l-23.3,0l2.2-2.6l14.1,0L31.9,21.4z M34.2,21c-3.8-1-7.3-3.1-7.3-3.1l0-13.4l7.3-3.1
+      C34.2,1.4,37.1,11.9,34.2,21z M6.9,1.5c0-0.9,2.3,3.1,2.3,3.1l0,13.4c0,0-0.7,1.5-2.3,3.1C5.8,19.3,5.1,5.8,6.9,1.5z M24.9,3.9
+      l-14.1,0L8.6,1.3l23.3,0L24.9,3.9z" />
+                </g>
+            </g>
+        </svg>
+    </div>
+
+    <!-- scroll-to-top start -->
+    <div class="scroll-to-top">
+        <span class="scroll-icon">
+            <i class="las la-arrow-up"></i>
+        </span>
+    </div>
+
+    <div class="page-wrapper">
+        <!-- login modal -->
+        <div class="modal fade" id="loginModal" tabindex="1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="account-form-area">
+                            <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close"><i
+                                    class="las la-times"></i></button>
+                            <h3 class="title">Welcome Back</h3>
+                            <div class="account-form-wrapper">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Email <sup>*</sup></label>
+                                        <input type="email" name="login_name" id="login_name"
+                                            placeholder="Enter your Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>password <sup>*</sup></label>
+                                        <input type="password" name="login_pass" id="login_pass" placeholder="password">
+                                    </div>
+                                    <div class="d-flex flex-wrap justify-content-between mt-2">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" name="id-1" id="id-1" checked>
+                                            <label for="id-1">Remember Password</label>
+                                            <span class="checkbox"></span>
+                                        </div>
+                                        <a href="#0" class="link">Forgot Password?</a>
+                                    </div>
+                                    <div class="form-group text-center mt-5">
+                                        <button class="cmn-btn">log in</button>
+                                    </div>
+                                </form>
+                                <p class="text-center mt-4">Don't have an account? <a href="#0"
+                                        data-bs-toggle="modal" data-bs-target="#signupModal"> Sign Up Now</a></p>
+                                <div class="divider">
+                                    <span>or</span>
+                                </div>
+                                <ul class="social-link-list">
+                                    <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#0"><i class="fab fa-google-plus-g"></i></a></li>
+                                </ul>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign Up modal -->
+        <div class="modal fade" id="signupModal" tabindex="1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="account-form-area">
+                            <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close"><i
+                                    class="las la-times"></i></button>
+                            <h3 class="title">Open Free Account</h3>
+                            <div class="account-form-wrapper">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Email <sup>*</sup></label>
+                                        <input type="email" name="signup_name" id="signup_name"
+                                            placeholder="Enter your Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>password <sup>*</sup></label>
+                                        <input type="password" name="signup_pass" id="signup_pass"
+                                            placeholder="password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>confirm password <sup>*</sup></label>
+                                        <input type="password" name="signup_re-pass" id="signup_re-pass"
+                                            placeholder="Confirm Password">
+                                    </div>
+                                    <div class="d-flex flex-wrap mt-2">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" name="id-2" id="id-2" checked>
+                                            <label for="id-2">I agree to the</label>
+                                            <span class="checkbox"></span>
+                                        </div>
+                                        <a href="#0" class="link ml-1">Terms, Privacy Policy and Fees</a>
+                                    </div>
+                                    <div class="form-group text-center mt-5">
+                                        <button class="cmn-btn">log in</button>
+                                    </div>
+                                </form>
+                                <p class="text-center mt-4"> Already have an account? <a href="#0"
+                                        data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></p>
+                                <div class="divider">
+                                    <span>or</span>
+                                </div>
+                                <ul class="social-link-list">
+                                    <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#0"><i class="fab fa-google-plus-g"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- header-section start  -->
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <div class="left d-flex align-items-center">
+                                <a href="tel:65655655"><i class="las la-phone-volume"></i> Customer Support</a>
+                                <div class="language">
+                                    <i class="las la-globe-europe"></i>
+                                    <select>
+                                        <option>En</option>
+                                        <option>Rus</option>
+                                        <option>Bn</option>
+                                        <option>Hp</option>
+                                        <option>Frn</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="right">
+                                <div class="product__cart">
+                                    <a href="cart.html" class="amount__btn">
+                                        <i class="las la-shopping-basket"></i>
+                                        <span class="cart__num">08</span>
+                                    </a>
+                                </div>
+                                <a href="#0" class="user__btn" data-bs-toggle="modal"
+                                    data-bs-target="#loginModal"><i class="las la-user"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- header__top end -->
+            <div class="header__bottom">
+                <div class="container">
+                    <nav class="navbar navbar-expand-xl p-0 align-items-center">
+                        <a class="site-logo site-title" href="{{ route('Welcome') }}"><img
+                                src="{{ asset('assets/dubai.png') }}" height="150px" width="150px" alt="site-logo"><span
+                                class="logo-icon"><i class="flaticon-fire"></i></span></a>
+                        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="menu-toggle"></span>
                         </button>
-                    </x-slot>
-
-                    <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
-                        </x-dropdown-link>
-
-                        <!-- Authentication -->
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-
-                            <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Log Out') }}
-                            </x-dropdown-link>
-                        </form>
-                    </x-slot>
-                </x-dropdown>
-            </div>
-
-            <!-- Hamburger -->
-            <div class="-me-2 flex items-center sm:hidden">
-                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                        <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
-        </div>
-
-        <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t border-gray-200">
-            <div class="px-4">
-                <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-            </div>
-
-            <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('profile.edit')">
-                    {{ __('Profile') }}
-                </x-responsive-nav-link>
-
-                <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-
-                    <x-responsive-nav-link :href="route('logout')"
-                            onclick="event.preventDefault();
-                                        this.closest('form').submit();">
-                        {{ __('Log Out') }}
-                    </x-responsive-nav-link>
-                </form>
-            </div>
-        </div>
-    </div>
-</nav>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav main-menu ms-auto">
+                                <li class="menu_has_children">
+                                    <a href="{{ route('Welcome') }}">Home</a>
+                                </li>
+                                <li class="menu_has_children">
+                                    <a href="{{ route('Contest') }}">Contest</a>
+                                </li>
+                                <li><a href="{{ route('Winner') }}">Winners</a></li>
+                                <li class="menu_has_children">
+                                    <a href="#0">pages</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="affiliate.html">Affiliate Page</a></li>
+                                        <li><a href="how-work.html">How it works</a></li>
+                                        <li><a href="user.html">User Panel</a></li>
+                                        <li><a href="blog.html">Blog Posts</a></li>
+                                        <li><a href="blog-single.html">Blog Single</a></li>
+                                        <li><a href="cart.html">Cart Page</a></li>
+                                        <li><a href="checkout.html">Checkout Page</a></li>
+                                        <li><a href="faq.html">FAQ Page</a></li>
+                                        <li><a href="error-404.html">404 Page</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{{ route('AboutUs') }}">About Us</a></li>
+                            </ul>
+                            <div class="nav-right">
+                                <a href="{{ route('Contest') }}" class="cmn-btn style--three btn--sm"><img
+                                        src="{{ asset('assets/images/icon/btn/tag.png') }}" alt="icon"
+                                        class="me-2"> Buy Tickets</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div><!-- header__bottom end -->
+        </header>
