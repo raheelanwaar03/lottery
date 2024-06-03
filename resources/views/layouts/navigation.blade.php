@@ -266,21 +266,19 @@
                                     <a href="{{ route('Contest') }}">Contest</a>
                                 </li>
                                 <li><a href="{{ route('Winner') }}">Winners</a></li>
-                                <li class="menu_has_children">
+                                {{-- <li class="menu_has_children">
                                     <a href="#0">pages</a>
                                     <ul class="sub-menu">
                                         <li><a href="about.html">About Us</a></li>
                                         <li><a href="affiliate.html">Affiliate Page</a></li>
                                         <li><a href="how-work.html">How it works</a></li>
                                         <li><a href="user.html">User Panel</a></li>
-                                        <li><a href="blog.html">Blog Posts</a></li>
-                                        <li><a href="blog-single.html">Blog Single</a></li>
                                         <li><a href="cart.html">Cart Page</a></li>
                                         <li><a href="checkout.html">Checkout Page</a></li>
                                         <li><a href="faq.html">FAQ Page</a></li>
                                         <li><a href="error-404.html">404 Page</a></li>
                                     </ul>
-                                </li>
+                                </li> --}}
                                 <li><a href="{{ route('AboutUs') }}">About Us</a></li>
                             </ul>
                             <div class="nav-right">
