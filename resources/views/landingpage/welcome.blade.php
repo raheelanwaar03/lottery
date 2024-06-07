@@ -47,7 +47,6 @@
                     <li><img src="{{asset('assets/img/cards/Mastercard.svg')}}" alt="Payment" width="25"></li>
                     <li><img src="{{asset('assets/img/cards/ApplePay.svg')}}" alt="Payment" width="25"></li>
                     <li><img src="{{asset('assets/img/cards/PayPal.svg')}}" alt="Payment" width="25"></li>
-                    <li><img src="{{ asset('asset/img/cards/Google+Pay.svg') }}" alt="Payment" width="25"></li>
                 </ul>
             </div>
             <div class="raiting mt-2 mt-md-0 text-center text-md-end">
@@ -168,7 +167,6 @@
                             <li><img src="{{asset('assets/img/cards/Mastercard.svg')}}" alt="Payment" width="40"></li>
                             <li><img src="{{asset('assets/img/cards/ApplePay.svg')}}" alt="Payment" width="40"></li>
                             <li><img src="{{asset('assets/img/cards/PayPal.svg')}}" alt="Payment" width="40"></li>
-                            <li><img src="{{ asset('assets/img/cards/Google+Pay.svg') }}" alt="Payment" width="40"></li>
                         </ul>
                         <a href="#" class="btn bg-gradient-theme px-3 fw-bold">SIGN UP</a>
                     </div>
@@ -258,7 +256,7 @@
                             <div class="bg-light rounded-pill text-center py-1 text-dark fs-5 fw-bold shadow">Draw
                                 Monday 10pm</div>
                         </div>
-                        <img src="img/games/1.webp" alt="Game Image" width="100%">
+                        <img src="{{ asset('assets/img/games/1.webp') }}" alt="Game Image" width="100%">
                         <div class="card-body text-white">
                             <h4 class="text-center">Win a Ninja 12in1 Multicooker</h4>
                             <p class="mb-0 text-center">Cash alternative : £130</p>
@@ -287,12 +285,12 @@
     <footer class="bg-dark">
         <div class="container py-4">
             <div class="d-flex justify-content-center align-items-center py-2 gap-3">
-                <img src="img/googleplay.svg" alt="Play Store" class="download-button" width="100">
-                <img src="img/appstore.svg" alt="App Store" class="download-button" width="100">
+                <img src="{{ asset('assets/img/googleplay.svg') }}" alt="Play Store" class="download-button" width="100">
+                <img src="{{ asset('assets/img/appstore.svg') }}" alt="App Store" class="download-button" width="100">
             </div>
             <hr class="text-white my-5">
             <div class="d-md-flex justify-content-between align-items-center">
-                <img src="img/trust.svg" alt="">
+                <img src="{{ asset('assets/img/trust.svg') }}" alt="">
                 <div class="d-flex flex-column justify-content-start align-items-center gap-3">
                     <p class="text-white mb-0" style="font-size: 20px;">Payments we accept</p>
                     <ul class="mb-0 list-unstyled d-flex justify-content-start align-items-center gap-2">
@@ -300,7 +298,6 @@
                         <li><img src="{{ asset('assets/img/cards/Visa.svg') }}" alt="Payment" width="50"></li>
                         <li><img src="{{ asset('assets/img/cards/Visa.svg') }}" alt="Payment" width="50"></li>
                         <li><img src="{{ asset('assets/img/cards/Visa.svg') }}" alt="Payment" width="50"></li>
-                        <li><img src="{{ asset('assets/img/cards/Google+Pay.svg') }}" alt="Payment" width="50"></li>
                     </ul>
                 </div>
                 <div class="d-flex flex-column">
