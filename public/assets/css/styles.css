@@ -71,11 +71,33 @@
     padding: 20px;
     opacity: 0.8;
 }
+
 .download-button {
     width: 200px;
 }
 
+.logo {
+    width: 150px;
+}
+
+.fs-7 {
+    font-size: 12px;
+}
+
+.fs-8 {
+    font-size: 10px;
+}
+
+.fs-9 {
+    font-size: 8px;
+}
+
+.responsive-heading {
+    font-size: 50px;
+}
+
 /* mobile device */
+
 
 @media only screen and (max-width: 600px) {
     .info-card-container {
@@ -89,5 +111,19 @@
 
     .download-button {
         width: 100px;
+    }
+
+    .logo {
+        width: 110px;
+    }
+
+    #hero-section {
+        background: url('../img/hero-sm.webp');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .responsive-heading {
+        font-size: 20px;
     }
 }
