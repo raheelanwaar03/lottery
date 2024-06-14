@@ -19,8 +19,9 @@
                 <a href="#" class="btn d-block d-md-none bg-gradient-theme me-3 py-1 fw-bold me-md-0">Sign In</a>
                 <img src="{{ asset('assets/img/logo.svg') }}" alt="Logo" class="logo me-md-4">
                 <ul class="list-unstyled d-none d-md-flex mb-0 d-flex justify-content-start align-items-center gap-4">
-                    <li><a href="#" class="text-white text-decoration-none fw-bold">All competitions</a></li>
-                    <li><a href="#" class="text-white text-decoration-none fw-bold">Charity</a></li>
+                    <li><a href="{{ route('Welcome') }}" class="text-white text-decoration-none fw-bold">Home</a></li>
+                    <li><a href="{{ route('Cart') }}" class="text-white text-decoration-none fw-bold">Cart</a></li>
+                    <li><a href="{{ route('Details') }}" class="text-white text-decoration-none fw-bold">Detials</a></li>
                 </ul>
             </div>
             <div class="action-buttons d-flex justify-content-start align-items-center gap-4">

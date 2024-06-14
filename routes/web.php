@@ -6,8 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',[LandingPageController::class,'welcome'])->name('Welcome');
-Route::get('/Contest',[LandingPageController::class,'contest'])->name('Contest');
-Route::get('/Winner',[LandingPageController::class,'winner'])->name('Winner');
+Route::get('/Cart',[LandingPageController::class,'cart'])->name('Cart');
+Route::get('/Details',[LandingPageController::class,'details'])->name('Details');
 Route::get('/AboutUs',[LandingPageController::class,'aboutUs'])->name('AboutUs');
 Route::get('/Product/Detail',[LandingPageController::class,'detail'])->name('detail');
 

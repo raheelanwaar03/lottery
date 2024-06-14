@@ -12,14 +12,14 @@ class LandingPageController extends Controller
         return view('landingpage.welcome');
     }
 
-    public function contest()
+    public function cart()
     {
-        return view('landingpage.contest');
+        return view('landingpage.cart');
     }
 
-    public function winner()
+    public function details()
     {
-        return view('landingpage.winner');
+        return view('landingpage.details');
     }
 
     public function aboutUs()
