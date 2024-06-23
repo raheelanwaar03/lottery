@@ -31,6 +31,10 @@
     color: var(--primary-color);
 }
 
+.text-theme {
+    color: var(--primary-color);
+}
+
 #hero-section {
     background: url('../img/hero.webp');
     background-size: cover;

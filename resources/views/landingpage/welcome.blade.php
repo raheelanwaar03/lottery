@@ -19,15 +19,14 @@
                 <a href="#" class="btn d-block d-md-none bg-gradient-theme me-3 py-1 fw-bold me-md-0">Sign In</a>
                 <img src="{{ asset('assets/img/logo.svg') }}" alt="Logo" class="logo me-md-4">
                 <ul class="list-unstyled d-none d-md-flex mb-0 d-flex justify-content-start align-items-center gap-4">
-                    <li><a href="{{ route('Welcome') }}" class="text-white text-decoration-none fw-bold">Home</a></li>
-                    <li><a href="{{ route('Cart') }}" class="text-white text-decoration-none fw-bold">Cart</a></li>
-                    <li><a href="{{ route('Details') }}" class="text-white text-decoration-none fw-bold">Detials</a></li>
+                    <li><a href="#" class="text-white text-decoration-none fw-bold">All competitions</a></li>
+                    <li><a href="#" class="text-white text-decoration-none fw-bold">Charity</a></li>
                 </ul>
             </div>
             <div class="action-buttons d-flex justify-content-start align-items-center gap-4">
                 <div class="auth-buttons d-flex d-none d-md-flex justify-content-start align-items-center gap-4">
-                    <a href="#" class="btn btn-outline-light px-4">Sign in</a>
-                    <a href="#" class="btn bg-gradient-theme px-3">Sign Up</a>
+                    <a href="javascript:void(0)" class="btn btn-outline-light px-4" data-bs-toggle="modal" data-bs-target="#authModal">Sign in</a>
+                    <a href="javascript:void(0)" class="btn bg-gradient-theme px-3" data-bs-toggle="modal" data-bs-target="#authModal">Sign Up</a>
                 </div>
                 <div class="cart-button d-flex justify-content-end align-items-center gap-4">
                     <div class="cart">
@@ -45,10 +44,10 @@
             <div class="d-flex justify-content-start align-items-center gap-3 text-center text-md-end">
                 <p class="text-white mb-0" style="font-size: 10px;">Payments <br> Accepted</p>
                 <ul class="mb-0 list-unstyled d-flex justify-content-start align-items-center gap-2">
-                    <li><img src="{{asset('assets/img/cards/Visa.svg')}}" alt="Payment" width="25"></li>
-                    <li><img src="{{asset('assets/img/cards/Mastercard.svg')}}" alt="Payment" width="25"></li>
-                    <li><img src="{{asset('assets/img/cards/ApplePay.svg')}}" alt="Payment" width="25"></li>
-                    <li><img src="{{asset('assets/img/cards/PayPal.svg')}}" alt="Payment" width="25"></li>
+                    <li><img src="{{ asset('assets/img/cards/Visa.svg') }}" alt="Payment" width="25"></li>
+                    <li><img src="{{ asset('assets/img/cards/Mastercard.svg') }}" alt="Payment" width="25"></li>
+                    <li><img src="{{ asset('assets/img/cards/ApplePay.svg') }}" alt="Payment" width="25"></li>
+                    <li><img src="{{ asset('assets/img/cards/PayPal.svg') }}" alt="Payment" width="25"></li>
                 </ul>
             </div>
             <div class="raiting mt-2 mt-md-0 text-center text-md-end">
@@ -57,8 +56,7 @@
         </div>
     </div>
 
-    <section id="hero-section"
-        class="py-5 d-flex justify-content-center align-items-end align-items-md-center px-4 px-md-5 ">
+    <section id="hero-section" class="py-5 d-flex justify-content-center align-items-end align-items-md-center px-4 px-md-5 ">
         <div class="container-fluid text-center text-md-start">
             <span class="badge bg-dark mt-5"><img src="{{ asset('assets/img/crown.svg') }}" alt="Crown"> JACKPOT DRAW</span>
             <h1 class="text-white responsive-heading fw-bold">WIN A MERCEDES GLC AMG <br> LINE + PRIZE BUNDLE!</h1>
@@ -67,28 +65,6 @@
                 now</a>
         </div>
     </section>
-
-    {{-- <section id="brands" class="py-2 d-none d-md-block">
-        <div class="scroll-area">
-            <?php
-            $loop = 0;
-            for ($i = 1; $i < 22; $i++) {
-                if ($i == 21) {
-                    $i = 1;
-                    $loop++;
-                }
-                if ($loop == 5) {
-                    $i = 22;
-                }
-            ?>
-            <img src="img/brands/<?php echo $i; ?>.png" alt="Brand" class="me-4" width="50"
-                <?php echo $i; ?>>
-
-            <?php
-            }
-            ?>
-        </div>
-    </section> --}}
 
     <section id="competition" class="bg-theme-dark py-5">
         <div class="container">
@@ -110,7 +86,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="competion-box postion-relative">
-                            <img src="{{ asset('assets/img/competition/3.webp') }}" alt="Los Angeles" class="d-block" width="100%">
+                            <img src="{{ asset('assets/img/competition/2.webp') }}" alt="Los Angeles" class="d-block" width="100%">
                             <div class="card bg-theme-dark info-card-container">
                                 <div class="card-body">
                                     <h2>£20k Ninja Instant Win Raffle</h2>
@@ -169,12 +145,12 @@
                     <div class="d-md-flex justify-content-between align-items-center">
                         <img src="{{ asset('assets/img/trust.svg') }}" alt="" class="w-100 mb-4 d-block d-md-none">
                         <h3 class="text-white mb-3 text-center fs-6 fs-md-2 mb-md-0">Supported payment options</h3>
-                        <ul
-                            class="mb-0 list-unstyled mb-3 mb-md-0 d-flex justify-content-start align-items-center gap-2">
-                            <li><img src="{{asset('assets/img/cards/Visa.svg')}}" alt="Payment" width="40"></li>
-                            <li><img src="{{asset('assets/img/cards/Mastercard.svg')}}" alt="Payment" width="40"></li>
-                            <li><img src="{{asset('assets/img/cards/ApplePay.svg')}}" alt="Payment" width="40"></li>
-                            <li><img src="{{asset('assets/img/cards/PayPal.svg')}}" alt="Payment" width="40"></li>
+                        <ul class="mb-0 list-unstyled mb-3 mb-md-0 d-flex justify-content-start align-items-center gap-2">
+                            <li><img src="{{ asset('assets/img/cards/Visa.svg') }}" alt="Payment" width="40"></li>
+                            <li><img src="{{ asset('assets/img/cards/Mastercard.svg') }}" alt="Payment" width="40"></li>
+                            <li><img src="{{ asset('assets/img/cards/ApplePay.svg') }}" alt="Payment" width="40"></li>
+                            <li><img src="{{ asset('assets/img/cards/PayPal.svg') }}" alt="Payment" width="40"></li>
+                            <li><img src="{{ asset('assets/img/cards/Google+Pay.svg') }}" alt="Payment" width="40"></li>
                         </ul>
                         <a href="#" class="btn bg-gradient-theme px-3 fw-bold d-none d-md-block">SIGN UP</a>
                     </div>
@@ -259,33 +235,31 @@
                 <?php
                 for ($i = 0; $i < 4; $i++) {
                 ?>
-                <div class="col-6 col-md-3 mb-5">
-                    <div class="card bg-theme-secondary position-relative">
-                        <div class="position-absolute"
-                            style="top:-25px; width: 80%; left: 50%; transform: translateX(-50%);">
-                            <div class="bg-light rounded-pill text-center py-1 text-dark fs-7 fw-bold shadow">Draw
-                                Monday 10pm</div>
-                        </div>
-                        <img src="{{ asset('assets/img/games/1.webp') }}" alt="Game Image" width="100%">
-                        <div class="card-body text-white ">
-                            <h4 class="text-center fs-6">Win a Ninja 12in1 Multicooker</h4>
-                            <small class="text-start" style="font-size: 12px;">25% Sold</small>
-                            <div class="progress-bar bg-dark poisition-relative">
-                                <div class="poisition-relative">
-                                    <div class="bg-theme" style="width: 25%; padding: 2px"></div>
-                                    <div class="position-absolute" style="bottom: 61px; left: 60px">
-                                        <i class="bi bi-dot d-none d-md-block text-warning fs-1"></i>
+                    <div class="col-6 col-md-3 mb-5">
+                        <div class="card bg-theme-secondary position-relative">
+                            <div class="position-absolute" style="top:-25px; width: 80%; left: 50%; transform: translateX(-50%);">
+                                <div class="bg-light rounded-pill text-center py-1 text-dark fs-7 fw-bold shadow">Draw
+                                    Monday 10pm</div>
+                            </div>
+                            <img src="{{ asset('assets/img/games/1.webp') }}" alt="Game Image" width="100%">
+                            <div class="card-body text-white ">
+                                <h4 class="text-center fs-6">Win a Ninja 12in1 Multicooker</h4>
+                                <small class="text-start" style="font-size: 12px;">25% Sold</small>
+                                <div class="progress-bar bg-dark poisition-relative">
+                                    <div class="poisition-relative">
+                                        <div class="bg-theme" style="width: 25%; padding: 2px"></div>
+                                        <div class="position-absolute" style="bottom: 61px; left: 60px">
+                                            <i class="bi bi-dot d-none d-md-block text-warning fs-1"></i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="buttons mt-4">
-                                <a href="#"
-                                    class="btn btn-sm btn-md-lg bg-gradient-theme px-3 fw-bold w-100">Enter
-                                    now</a>
+                                <div class="buttons mt-4">
+                                    <a href="#" class="btn btn-sm btn-md-lg bg-gradient-theme px-3 fw-bold w-100">Enter
+                                        now</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 <?php } ?>
             </div>
 
@@ -295,8 +269,8 @@
     <footer class="bg-dark">
         <div class="container py-4">
             <div class="d-flex justify-content-center align-items-center py-2 gap-3">
-                <img src="{{asset('assets/img/googleplay.svg')}}" alt="Play Store" class="download-button" width="100">
-                <img src="{{asset('assets/img/appstore.svg')}}" alt="App Store" class="download-button" width="100">
+                <img src="{{ asset('assets/img/googleplay.svg') }}" alt="Play Store" class="download-button" width="100">
+                <img src="{{ asset('assets/img/appstore.svg') }}" alt="App Store" class="download-button" width="100">
             </div>
             <hr class="text-white my-5">
             <div class="d-md-flex justify-content-between align-items-center">
@@ -306,16 +280,16 @@
                 <div class="d-flex flex-column mb-4 mb-md-0 justify-content-start align-items-center gap-3">
                     <p class="text-white mb-0" style="font-size: 20px;">Payments we accept</p>
                     <ul class="mb-0 list-unstyled d-flex justify-content-start align-items-center gap-2">
-                        <li><img src="{{asset('assets/img/cards/Visa.svg')}}" alt="Payment" width="50"></li>
-                        <li><img src="{{asset('assets/img/cards/Mastercard.svg')}}" alt="Payment" width="50"></li>
-                        <li><img src="{{asset('assets/img/cards/ApplePay.svg')}}" alt="Payment" width="50"></li>
-                        <li><img src="{{asset('assets/img/cards/PayPal.svg')}}" alt="Payment" width="50"></li>
+                        <li><img src="{{ asset('assets/img/cards/Visa.svg') }}" alt="Payment" width="50"></li>
+                        <li><img src="{{ asset('assets/img/cards/Mastercard.svg') }}" alt="Payment" width="50"></li>
+                        <li><img src="{{ asset('assets/img/cards/ApplePay.svg') }}" alt="Payment" width="50"></li>
+                        <li><img src="{{ asset('assets/img/cards/PayPal.svg') }}" alt="Payment" width="50"></li>
+                        <li><img src="{{ asset('assets/img/cards/Google+Pay.svg') }}" alt="Payment" width="50"></li>
                     </ul>
                 </div>
                 <div class="d-flex flex-column">
                     <h5 class="text-white text-center text-md-start mt-3 mt-md-0">Follow us</h5>
-                    <ul
-                        class="mb-0 list-unstyled fs-3 d-flex justify-content-around px-5 px-md-0 justify-content-md-center gap-2">
+                    <ul class="mb-0 list-unstyled fs-3 d-flex justify-content-around px-5 px-md-0 justify-content-md-center gap-2">
                         <li><i class="bi bi-facebook text-white"></i></li>
                         <li><i class="bi bi-messenger text-white"></i></li>
                         <li><i class="bi bi-whatsapp text-white"></i></li>
@@ -371,6 +345,102 @@
             </div>
         </div>
     </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal body -->
+                <div class="modal-body bg-theme-dark">
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn-close bg-white text-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs border-0 d-flex justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link bg-theme-dark text-theme active" data-bs-toggle="tab" href="#login">Sign in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link bg-theme-dark text-theme" data-bs-toggle="tab" href="#register">Sign Up</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane container active" id="login">
+                            <h3 class="text-center my-4 text-white">Sign in</h3>
+                            <form action="#" method="POST">
+                                <div class="form-group mb-3">
+                                    <label for="email" class="text-white mb-2">Enter your Email</label>
+                                    <input type="email" name="email" id="email" placeholder="your email" class="form-control bg-dark text-white bg-theme-dark">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="text-white mb-2">Enter your Password</label>
+                                    <input type="password" name="password" id="password" placeholder="your password" class="form-control bg-dark text-white bg-theme-dark">
+                                </div>
+                                <div class="form-group text-end my-3">
+                                    <a href="#" class="text-theme text-decoration-none ">Forgot Password?</a>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn bg-gradient-theme text-dark py-2 fw-bold fs-5 w-100">Sign In</button>
+                                </div>
+                            </form>
+
+                            <p class="text-center my-4 text-white">Sign in via social account</p>
+                            <div class="d-flex flex-column gap-2">
+                                <button class="bg-theme-dark border-1 py-2 border-white outline-0 d-flex justify-content-center gap-2">
+                                    <img src="{{ asset('/assets/img/google.svg') }}" alt="Google Login">
+                                    <p class="mb-0 text-white">Sign in with Google</p>
+                                </button>
+                                <button class="bg-theme-dark border-1 py-2 border-white outline-0 d-flex justify-content-center gap-2">
+                                    <img src="{{ asset('/assets/img/facebook.svg') }}" alt="Facebook Login">
+                                    <p class="mb-0 text-white">Sign in with Facebook</p>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tab-pane container" id="register">
+                            <h3 class="text-center my-4 text-white">Sign up</h3>
+                            <form action="#" method="POST">
+                                <div class="form-group mb-3">
+                                    <label for="name" class="text-white mb-2">Enter your Full Name</label>
+                                    <input type="text" name="name" id="name" placeholder="your Full Name" class="form-control bg-dark text-white bg-theme-dark">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="email" class="text-white mb-2">Enter your Email</label>
+                                    <input type="email" name="email" id="email" placeholder="your email" class="form-control bg-dark text-white bg-theme-dark">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="text-white mb-2">Enter your Password</label>
+                                    <input type="password" name="password" id="password" placeholder="your password" class="form-control bg-dark text-white bg-theme-dark">
+                                </div>
+                                <div class="form-group text-end my-3">
+                                    <a href="#" class="text-theme text-decoration-none ">Forgot Password?</a>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn bg-gradient-theme text-dark py-2 fw-bold fs-5 w-100">Sign In</button>
+                                </div>
+                            </form>
+
+                            <p class="text-center my-4 text-white">Sign up via social account</p>
+                            <div class="d-flex flex-column gap-2">
+                                <button class="bg-theme-dark border-1 py-2 border-white outline-0 d-flex justify-content-center gap-2">
+                                    <img src="{{ asset('/assets/img/google.svg') }}" alt="Google Login">
+                                    <p class="mb-0 text-white">Sign up with Google</p>
+                                </button>
+                                <button class="bg-theme-dark border-1 py-2 border-white outline-0 d-flex justify-content-center gap-2">
+                                    <img src="{{ asset('/assets/img/facebook.svg') }}" alt="Facebook Login">
+                                    <p class="mb-0 text-white">Sign up with Facebook</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
