@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>DreamDraw</title>
+    <title>Dream Draw</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -16,7 +16,7 @@
     <div class="container-fluid py-3 px-md-3 bg-theme-dark text-white text-center">
         <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center justify-content-between">
-                <a href="#" class="btn d-block d-md-none bg-gradient-theme me-3 py-1 fw-bold me-md-0">Sign In</a>
+                <a href="#" class="btn d-block d-md-none bg-gradient-theme me-3 py-1 fw-bold me-md-0" data-bs-toggle="modal" data-bs-target="#authModal">Sign In</a>
                 <img src="{{ asset('assets/img/logo.svg') }}" alt="Logo" class="logo me-md-4">
                 <ul class="list-unstyled d-none d-md-flex mb-0 d-flex justify-content-start align-items-center gap-4">
                     <li><a href="#" class="text-white text-decoration-none fw-bold">All competitions</a></li>
@@ -33,7 +33,9 @@
                         <i class="bi bi-cart3 text-gradient-theme fs-2"></i>
                     </div>
                     <div class="nav-menu">
-                        <i class="bi bi-list text-gradient-theme fs-2"></i>
+                        <a href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#sidemenu">
+                            <i class="bi bi-list text-gradient-theme fs-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -150,9 +152,8 @@
                             <li><img src="{{ asset('assets/img/cards/Mastercard.svg') }}" alt="Payment" width="40"></li>
                             <li><img src="{{ asset('assets/img/cards/ApplePay.svg') }}" alt="Payment" width="40"></li>
                             <li><img src="{{ asset('assets/img/cards/PayPal.svg') }}" alt="Payment" width="40"></li>
-                            <li><img src="{{ asset('assets/img/cards/Google+Pay.svg') }}" alt="Payment" width="40"></li>
                         </ul>
-                        <a href="#" class="btn bg-gradient-theme px-3 fw-bold d-none d-md-block">SIGN UP</a>
+                        <a data-bs-toggle="tab" href="#register" class="btn bg-gradient-theme px-3 fw-bold d-none d-md-block">SIGN UP</a>
                     </div>
                 </div>
             </div>
@@ -441,6 +442,70 @@
         </div>
     </div>
 
+    <!-- side menu -->
+    <div class="offcanvas offcanvas-end" id="sidemenu">
+        <div class="offcanvas-body bg-theme-dark">
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="text-white">
+                <h4>Menu</h4>
+                <ul class="list-unstyled d-flex flex-column gap-3 mb-0 mt-5">
+                    <li>
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card card-body py-2 bg-theme-dark border border-dark">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-house-door fs-3"></i>
+                                    <h6 class="mb-0">Home</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card card-body py-2 bg-theme-dark border border-dark">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-house-door fs-3"></i>
+                                    <h6 class="mb-0">Home</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card card-body py-2 bg-theme-dark border border-dark">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-house-door fs-3"></i>
+                                    <h6 class="mb-0">Home</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card card-body py-2 bg-theme-dark border border-dark">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-house-door fs-3"></i>
+                                    <h6 class="mb-0">Home</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="social-icons">
+                    <div class="d-flex flex-column">
+                        <h5 class="text-white text-center text-md-start mt-3 mt-md-0">Follow us</h5>
+                        <ul class="mb-0 list-unstyled fs-3 d-flex justify-content-around px-5 px-md-0 justify-content-md-center gap-2">
+                            <li><i class="bi bi-facebook text-white"></i></li>
+                            <li><i class="bi bi-messenger text-white"></i></li>
+                            <li><i class="bi bi-whatsapp text-white"></i></li>
+                            <li><i class="bi bi-facebook text-white"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
