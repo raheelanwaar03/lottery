@@ -39,18 +39,11 @@
             <div class="action-buttons d-flex justify-content-start align-items-center gap-4">
                 @if (auth()->user())
                     <div class="auth-buttons d-flex d-none d-md-flex justify-content-start align-items-center gap-4">
-                        <form action="{{ route('register') }}" method="POST">
+                        <form action="{{ route('logout') }}" method="POST">
                             @csrf
                             <button type="submit" class="btn bg-gradient-theme px-3 text-white">Logout</button>
                         </form>
-                        {{-- <a href="{{ route('register') }}" class="btn bg-gradient-theme px-3">Sign Up</a> --}}
                     </div>
-
-                    {{-- <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <button type="submit"
-                            class="btn d-block d-md-none bg-gradient-theme me-3 py-1 fw-bold me-md-0 text-white">Logout</button>
-                    </form> --}}
                 @else
                     <div class="auth-buttons d-flex d-none d-md-flex justify-content-start align-items-center gap-4">
                         <a href="{{ route('login') }}" class="btn btn-outline-light px-4">Sign in</a>
