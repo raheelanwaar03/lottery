@@ -13,11 +13,21 @@
 
 <body>
 
+    <x-alert />
+
     <div class="container-fluid py-3 px-md-3 bg-theme-dark text-white text-center">
         <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center justify-content-between">
-                <a href="{{ route('login') }}"
-                    class="btn d-block d-md-none bg-gradient-theme me-3 py-1 fw-bold me-md-0">Sign In</a>
+                @if (auth()->user())
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit"
+                            class="btn d-block d-md-none bg-gradient-theme me-3 py-1 fw-bold me-md-0 text-white">Logout</button>
+                    </form>
+                @else
+                    <a href="{{ route('login') }}"
+                        class="btn d-block d-md-none bg-gradient-theme me-3 py-1 fw-bold me-md-0 text-white">Sign In</a>
+                @endif
                 <a href="{{ route('Welcome') }}">
                     <img src="{{ asset('assets/img/logo.svg') }}" alt="Logo" class="logo me-md-4">
                 </a>
@@ -27,10 +37,26 @@
                 </ul>
             </div>
             <div class="action-buttons d-flex justify-content-start align-items-center gap-4">
-                <div class="auth-buttons d-flex d-none d-md-flex justify-content-start align-items-center gap-4">
-                    <a href="{{ route('login') }}" class="btn btn-outline-light px-4">Sign in</a>
-                    <a href="{{ route('register') }}" class="btn bg-gradient-theme px-3">Sign Up</a>
-                </div>
+                @if (auth()->user())
+                    <div class="auth-buttons d-flex d-none d-md-flex justify-content-start align-items-center gap-4">
+                        <form action="{{ route('register') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn bg-gradient-theme px-3 text-white">Logout</button>
+                        </form>
+                        {{-- <a href="{{ route('register') }}" class="btn bg-gradient-theme px-3">Sign Up</a> --}}
+                    </div>
+
+                    {{-- <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit"
+                            class="btn d-block d-md-none bg-gradient-theme me-3 py-1 fw-bold me-md-0 text-white">Logout</button>
+                    </form> --}}
+                @else
+                    <div class="auth-buttons d-flex d-none d-md-flex justify-content-start align-items-center gap-4">
+                        <a href="{{ route('login') }}" class="btn btn-outline-light px-4">Sign in</a>
+                        <a href="{{ route('register') }}" class="btn bg-gradient-theme px-3">Sign Up</a>
+                    </div>
+                @endif
                 <div class="cart-button d-flex justify-content-end align-items-center gap-4">
                     <div class="cart">
                         <i class="bi bi-cart3 text-gradient-theme fs-2"></i>

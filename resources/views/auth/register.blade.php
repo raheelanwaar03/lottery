@@ -9,41 +9,42 @@
                             <h1 class="text-white">Create Free Account</h1>
                         </div>
                         <div class="col-md-7 mx-auto">
-                            <form action="#" method="POST">
+                            <form action="{{ route('register') }}" method="POST">
+                                @csrf
                                 <div class="form-group">
                                     <label for="name" class="text-white">Full Name</label>
                                     <input type="text" name="name" id="name"
-                                        class="form-control bg-dark text-white ">
+                                        class="form-control bg-dark text-white" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email" class="text-white">Email</label>
                                     <input type="text" name="email" id="email"
-                                        class="form-control  bg-dark text-white ">
+                                        class="form-control  bg-dark text-white" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="country" class="text-white">Country</label>
                                     <input type="text" name="country" id="country"
-                                        class="form-control  bg-dark text-white ">
+                                        class="form-control  bg-dark text-white" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="provinec" class="text-white">Provinec</label>
                                     <input type="text" name="provinec" id="provinec"
-                                        class="form-control  bg-dark text-white ">
+                                        class="form-control  bg-dark text-white" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="city" class="text-white">city</label>
                                     <input type="text" name="city" id="city"
-                                        class="form-control  bg-dark text-white ">
+                                        class="form-control  bg-dark text-white" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="text-white">Password</label>
-                                    <input type="text" name="password" id="password"
-                                        class="form-control bg-dark text-white ">
+                                    <input type="password" name="password" id="password"
+                                        class="form-control bg-dark text-white" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="password_confirmation" class="text-white">Confirm Password</label>
-                                    <input type="text" name="password_confirmation" id="password_confirmation"
-                                        class="form-control bg-dark text-white ">
+                                    <input type="password" name="password_confirmation" id="password_confirmation"
+                                        class="form-control bg-dark text-white" required>
                                 </div>
                                 <div class="form-group mt-4">
                                     <button type="submit" class="btn bg-gradient-theme btn-lg w-100">Create

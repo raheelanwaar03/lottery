@@ -9,7 +9,8 @@
                             <h1 class="text-white">Sign in to your Account</h1>
                         </div>
                         <div class="col-md-7 mx-auto">
-                            <form action="#" method="POST">
+                            <form action="{{ route('login') }}" method="POST">
+                                @csrf
                                 <div class="form-group">
                                     <label for="email" class="text-white">Email</label>
                                     <input type="text" name="email" id="email"
@@ -17,14 +18,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="text-white">Password</label>
-                                    <input type="text" name="password" id="password"
+                                    <input type="password" name="password" id="password"
                                         class="form-control bg-dark text-white ">
                                 </div>
                                 <div class="form-group mt-4">
                                     <button type="submit" class="btn bg-gradient-theme btn-lg w-100">Sign in</button>
                                 </div>
                                 <div class="form-group mt-4">
-                                    <a href="/register.php" class="text-decoration-none text-white">Don't have an account?
+                                    <a href="{{ route('register') }}" class="text-decoration-none text-white">Don't have an
+                                        account?
                                         <span class="text-theme">Create new one</span> </a>
                                 </div>
                             </form>
