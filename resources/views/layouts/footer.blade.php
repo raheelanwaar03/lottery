@@ -1,87 +1,255 @@
-<footer class="footer-section">
-    <div class="bg-shape--top"><img src="{{ asset('assets/images/elements/round-shape-2.png') }}" alt="image"></div>
-    <div class="container pt-120">
-        <div class="row pb-5 align-items-center">
-            <div class="col-lg-4">
-                <ul class="app-btn">
-                    <li><a href="#0"><img src="{{ asset('assets/images/icon/store-btn/1.png') }}" alt="image"></a>
-                    </li>
-                    <li><a href="#0"><img src="{{ asset('assets/images/icon/store-btn/2.png') }}"
-                                alt="image"></a></li>
+<footer class="bg-dark">
+    <div class="container py-4">
+        <div class="d-flex justify-content-center align-items-center py-2 gap-3">
+            <img src="{{ asset('assets/img/googleplay.svg') }}" alt="Play Store" class="download-button" width="100">
+            <img src="{{ asset('assets/img/appstore.svg') }}" alt="App Store" class="download-button" width="100">
+        </div>
+        <hr class="text-white my-5">
+        <div class="d-md-flex justify-content-between align-items-center">
+            <div class="text-center mb-4 mb-md-0">
+                <img src="{{ asset('assets/img/trust.svg') }}" alt="">
+            </div>
+            <div class="d-flex flex-column mb-4 mb-md-0 justify-content-start align-items-center gap-3">
+                <p class="text-white mb-0" style="font-size: 20px;">Payments we accept</p>
+                <ul class="mb-0 list-unstyled d-flex justify-content-start align-items-center gap-2">
+                    <li><img src="{{ asset('assets/img/cards/Visa.svg') }}" alt="Payment" width="50"></li>
+                    <li><img src="{{ asset('assets/img/cards/Mastercard.svg') }}" alt="Payment" width="50"></li>
+                    <li><img src="{{ asset('assets/img/cards/ApplePay.svg') }}" alt="Payment" width="50"></li>
+                    <li><img src="{{ asset('assets/img/cards/PayPal.svg') }}" alt="Payment" width="50"></li>
                 </ul>
             </div>
-            <div class="col-lg-8">
-                <ul class="short-links justify-content-lg-end justify-content-center">
-                    <li><a href="#0">Abount</a></li>
-                    <li><a href="#0">FAQs</a></li>
-                    <li><a href="#0">Contact</a></li>
-                    <li><a href="#0">Terms of Services</a></li>
-                    <li><a href="#0">Privacy</a></li>
+            <div class="d-flex flex-column">
+                <h5 class="text-white text-center text-md-start mt-3 mt-md-0">Follow us</h5>
+                <ul
+                    class="mb-0 list-unstyled fs-3 d-flex justify-content-around px-5 px-md-0 justify-content-md-center gap-2">
+                    <li><i class="bi bi-facebook text-white"></i></li>
+                    <li><i class="bi bi-messenger text-white"></i></li>
+                    <li><i class="bi bi-whatsapp text-white"></i></li>
+                    <li><i class="bi bi-facebook text-white"></i></li>
                 </ul>
             </div>
         </div>
-        <hr>
-        <div class="row py-5 align-items-center">
-            <div class="col-lg-6">
-                <p class="copy-right-text text-lg-start text-center mb-lg-0 mb-3">Copyright © 2024.All Rights
-                    Reserved By <a href="index.html">DreemDraw</a></p>
+        <hr class="text-white my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="text-center text-md-start mb-5">
+                    <img src="{{ asset('assets/img/logo-light.svg') }}" alt="Logo" width="200">
+                </div>
             </div>
-            <div class="col-lg-6">
-                <ul class="social-links justify-content-lg-end justify-content-center">
-                    <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#0"><i class="fab fa-linkedin-in"></i></a></li>
+            <div class="col-6 col-md-3 text-center text-md-start">
+                <h4 class="text-white my-4">Website</h4>
+                <ul class="list-unstyled mb-0 text-white">
+                    <li>My Raffles</li>
+                    <li>News & Blog</li>
+                    <li>Account</li>
+                    <li>Responsible Play</li>
+                    <li>Winners Gallery</li>
                 </ul>
+            </div>
+            <div class="col-6 col-md-3 text-center text-md-start">
+                <h4 class="text-white my-4">Categories</h4>
+                <ul class="list-unstyled mb-0 text-white">
+                    <li>My Raffles</li>
+                    <li>News & Blog</li>
+                    <li>Account</li>
+                    <li>Responsible Play</li>
+                    <li>Winners Gallery</li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 text-center text-md-start">
+                <h4 class="text-white my-4">Contact</h4>
+                <ul class="list-unstyled mb-0 text-white">
+                    <li>My Raffles</li>
+                    <li>News & Blog</li>
+                    <li>Account</li>
+                    <li>Responsible Play</li>
+                    <li>Winners Gallery</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="text-white my-5">
+        <div class="d-md-flex text-center text-md-start justify-content-between align-items-center">
+            <p class="text-white mb-0">Copyright © 2024. All rights reserved. </p>
+            <div class="privacy d-flex gap-4 justify-content-center justify-content-md-betwen">
+                <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+                <a href="#" class="text-white text-decoration-none">Terms & Conditions</a>
             </div>
         </div>
     </div>
 </footer>
-<!-- footer section end -->
-</div>
-<!-- page-wrapper end -->
-<!-- jQuery library -->
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script src="{{ asset('assets/js/vendor/jquery-3.5.1.min.js') }}"></script>
-<!-- bootstrap js -->
-<script src="{{ asset('assets/js/vendor/bootstrap.bundle.min.js') }}"></script>
-<!-- custom select js -->
-<script src="{{ asset('assets/js/vendor/jquery.nice-select.min.js') }}"></script>
-<!-- lightcase js -->
-<script src="{{ asset('assets/js/vendor/lightcase.js') }}"></script>
-<!-- wow js -->
-<script src="{{ asset('assets/js/vendor/wow.min.js') }}"></script>
-<!-- slick slider js -->
-<!-- <script src="{{ asset('assets/js/vendor/slick.min.js') }}"></script> -->
-<!-- countdown js -->
-<script src="{{ asset('assets/js/vendor/jquery.countdown.js') }}"></script>
-<!-- jquery ui js -->
-<script src="{{ asset('assets/js/vendor/jquery-ui.min.js') }}"></script>
-<!-- datepicker js -->
-<script src="{{ asset('assets/js/vendor/datepicker.min.js') }}"></script>
-<script src="{{ asset('assets/js/vendor/datepicker.en.js') }}"></script>
-<!-- preloader -->
-<script src='{{ asset('assets/js/vendor/TweenMax.min.js') }}'></script>
-<script src='{{ asset('assets/js/vendor/MorphSVGPlugin.min.js') }}'></script>
-<script src="{{ asset('assets/js/preloader.js') }}"></script>
-<!-- contact js -->
-<script src="{{ asset('assets/js/contact.js') }}"></script>
-<!-- custom js -->
-<script src="{{ asset('assets/js/app.js') }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('.slider').slick({
-            dots: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
-        });
-    });
-</script>
 
+<!-- Login Modal -->
+<div class="modal" id="authModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal body -->
+            <div class="modal-body bg-theme-dark">
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close bg-white text-white" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs border-0 d-flex justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link bg-theme-dark text-theme active" data-bs-toggle="tab" href="#login">Sign
+                            in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bg-theme-dark text-theme" data-bs-toggle="tab" href="#register">Sign Up</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane container active" id="login">
+                        <h3 class="text-center my-4 text-white">Sign in</h3>
+                        <form action="#" method="POST">
+                            <div class="form-group mb-3">
+                                <label for="email" class="text-white mb-2">Enter your Email</label>
+                                <input type="email" name="email" id="email" placeholder="your email"
+                                    class="form-control bg-dark text-white bg-theme-dark">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-white mb-2">Enter your Password</label>
+                                <input type="password" name="password" id="password" placeholder="your password"
+                                    class="form-control bg-dark text-white bg-theme-dark">
+                            </div>
+                            <div class="form-group text-end my-3">
+                                <a href="#" class="text-theme text-decoration-none ">Forgot Password?</a>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit"
+                                    class="btn bg-gradient-theme text-dark py-2 fw-bold fs-5 w-100">Sign In</button>
+                            </div>
+                        </form>
+
+                        <p class="text-center my-4 text-white">Sign in via social account</p>
+                        <div class="d-flex flex-column gap-2">
+                            <button
+                                class="bg-theme-dark border-1 py-2 border-white outline-0 d-flex justify-content-center gap-2">
+                                <img src="/{{ asset('assets/img/google.svg') }}" alt="Google Login">
+                                <p class="mb-0 text-white">Sign in with Google</p>
+                            </button>
+                            <button
+                                class="bg-theme-dark border-1 py-2 border-white outline-0 d-flex justify-content-center gap-2">
+                                <img src="/{{ asset('assets/img/facebook.svg') }}" alt="Facebook Login">
+                                <p class="mb-0 text-white">Sign in with Facebook</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane container" id="register">
+                        <h3 class="text-center my-4 text-white">Sign up</h3>
+                        <form action="#" method="POST">
+                            <div class="form-group mb-3">
+                                <label for="name" class="text-white mb-2">Enter your Full Name</label>
+                                <input type="text" name="name" id="name" placeholder="your Full Name"
+                                    class="form-control bg-dark text-white bg-theme-dark">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="email" class="text-white mb-2">Enter your Email</label>
+                                <input type="email" name="email" id="email" placeholder="your email"
+                                    class="form-control bg-dark text-white bg-theme-dark">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-white mb-2">Enter your Password</label>
+                                <input type="password" name="password" id="password" placeholder="your password"
+                                    class="form-control bg-dark text-white bg-theme-dark">
+                            </div>
+                            <div class="form-group text-end my-3">
+                                <a href="#" class="text-theme text-decoration-none ">Forgot Password?</a>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit"
+                                    class="btn bg-gradient-theme text-dark py-2 fw-bold fs-5 w-100">Sign In</button>
+                            </div>
+                        </form>
+
+                        <p class="text-center my-4 text-white">Sign up via social account</p>
+                        <div class="d-flex flex-column gap-2">
+                            <button
+                                class="bg-theme-dark border-1 py-2 border-white outline-0 d-flex justify-content-center gap-2">
+                                <img src="/{{ asset('assets/img/google.svg') }}" alt="Google Login">
+                                <p class="mb-0 text-white">Sign up with Google</p>
+                            </button>
+                            <button
+                                class="bg-theme-dark border-1 py-2 border-white outline-0 d-flex justify-content-center gap-2">
+                                <img src="/{{ asset('assets/img/facebook.svg') }}" alt="Facebook Login">
+                                <p class="mb-0 text-white">Sign up with Facebook</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- side menu -->
+<div class="offcanvas offcanvas-end" id="sidemenu">
+    <div class="offcanvas-body bg-theme-dark">
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="text-white">
+            <h4>Menu</h4>
+            <ul class="list-unstyled d-flex flex-column gap-3 mb-0 mt-5">
+                <li>
+                    <a href="#" class="text-decoration-none text-white">
+                        <div class="card card-body py-2 bg-theme-dark border border-dark">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-house-door fs-3"></i>
+                                <h6 class="mb-0">Home</h6>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration-none text-white">
+                        <div class="card card-body py-2 bg-theme-dark border border-dark">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-house-door fs-3"></i>
+                                <h6 class="mb-0">Home</h6>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration-none text-white">
+                        <div class="card card-body py-2 bg-theme-dark border border-dark">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-house-door fs-3"></i>
+                                <h6 class="mb-0">Home</h6>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration-none text-white">
+                        <div class="card card-body py-2 bg-theme-dark border border-dark">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-house-door fs-3"></i>
+                                <h6 class="mb-0">Home</h6>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="social-icons">
+                <div class="d-flex flex-column">
+                    <h5 class="text-white text-center text-md-start mt-3 mt-md-0">Follow us</h5>
+                    <ul
+                        class="mb-0 list-unstyled fs-3 d-flex justify-content-around px-5 px-md-0 justify-content-md-center gap-2">
+                        <li><i class="bi bi-facebook text-white"></i></li>
+                        <li><i class="bi bi-messenger text-white"></i></li>
+                        <li><i class="bi bi-whatsapp text-white"></i></li>
+                        <li><i class="bi bi-facebook text-white"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>
