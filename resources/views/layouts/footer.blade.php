@@ -192,47 +192,78 @@
             <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="text-white">
-            <h4>Menu</h4>
-            <ul class="list-unstyled d-flex flex-column gap-3 mb-0 mt-5">
+            <p>Hi Raheel,<br>
+                you have active tickets <span class="text-warning">0 active raffle</span>
+            </p>
+            <div class="my-3">
+                <h5 style="opacity: 0.5">My Points</h5>
+                <p>You have <button class="btn btn-sm btn-outline-warning">0 Coins</button>
+                    <br> Vist our store to gain more points <a href="#" class="text-warning">Store</a>
+                </p>
+            </div>
+            <div class="mt-3">
+                <h5 style="opacity: 0.5">Menu</h5>
+            </div>
+            <ul class="list-unstyled d-flex flex-column gap-3 mb-0 mt-2">
                 <li>
-                    <a href="#" class="text-decoration-none text-white">
-                        <div class="card card-body py-2 bg-theme-dark border border-dark">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="bi bi-house-door fs-3"></i>
-                                <h6 class="mb-0">Home</h6>
-                            </div>
-                        </div>
-                    </a>
+                    <div style="padding-left:4px;background-color:#191d2e;border-radius: 5px;">
+                        <a href="#" class="text-decoration-none text-white">
+                            <span class="pl-4 d-flex align-items-center">
+                                <i class="bi bi-house" style="font-size:25px"></i>
+                                <p style="margin-left: 15px;margin-top:12px;font-size:15px">Home</p>
+                            </span>
+                        </a>
+                    </div>
                 </li>
                 <li>
-                    <a href="#" class="text-decoration-none text-white">
-                        <div class="card card-body py-2 bg-theme-dark border border-dark">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="bi bi-house-door fs-3"></i>
-                                <h6 class="mb-0">Home</h6>
-                            </div>
-                        </div>
-                    </a>
+                    <div style="padding-left:4px;background-color:#191d2e;border-radius: 5px;">
+                        <a href="#" class="text-decoration-none text-white">
+                            <span class="pl-4 d-flex align-items-center">
+                                <i class="bi bi-ticket" style="font-size:25px"></i>
+                                <p style="margin-left: 15px;margin-top:12px;font-size:15px">Tikets</p>
+                            </span>
+                        </a>
+                    </div>
                 </li>
                 <li>
-                    <a href="#" class="text-decoration-none text-white">
-                        <div class="card card-body py-2 bg-theme-dark border border-dark">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="bi bi-house-door fs-3"></i>
-                                <h6 class="mb-0">Home</h6>
-                            </div>
-                        </div>
-                    </a>
+                    <div style="padding-left:4px;background-color:#191d2e;border-radius: 5px;">
+                        <a href="#" class="text-decoration-none text-white">
+                            <span class="pl-4 d-flex align-items-center">
+                                <i class="bi bi-coin" style="font-size:25px"></i>
+                                <p style="margin-left: 15px;margin-top:12px;font-size:15px">Credits</p>
+                            </span>
+                        </a>
+                    </div>
                 </li>
                 <li>
-                    <a href="#" class="text-decoration-none text-white">
-                        <div class="card card-body py-2 bg-theme-dark border border-dark">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="bi bi-house-door fs-3"></i>
-                                <h6 class="mb-0">Home</h6>
-                            </div>
-                        </div>
-                    </a>
+                    <div style="padding-left:4px;background-color:#191d2e;border-radius: 5px;">
+                        <a href="#" class="text-decoration-none text-white">
+                            <span class="pl-4 d-flex align-items-center">
+                                <i class="bi bi-bag" style="font-size:25px"></i>
+                                <p style="margin-left: 15px;margin-top:12px;font-size:15px">Store</p>
+                            </span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div style="padding-left:4px;background-color:#191d2e;border-radius: 5px;">
+                        <a href="#" class="text-decoration-none text-white">
+                            <span class="pl-4 d-flex align-items-center">
+                                <i class="bi bi-gift" style="font-size:25px"></i>
+                                <p style="margin-left: 15px;margin-top:12px;font-size:15px">Refer a Friend</p>
+                            </span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div style="padding-left:4px;background-color:#191d2e;border-radius: 5px;">
+                        <a href="#" class="text-decoration-none text-white">
+                            <span class="pl-4 d-flex align-items-center">
+                                <i class="bi bi-trophy" style="font-size:25px"></i>
+                                <p style="margin-left: 15px;margin-top:12px;font-size:15px">Winner</p>
+                            </span>
+                        </a>
+                    </div>
                 </li>
             </ul>
             <div class="social-icons">
