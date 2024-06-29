@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\admin\Lottery;
 use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
@@ -9,7 +10,8 @@ class LandingPageController extends Controller
 
     public function welcome()
     {
-        return view('landingpage.welcome');
+        $lotteries = Lottery::get();
+        return view('landingpage.welcome', compact('lotteries'));
     }
 
     public function cart()
@@ -31,7 +33,4 @@ class LandingPageController extends Controller
     {
         return view('landingpage.details');
     }
-
-
-
 }

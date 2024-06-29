@@ -163,19 +163,17 @@
                 </div>
             </div>
             <div class="row mt-5">
-                <?php
-            for ($i = 0; $i < 4; $i++) {
-            ?>
+                @forelse ($lotteries as $lottery)
                 <div class="col-6 col-md-3 mb-5">
                     <div class="card bg-theme-secondary position-relative">
                         <div class="position-absolute"
                             style="top:-25px; width: 80%; left: 50%; transform: translateX(-50%);">
-                            <div class="bg-light rounded-pill text-center py-1 text-dark fs-7 fw-bold shadow">Draw
-                                Monday 10pm</div>
+                            <div class="bg-light rounded-pill text-center py-1 text-dark fs-7 fw-bold shadow">
+                                {{ $lottery->time }}</div>
                         </div>
-                        <img src="{{ asset('assets/img/games/1.webp') }}" alt="Game Image" width="100%">
+                        <img src="{{ asset('lottery/' . $lottery->picture) }}" alt="Game Image" width="100%">
                         <div class="card-body text-white ">
-                            <h4 class="text-center fs-6">Win a Ninja 12in1 Multicooker</h4>
+                            <h4 class="text-center fs-6">{{ $lottery->title }}</h4>
                             <small class="text-start" style="font-size: 12px;">25% Sold</small>
                             <div class="progress-bar bg-dark poisition-relative">
                                 <div class="poisition-relative">
@@ -186,13 +184,17 @@
                                 </div>
                             </div>
                             <div class="buttons mt-4">
-                                <a href="#" class="btn btn-sm btn-md-lg bg-gradient-theme px-3 fw-bold w-100">Enter
+                                <a href="#"
+                                    class="btn btn-sm btn-md-lg bg-gradient-theme px-3 fw-bold w-100">Enter
                                     now</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <?php } ?>
+                @empty
+                <h3 class="text-center text-white">No Lottery</h3>
+                @endforelse
+
             </div>
 
         </div>
