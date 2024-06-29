@@ -27,8 +27,8 @@
                                         class="form-control  bg-dark text-white" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="provinec" class="text-white">Provinec</label>
-                                    <input type="text" name="provinec" id="provinec"
+                                    <label for="province" class="text-white">Province</label>
+                                    <input type="text" name="province" id="province"
                                         class="form-control  bg-dark text-white" required>
                                 </div>
                                 <div class="form-group">

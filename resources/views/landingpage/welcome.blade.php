@@ -90,44 +90,6 @@
         </div>
     </section>
 
-    <section class="bg-theme-dark py-4 d-none d-md-block">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card bg-theme-secondary">
-                        <div class="card-body">
-                            <img src="{{ asset('assets/img/review.png') }}" alt="TrustPoilot" width="100%">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-theme-dark py-2">
-        <div class="container mt-5">
-            <div class="card bg-theme-secondary">
-                <div class="card-body">
-                    <div class="d-md-flex justify-content-between align-items-center">
-                        <img src="{{ asset('assets/img/trust.svg') }}" alt=""
-                            class="w-100 mb-4 d-block d-md-none">
-                        <h3 class="text-white mb-3 text-center fs-6 fs-md-2 mb-md-0">Supported payment options</h3>
-                        <ul class="mb-0 list-unstyled mb-3 mb-md-0 d-flex justify-content-start align-items-center gap-2">
-                            <li><img src="{{ asset('assets/img/cards/Visa.svg') }}" alt="Payment" width="40"></li>
-                            <li><img src="{{ asset('assets/img/cards/Mastercard.svg') }}" alt="Payment" width="40">
-                            </li>
-                            <li><img src="{{ asset('assets/img/cards/ApplePay.svg') }}" alt="Payment" width="40">
-                            </li>
-                            <li><img src="{{ asset('assets/img/cards/PayPal.svg') }}" alt="Payment" width="40">
-                            </li>
-                        </ul>
-                        <a href="#" class="btn bg-gradient-theme px-3 fw-bold d-none d-md-block">SIGN UP</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="bg-theme-dark py-5 d-none d-md-block">
         <div class="container">
             <div class="card bg-theme-secondary text-white">

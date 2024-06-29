@@ -1,10 +1,5 @@
 <footer class="bg-dark">
     <div class="container py-4">
-        <div class="d-flex justify-content-center align-items-center py-2 gap-3">
-            <img src="{{ asset('assets/img/googleplay.svg') }}" alt="Play Store" class="download-button" width="100">
-            <img src="{{ asset('assets/img/appstore.svg') }}" alt="App Store" class="download-button" width="100">
-        </div>
-        <hr class="text-white my-5">
         <div class="d-md-flex justify-content-between align-items-center">
             <div class="text-center mb-4 mb-md-0">
                 <img src="{{ asset('assets/img/trust.svg') }}" alt="">
@@ -30,44 +25,6 @@
             </div>
         </div>
         <hr class="text-white my-5">
-        <div class="row justify-content-center">
-            <div class="col-md-3">
-                <div class="text-center text-md-start mb-5">
-                    <img src="{{ asset('assets/img/logo-light.svg') }}" alt="Logo" width="200">
-                </div>
-            </div>
-            <div class="col-6 col-md-3 text-center text-md-start">
-                <h4 class="text-white my-4">Website</h4>
-                <ul class="list-unstyled mb-0 text-white">
-                    <li>My Raffles</li>
-                    <li>News & Blog</li>
-                    <li>Account</li>
-                    <li>Responsible Play</li>
-                    <li>Winners Gallery</li>
-                </ul>
-            </div>
-            <div class="col-6 col-md-3 text-center text-md-start">
-                <h4 class="text-white my-4">Categories</h4>
-                <ul class="list-unstyled mb-0 text-white">
-                    <li>My Raffles</li>
-                    <li>News & Blog</li>
-                    <li>Account</li>
-                    <li>Responsible Play</li>
-                    <li>Winners Gallery</li>
-                </ul>
-            </div>
-            <div class="col-6 col-md-3 text-center text-md-start">
-                <h4 class="text-white my-4">Contact</h4>
-                <ul class="list-unstyled mb-0 text-white">
-                    <li>My Raffles</li>
-                    <li>News & Blog</li>
-                    <li>Account</li>
-                    <li>Responsible Play</li>
-                    <li>Winners Gallery</li>
-                </ul>
-            </div>
-        </div>
-        <hr class="text-white my-5">
         <div class="d-md-flex text-center text-md-start justify-content-between align-items-center">
             <p class="text-white mb-0">Copyright © 2024. All rights reserved. </p>
             <div class="privacy d-flex gap-4 justify-content-center justify-content-md-betwen">
@@ -77,113 +34,6 @@
         </div>
     </div>
 </footer>
-
-<!-- Login Modal -->
-<div class="modal" id="authModal">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-
-            <!-- Modal body -->
-            <div class="modal-body bg-theme-dark">
-                <div class="d-flex justify-content-end">
-                    <button type="button" class="btn-close bg-white text-white" data-bs-dismiss="modal"></button>
-                </div>
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs border-0 d-flex justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link bg-theme-dark text-theme active" data-bs-toggle="tab" href="#login">Sign
-                            in</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link bg-theme-dark text-theme" data-bs-toggle="tab" href="#register">Sign Up</a>
-                    </li>
-                </ul>
-
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div class="tab-pane container active" id="login">
-                        <h3 class="text-center my-4 text-white">Sign in</h3>
-                        <form action="#" method="POST">
-                            <div class="form-group mb-3">
-                                <label for="email" class="text-white mb-2">Enter your Email</label>
-                                <input type="email" name="email" id="email" placeholder="your email"
-                                    class="form-control bg-dark text-white bg-theme-dark">
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="text-white mb-2">Enter your Password</label>
-                                <input type="password" name="password" id="password" placeholder="your password"
-                                    class="form-control bg-dark text-white bg-theme-dark">
-                            </div>
-                            <div class="form-group text-end my-3">
-                                <a href="#" class="text-theme text-decoration-none ">Forgot Password?</a>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit"
-                                    class="btn bg-gradient-theme text-dark py-2 fw-bold fs-5 w-100">Sign In</button>
-                            </div>
-                        </form>
-
-                        <p class="text-center my-4 text-white">Sign in via social account</p>
-                        <div class="d-flex flex-column gap-2">
-                            <button
-                                class="bg-theme-dark border-1 py-2 border-white outline-0 d-flex justify-content-center gap-2">
-                                <img src="/{{ asset('assets/img/google.svg') }}" alt="Google Login">
-                                <p class="mb-0 text-white">Sign in with Google</p>
-                            </button>
-                            <button
-                                class="bg-theme-dark border-1 py-2 border-white outline-0 d-flex justify-content-center gap-2">
-                                <img src="/{{ asset('assets/img/facebook.svg') }}" alt="Facebook Login">
-                                <p class="mb-0 text-white">Sign in with Facebook</p>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="tab-pane container" id="register">
-                        <h3 class="text-center my-4 text-white">Sign up</h3>
-                        <form action="#" method="POST">
-                            <div class="form-group mb-3">
-                                <label for="name" class="text-white mb-2">Enter your Full Name</label>
-                                <input type="text" name="name" id="name" placeholder="your Full Name"
-                                    class="form-control bg-dark text-white bg-theme-dark">
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="email" class="text-white mb-2">Enter your Email</label>
-                                <input type="email" name="email" id="email" placeholder="your email"
-                                    class="form-control bg-dark text-white bg-theme-dark">
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="text-white mb-2">Enter your Password</label>
-                                <input type="password" name="password" id="password" placeholder="your password"
-                                    class="form-control bg-dark text-white bg-theme-dark">
-                            </div>
-                            <div class="form-group text-end my-3">
-                                <a href="#" class="text-theme text-decoration-none ">Forgot Password?</a>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit"
-                                    class="btn bg-gradient-theme text-dark py-2 fw-bold fs-5 w-100">Sign In</button>
-                            </div>
-                        </form>
-
-                        <p class="text-center my-4 text-white">Sign up via social account</p>
-                        <div class="d-flex flex-column gap-2">
-                            <button
-                                class="bg-theme-dark border-1 py-2 border-white outline-0 d-flex justify-content-center gap-2">
-                                <img src="/{{ asset('assets/img/google.svg') }}" alt="Google Login">
-                                <p class="mb-0 text-white">Sign up with Google</p>
-                            </button>
-                            <button
-                                class="bg-theme-dark border-1 py-2 border-white outline-0 d-flex justify-content-center gap-2">
-                                <img src="/{{ asset('assets/img/facebook.svg') }}" alt="Facebook Login">
-                                <p class="mb-0 text-white">Sign up with Facebook</p>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
 
 <!-- side menu -->
 <div class="offcanvas offcanvas-end" id="sidemenu">
