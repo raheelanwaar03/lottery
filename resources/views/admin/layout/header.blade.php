@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="{{ asset('admin/asset/fonts/material.css') }}"><!-- [Template CSS Files] -->
     <link rel="stylesheet" href="{{ asset('admin/asset/css/style.css') }}" id="main-style-link">
     <link rel="stylesheet" href="{{ asset('admin/asset/css/style-preset.css') }}">
+
+    <x-alert />
+
 </head><!-- [Head] end --><!-- [Body] Start -->
 
 <body data-pc-preset="preset-1" data-pc-sidebar-caption="true" data-pc-layout="vertical" data-pc-direction="ltr"
@@ -67,38 +70,27 @@
                                     <use xlink:href="#custom-user"></use>
                                 </svg> </span><span class="pc-mtext">Users</span></a>
                     </li>
-                    <li class="pc-item pc-caption"><label>UI Components</label> <svg class="pc-icon">
-                            <use xlink:href="#custom-box-1"></use>
-                        </svg></li>
-                    <li class="pc-item"><a href="../elements/bc_alert.html" class="pc-link" target="_blank"><span
-                                class="pc-micon"><svg class="pc-icon">
-                                    <use xlink:href="#custom-box-1"></use>
-                                </svg> </span><span class="pc-mtext">Components</span></a></li>
-                    <li class="pc-item"><a href="../elements/animation.html" class="pc-link"><span
-                                class="pc-micon"><svg class="pc-icon">
-                                    <use xlink:href="#custom-flag"></use>
-                                </svg> </span><span class="pc-mtext">Animation</span></a></li>
                     <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link"><span class="pc-micon"><svg
                                     class="pc-icon">
                                     <use xlink:href="#custom-mouse-circle"></use>
-                                </svg> </span><span class="pc-mtext">Icons</span><span class="pc-arrow"><i
+                                </svg> </span><span class="pc-mtext">Lotteries</span><span class="pc-arrow"><i
                                     data-feather="chevron-right"></i></span></a>
                         <ul class="pc-submenu">
-                            <li class="pc-item"><a class="pc-link" href="../elements/icon-feather.html">Feather</a>
-                            </li>
-                            <li class="pc-item"><a class="pc-link" href="../elements/icon-fontawesome.html">Font
-                                    Awesome 5</a></li>
-                            <li class="pc-item"><a class="pc-link" href="../elements/icon-material.html">Material</a>
-                            </li>
-                            <li class="pc-item"><a class="pc-link" href="../elements/icon-tabler.html">Tabler</a>
-                            </li>
-                            <li class="pc-item"><a class="pc-link" href="../elements/icon-phosphor.html">Phosphor</a>
-                            </li>
-                            <li class="pc-item"><a class="pc-link" href="../elements/icon-custom.html">Custom</a>
+                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.Add.Lottery') }}">Add</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="pc-item pc-caption"><label>Forms</label> <svg class="pc-icon">
+                    {{-- <li class="pc-item"><a href="" class="pc-link" target="_blank"><span
+                                class="pc-micon"><svg class="pc-icon">
+                                    <use xlink:href="#custom-box-1"></use>
+                                </svg> </span><span class="pc-mtext">Components</span></a>
+                    </li>
+                    <li class="pc-item"><a href="../elements/animation.html" class="pc-link"><span
+                                class="pc-micon"><svg class="pc-icon">
+                                    <use xlink:href="#custom-flag"></use>
+                                </svg> </span><span class="pc-mtext">Animation</span></a>
+                    </li> --}}
+                    {{-- <li class="pc-item pc-caption"><label>Forms</label> <svg class="pc-icon">
                             <use xlink:href="#custom-element-plus"></use>
                         </svg></li>
                     <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link"><span class="pc-micon"><svg
@@ -541,7 +533,8 @@
                     <li class="pc-item"><a href="../other/sample-page.html" class="pc-link"><span
                                 class="pc-micon"><svg class="pc-icon">
                                     <use xlink:href="#custom-notification-status"></use>
-                                </svg> </span><span class="pc-mtext">Sample page</span></a></li>
+                                </svg> </span><span class="pc-mtext">Sample page</span></a>
+                    </li> --}}
                 </ul>
             </div>
         </div>
