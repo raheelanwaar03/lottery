@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('role')->default('user');
             $table->string('user_id');
             $table->string('country');
-            $table->string('provinec');
+            $table->string('province');
             $table->string('city');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
