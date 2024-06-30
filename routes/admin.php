@@ -11,6 +11,7 @@ Route::name('Admin.')->prefix('Admin/')->middleware('auth','admin')->group(funct
     // Add Lotteries
     Route::get('/Add/Lottery',[AdminLotteryController::class,'add'])->name('Add.Lottery');
     Route::post('/Store/Lottery',[AdminLotteryController::class,'store'])->name('Store.Lottery');
+    Route::get('/All/Lottery',[AdminLotteryController::class,'all'])->name('All.Lottery');
 
 
 });

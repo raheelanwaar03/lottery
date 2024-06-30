@@ -26,7 +26,12 @@ class AdminLotteryController extends Controller
         $lottery->picture = $imageName;
         $lottery->save();
         return redirect()->back()->with('success','New Lottery Added');
+    }
 
+    public function all()
+    {
+        $lotteries = Lottery::get();
+        return view('admin.lottery.all',compact('lotteries'));
     }
 
 
