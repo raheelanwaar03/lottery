@@ -5,11 +5,11 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/',[LandingPageController::class,'welcome'])->name('Welcome');
-Route::get('/Cart',[LandingPageController::class,'cart'])->name('Cart');
-Route::get('/Details',[LandingPageController::class,'details'])->name('Details');
-Route::get('/AboutUs',[LandingPageController::class,'aboutUs'])->name('AboutUs');
-Route::get('/Product/Detail',[LandingPageController::class,'detail'])->name('detail');
+Route::get('/', [LandingPageController::class, 'welcome'])->name('Welcome');
+Route::get('/Cart', [LandingPageController::class, 'cart'])->name('Cart');
+Route::get('/Details', [LandingPageController::class, 'details'])->name('Details');
+Route::get('/AboutUs', [LandingPageController::class, 'aboutUs'])->name('AboutUs');
+Route::get('/Product/Detail/{id}', [LandingPageController::class, 'detail'])->name('Product.Details');
 
 
 Route::middleware('auth')->group(function () {
@@ -18,6 +18,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
-require __DIR__.'/user.php';
-require __DIR__.'/admin.php';
+require __DIR__ . '/auth.php';
+require __DIR__ . '/user.php';
+require __DIR__ . '/admin.php';

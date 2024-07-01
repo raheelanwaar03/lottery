@@ -29,8 +29,9 @@ class LandingPageController extends Controller
         return view('landingpage.aboutUs');
     }
 
-    public function detail()
+    public function detail($id)
     {
-        return view('landingpage.details');
+        $lottery = Lottery::find($id);
+        return view('landingpage.details', compact('lottery'));
     }
 }
