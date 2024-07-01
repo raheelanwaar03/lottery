@@ -23,7 +23,7 @@
             <span class="badge bg-dark mt-5"><img src="{{ asset('assets/img/crown.svg') }}" alt="Crown"> JACKPOT
                 DRAW</span>
             <h1 class="text-white responsive-heading fw-bold">WIN A MERCEDES GLC AMG <br> LINE + PRIZE BUNDLE!</h1>
-            <h1 class="text-gradient-theme mb-4">£0.50</h1>
+            <h1 class="text-gradient-theme mb-4">100 Rs.</h1>
             <a href="#" class="btn fw-bold text-uppercase bg-gradient-theme px-5">Enter
                 now</a>
         </div>
@@ -39,7 +39,7 @@
                                 width="100%">
                             <div class="card bg-theme-dark info-card-container">
                                 <div class="card-body">
-                                    <h2>£20k Ninja Instant Win Raffle</h2>
+                                    <h2>20k Rs. Ninja Instant Win Raffle</h2>
                                     <div class="progress w-100 bg-dark" style="height: 10px;">
                                         <div class="progress bg-theme w-75" style="height: 10px;"></div>
                                     </div>
@@ -54,7 +54,7 @@
                                 width="100%">
                             <div class="card bg-theme-dark info-card-container">
                                 <div class="card-body">
-                                    <h2>£20k Ninja Instant Win Raffle</h2>
+                                    <h2>20k Rs. Ninja Instant Win Raffle</h2>
                                     <div class="progress w-100 bg-dark" style="height: 10px;">
                                         <div class="progress bg-theme w-75" style="height: 10px;"></div>
                                     </div>
@@ -69,7 +69,7 @@
                                 width="100%">
                             <div class="card bg-theme-dark info-card-container">
                                 <div class="card-body">
-                                    <h2>£20k Ninja Instant Win Raffle</h2>
+                                    <h2>20k Rs. Ninja Instant Win Raffle</h2>
                                     <div class="progress w-100 bg-dark" style="height: 10px;">
                                         <div class="progress bg-theme w-75" style="height: 10px;"></div>
                                     </div>
@@ -97,7 +97,7 @@
                     <div class="d-md-flex">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="left-text text-center text-md-start" style="width: 300px">
-                                <h4>£ 16.4 Million</h4>
+                                <h4>16.4 Million Pkr</h4>
                                 <h6>won in prizes so far</h6>
                             </div>
                         </div>
@@ -172,9 +172,9 @@
                                 {{ $lottery->time }}</div>
                         </div>
                         <img src="{{ asset('lottery/' . $lottery->picture) }}" alt="Game Image" width="100%">
-                        <div class="card-body text-white ">
+                        <div class="card-body text-white">
                             <h4 class="text-center fs-6">{{ $lottery->title }}</h4>
-                            <small class="text-start" style="font-size: 12px;">25% Sold</small>
+                            <small class="text-start" style="font-size: 12px;">{{ $lottery->time }}</small>
                             <div class="progress-bar bg-dark poisition-relative">
                                 <div class="poisition-relative">
                                     <div class="bg-theme" style="width: 25%; padding: 2px"></div>
