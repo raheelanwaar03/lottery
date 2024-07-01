@@ -153,49 +153,47 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex align-items-center py-3 gap-3 overflow-auto">
+                {{-- <div class="d-flex align-items-center py-3 gap-3 overflow-auto">
                     <div class="badge bg-dark">All</div>
                     <div class="badge bg-dark">Cash</div>
                     <div class="badge bg-dark">Tech</div>
                     <div class="badge bg-dark">Car</div>
                     <div class="badge bg-dark">Holiday</div>
                     <div class="badge bg-dark">Other</div>
-                </div>
+                </div> --}}
             </div>
             <div class="row mt-5">
                 @forelse ($lotteries as $lottery)
-                <div class="col-6 col-md-3 mb-5">
-                    <div class="card bg-theme-secondary position-relative">
-                        <div class="position-absolute"
-                            style="top:-25px; width: 80%; left: 50%; transform: translateX(-50%);">
-                            <div class="bg-light rounded-pill text-center py-1 text-dark fs-7 fw-bold shadow">
-                                {{ $lottery->time }}</div>
-                        </div>
-                        <img src="{{ asset('lottery/' . $lottery->picture) }}" alt="Game Image" width="100%">
-                        <div class="card-body text-white">
-                            <h4 class="text-center fs-6">{{ $lottery->title }}</h4>
-                            <small class="text-start" style="font-size: 12px;">{{ $lottery->time }}</small>
-                            <div class="progress-bar bg-dark poisition-relative">
-                                <div class="poisition-relative">
-                                    <div class="bg-theme" style="width: 25%; padding: 2px"></div>
-                                    <div class="position-absolute" style="bottom: 61px; left: 60px">
-                                        <i class="bi bi-dot d-none d-md-block text-warning fs-1"></i>
-                                    </div>
+                    <div class="col-6 col-md-3 mb-5">
+                        <div class="card bg-theme-secondary position-relative">
+                            <div class="position-absolute"
+                                style="top:-20px; width: 80%; left: 50%; transform: translateX(-50%);">
+                                <div
+                                    class="bg-danger text-white rounded-pill text-center py-1 text-dark fs-7 fw-bold shadow py-2">
+                                    <span style="font-size: 20px;"><i class="bi bi-stopwatch"></i>
+                                        {{ $lottery->time }}
+                                    </span>
+                                </div>
+                            </div>
+                            <img src="{{ asset('lottery/' . $lottery->picture) }}" alt="Game Image" width="100%">
+                            <div class="card-body text-white">
+                                <h4 class="text-center fs-6">{{ $lottery->title }}</h4>
+                                <div class="text-center">
+                                    <button class="btn btn-warning">{{ $lottery->price }} Rs.</button>
                                 </div>
                             </div>
                             <div class="buttons mt-4">
-                                <a href="#"
-                                    class="btn btn-sm btn-md-lg bg-gradient-theme px-3 fw-bold w-100">Enter
+                                <a href="#" class="btn btn-sm btn-md-lg bg-gradient-theme px-3 fw-bold w-100">Enter
                                     now</a>
                             </div>
                         </div>
                     </div>
-                </div>
                 @empty
-                <h3 class="text-center text-white">No Lottery</h3>
+                    <h3 class="text-center text-white">No Lottery</h3>
                 @endforelse
-
             </div>
+
+        </div>
 
         </div>
     </section>
