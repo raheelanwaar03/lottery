@@ -10,7 +10,7 @@
             <div class="form-group">
                 <button class="btn bg-gradient-theme mt-4 py-3 fw-bold w-100">
                     <div class="d-flex justify-content-between">
-                        <h3 class="mb-0">Add to Cart</h3>
+                        <h3 class="mb-0">Enter Now</h3>
                         <h3 class="mb-0">{{ $lottery->price }} Rs.</h3>
                     </div>
                 </button>
@@ -162,7 +162,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <button class="btn bg-gradient-theme mt-4 py-3 fw-bold w-100">Add Tickets to Cart
+                                    <button class="btn btn-warning mt-4 py-3 fw-bold w-100">Enter Now
                                         {{ $lottery->price }} Rs.</button>
                                 </div>
                             </div>
