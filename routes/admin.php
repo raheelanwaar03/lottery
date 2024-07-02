@@ -20,5 +20,6 @@ Route::name('Admin.')->prefix('Admin/')->middleware('auth', 'admin')->group(func
     Route::post('Store/Coin', [AdminCoinController::class, 'store'])->name('Store.Coins');
     // Store Products
     Route::get('Add/Product', [StoreController::class, 'addProduct'])->name('Add.Product');
-    Route::get('Store/Product', [StoreController::class, 'storeProduct'])->name('Store.Product');
+    Route::get('All/Product', [StoreController::class, 'allProduct'])->name('All.Products');
+    Route::post('Store/Product', [StoreController::class, 'storeProduct'])->name('Store.Product');
 });

@@ -107,6 +107,7 @@
                                     data-feather="chevron-right"></i></span></a>
                         <ul class="pc-submenu">
                             <li class="pc-item"><a class="pc-link" href="{{ route('Admin.Add.Product') }}">Add Product</a></li>
+                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.All.Products') }}">All Product</a></li>
                         </ul>
                     </li>
                     {{-- <li class="pc-item pc-caption"><label>UI Components</label> <svg class="pc-icon">
