@@ -66,9 +66,9 @@
                     <li class="pc-item pc-caption"><label>Admin Panel</label> <svg class="pc-icon">
                             <use xlink:href="#custom-layer"></use>
                         </svg></li>
-                    <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link"><span class="pc-micon"><svg
-                                    class="pc-icon">
-                                    <use xlink:href="#custom-layer"></use>
+                    <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link"><span class="pc-micon">
+                                <svg class="pc-icon">
+                                    <use xlink:href="#custom-user"></use>
                                 </svg> </span><span class="pc-mtext">Users</span> <span class="pc-arrow"><i
                                     data-feather="chevron-right"></i></span></a>
                         <ul class="pc-submenu">
@@ -76,10 +76,12 @@
                                     href="https://ableproadmin.com/admins/course-dashboard.html">All Users</a></li>
                         </ul>
                     </li>
-                    <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link"><span class="pc-micon"><svg
-                                    class="pc-icon">
-                                    <use xlink:href="#custom-user"></use>
-                                </svg> </span><span class="pc-mtext">Lotteries</span> <span class="pc-arrow"><i
+                    <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link">
+                            <span class="pc-micon">
+                                <svg class="pc-icon">
+                                    <use xlink:href="#custom-layer"></use>
+                                </svg>
+                            </span><span class="pc-mtext">Lotteries</span> <span class="pc-arrow"><i
                                     data-feather="chevron-right"></i></span></a>
                         <ul class="pc-submenu">
                             <li class="pc-item"><a class="pc-link" href="{{ route('Admin.Add.Lottery') }}">ADD</a></li>
@@ -87,50 +89,27 @@
                             </li>
                         </ul>
                     </li>
-                    {{-- <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link"><span class="pc-micon"><svg
+                    <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link"><span class="pc-micon"><svg
                                     class="pc-icon">
                                     <use xlink:href="#custom-24-support"></use>
-                                </svg> </span><span class="pc-mtext">Helpdesk</span><span class="pc-arrow"><i
+                                </svg> </span><span class="pc-mtext">Coin</span><span class="pc-arrow"><i
                                     data-feather="chevron-right"></i></span></a>
                         <ul class="pc-submenu">
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/admins/helpdesk-dashboard.html">Dashboard</a></li>
-                            <li class="pc-item pc-hasmenu"><a class="pc-link" href="#!">Ticket<span
-                                        class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                                <ul class="pc-submenu">
-                                    <li class="pc-item"><a class="pc-link"
-                                            href="https://ableproadmin.com/admins/helpdesk-create-ticket.html">Create</a>
-                                    </li>
-                                    <li class="pc-item"><a class="pc-link"
-                                            href="https://ableproadmin.com/admins/helpdesk-ticket.html">List</a></li>
-                                    <li class="pc-item"><a class="pc-link"
-                                            href="https://ableproadmin.com/admins/helpdesk-ticket-details.html">Details</a>
-                                    </li>
-                                </ul>
+                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.Add.Coins') }}">Add
+                                    Coin</a>
                             </li>
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/admins/helpdesk-customer.html">Customer</a></li>
                         </ul>
                     </li>
                     <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link"><span class="pc-micon"><svg
                                     class="pc-icon">
                                     <use xlink:href="#custom-bill"></use>
-                                </svg> </span><span class="pc-mtext">Invoice</span><span class="pc-arrow"><i
+                                </svg> </span><span class="pc-mtext">Store</span><span class="pc-arrow"><i
                                     data-feather="chevron-right"></i></span></a>
                         <ul class="pc-submenu">
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/admins/invoice-dashboard.html">Dashboard</a></li>
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/admins/invoice-create.html">Create</a></li>
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/admins/invoice-view.html">Details</a></li>
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/admins/invoice-list.html">List</a></li>
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/admins/invoice-edit.html">Edit</a></li>
+                            <li class="pc-item"><a class="pc-link" href="#">Add Product</a></li>
                         </ul>
                     </li>
-                    <li class="pc-item pc-caption"><label>UI Components</label> <svg class="pc-icon">
+                    {{-- <li class="pc-item pc-caption"><label>UI Components</label> <svg class="pc-icon">
                             <use xlink:href="#custom-box-1"></use>
                         </svg></li>
                     <li class="pc-item"><a href="https://ableproadmin.com/elements/bc_alert.html" class="pc-link"
