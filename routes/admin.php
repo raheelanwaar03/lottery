@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\AdminCoinController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\AdminLotteryController;
+use App\Http\Controllers\admin\StoreController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -17,4 +18,7 @@ Route::name('Admin.')->prefix('Admin/')->middleware('auth', 'admin')->group(func
     Route::get('Add/Coin', [AdminCoinController::class, 'add'])->name('Add.Coins');
     Route::get('All/Coin', [AdminCoinController::class, 'all'])->name('All.Coins');
     Route::post('Store/Coin', [AdminCoinController::class, 'store'])->name('Store.Coins');
+    // Store Products
+    Route::get('Add/Product', [StoreController::class, 'addProduct'])->name('Add.Product');
+    Route::get('Store/Product', [StoreController::class, 'storeProduct'])->name('Store.Product');
 });
