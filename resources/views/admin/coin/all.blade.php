@@ -10,12 +10,12 @@
                             <ul class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{ route('Admin.Dashboard') }}">Home</a></li>
                                 <li class="breadcrumb-item" aria-current="page">Admin dashbard</li>
-                                <li class="breadcrumb-item" aria-current="page">Lottery</li>
+                                <li class="breadcrumb-item" aria-current="page">Coins</li>
                             </ul>
                         </div>
                         <div class="col-md-12">
                             <div class="d-flex justify-content-between align-items-center">
-                                <h2 class="mb-0">All Lotteries</h2>
+                                <h2 class="mb-0">All Coins</h2>
                                 <a href="{{ route('Admin.Add.Coins') }}" class="btn btn-primary">Add New</a>
                             </div>
                         </div>
@@ -42,8 +42,10 @@
                                             <td>{{ $item->qty }}</td>
                                             <td>{{ date('d-m-Y', strtotime($item->created_at)) }}</td>
                                             <td>
-                                                <a href="#" class="btn btn-sm btn-info">Edit</a>
-                                                <a href="#" class="btn btn-sm btn-danger">Del</a>
+                                                <a href="{{ route('Admin.Edit.Coin', $item->id) }}"
+                                                    class="btn btn-sm btn-info">Edit</a>
+                                                <a href="{{ route('Admin.Delete.Coin', $item->id) }}"
+                                                    class="btn btn-sm btn-danger">Del</a>
                                             </td>
                                         </tr>
                                     @empty

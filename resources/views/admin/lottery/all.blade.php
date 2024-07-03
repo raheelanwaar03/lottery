@@ -44,13 +44,15 @@
                                             <td>{{ $item->price }}</td>
                                             <td>{{ $item->time }}</td>
                                             <td>
-                                                <img src="{{ asset('lottery/' . $item->picture) }}" height="70px"
-                                                    width="70px" class="img-fluid img-thumbnail" alt="">
+                                                <img src="{{ asset('lottery/' . $item->picture) }}" class="img-fluid image-zoom-sm" 
+                                                style="width: 50px;height: 50px;border-radius: 50%;">
                                             </td>
                                             <td>{{ $item->created_at }}</td>
                                             <td>
-                                                <a href="#" class="btn btn-sm btn-info">Edit</a>
-                                                <a href="#" class="btn btn-sm btn-danger">Del</a>
+                                                <a href="{{ route('Admin.Edit.Lottery', $item->id) }}"
+                                                    class="btn btn-sm btn-info">Edit</a>
+                                                <a href="{{ route('Admin.Delete.Lottery', $item->id) }}"
+                                                    class="btn btn-sm btn-danger">Del</a>
                                             </td>
                                         </tr>
                                     @empty

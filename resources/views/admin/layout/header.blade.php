@@ -84,8 +84,8 @@
                             </span><span class="pc-mtext">Lotteries</span> <span class="pc-arrow"><i
                                     data-feather="chevron-right"></i></span></a>
                         <ul class="pc-submenu">
-                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.Add.Lottery') }}">ADD</a></li>
-                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.All.Lottery') }}">ALL</a>
+                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.Add.Lottery') }}">Add</a></li>
+                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.All.Lottery') }}">All</a>
                             </li>
                         </ul>
                     </li>
@@ -95,9 +95,8 @@
                                 </svg> </span><span class="pc-mtext">Coin</span><span class="pc-arrow"><i
                                     data-feather="chevron-right"></i></span></a>
                         <ul class="pc-submenu">
-                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.Add.Coins') }}">Add
-                                    Coin</a>
-                            </li>
+                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.Add.Coins') }}">Add Coin</a></li>
+                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.All.Coins') }}">All Ads</a></li>
                         </ul>
                     </li>
                     <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link"><span class="pc-micon"><svg
@@ -106,8 +105,10 @@
                                 </svg> </span><span class="pc-mtext">Store</span><span class="pc-arrow"><i
                                     data-feather="chevron-right"></i></span></a>
                         <ul class="pc-submenu">
-                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.Add.Product') }}">Add Product</a></li>
-                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.All.Products') }}">All Product</a></li>
+                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.Add.Product') }}">Add
+                                    Product</a></li>
+                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.All.Products') }}">All
+                                    Product</a></li>
                         </ul>
                     </li>
                     {{-- <li class="pc-item pc-caption"><label>UI Components</label> <svg class="pc-icon">

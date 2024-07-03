@@ -42,13 +42,15 @@
                                             <td>{{ $item->title }}</td>
                                             <td>{{ $item->coins }}</td>
                                             <td>
-                                                <img src="{{ asset('products/' . $item->image) }}"
+                                                <img src="{{ asset('product/' . $item->image) }}" class="image-zoom-sm"
                                                     style="width: 50px;height: 50px;border-radius: 50%;">
                                             </td>
                                             <td>{{ date('d-m-Y', strtotime($item->created_at)) }}</td>
                                             <td>
-                                                <a href="#" class="btn btn-sm btn-info">Edit</a>
-                                                <a href="#" class="btn btn-sm btn-danger">Del</a>
+                                                <a href="{{ route('Admin.Edit.Product', $item->id) }}"
+                                                    class="btn btn-sm btn-info">Edit</a>
+                                                <a href="{{ route('Admin.Delete.Product', $item->id) }}"
+                                                    class="btn btn-sm btn-danger">Del</a>
                                             </td>
                                         </tr>
                                     @empty
