@@ -14,6 +14,10 @@
     background-color: var(--primary-color);
 }
 
+.border-theme {
+    border-color: var(--primary-color);
+}
+
 .bg-theme-secondary {
     background-color: var(--secondary-color);
 }
@@ -180,4 +184,21 @@
     background-size: 20px 20px;
     padding-left: 30px;
     margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 25px;
+    left: -2px;
+    background-color: #070b1a;
+    color: white;
+    padding-left: 30px;
+    padding-right: 10px;
+    border-end-end-radius: 20px;
+    border-top-right-radius: 20px;
+
 }
