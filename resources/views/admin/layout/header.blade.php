@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Phoenixcoded">
-    <link rel="icon" href="{{ asset('assets/img/logo.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('logo/logo.svg') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('admin/asset/fonts/inter/inter.css') }}" id="main-font-link">
     <link rel="stylesheet" href="{{ asset('admin/asset/fonts/phosphor/duotone/style.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/asset/fonts/tabler-icons.min.css') }}">
@@ -34,8 +34,7 @@
         <div class="navbar-wrapper">
             <div class="m-header"><a href="index.html"
                     class="b-brand text-primary"><!-- ========   Change your logo from here   ============ --> <img
-                        src="https://ableproadmin.com/assets/images/logo-dark.svg') }}" class="img-fluid logo-lg"
-                        alt="logo">
+                        src="{{ asset('logo/logo.png') }}" class="img-fluid logo-lg">
                     <span class="badge bg-light-success rounded-pill ms-2 theme-version">v9.4.1</span></a></div>
             <div class="navbar-content">
                 <div class="card pc-user-card">
@@ -95,8 +94,10 @@
                                 </svg> </span><span class="pc-mtext">Coin</span><span class="pc-arrow"><i
                                     data-feather="chevron-right"></i></span></a>
                         <ul class="pc-submenu">
-                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.Add.Coins') }}">Add Coin</a></li>
-                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.All.Coins') }}">All Ads</a></li>
+                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.Add.Coins') }}">Add
+                                    Coin</a></li>
+                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.All.Coins') }}">All Ads</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link"><span class="pc-micon"><svg
