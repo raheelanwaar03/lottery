@@ -30,7 +30,7 @@
                                     <p class="text-muted mb-0">Total Users</p>
                                 </div>
                                 <div class="col-4 text-end">
-                                    {{-- icon --}}
+                                    <i class="fa fa-users" style="font-size:28px"></i>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                                     <p class="text-muted mb-0">Products</p>
                                 </div>
                                 <div class="col-4 text-end">
-                                    {{-- icon --}}
+                                    <i class="fa fa-th" style="font-size: 28px;"></i>
                                 </div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                                     <p class="text-muted mb-0">Lotteries</p>
                                 </div>
                                 <div class="col-4 text-end">
-                                    {{-- icon --}}
+                                    <p style="font-size: 28px">$</p>
                                 </div>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                                     <p class="text-muted mb-0">Coin Ads</p>
                                 </div>
                                 <div class="col-4 text-end">
-                                    {{-- icon --}}
+                                    <p style="font-size: 28px">$</p>
                                 </div>
                             </div>
                         </div>
