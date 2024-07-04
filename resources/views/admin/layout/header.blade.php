@@ -32,10 +32,11 @@
 
     <nav class="pc-sidebar">
         <div class="navbar-wrapper">
-            <div class="m-header"><a href="index.html"
-                    class="b-brand text-primary"><!-- ========   Change your logo from here   ============ --> <img
-                        src="{{ asset('logo/logo.png') }}" class="img-fluid logo-lg">
-                    <span class="badge bg-light-success rounded-pill ms-2 theme-version">v9.4.1</span></a></div>
+            <div class="m-header">
+                <a href="{{ route('Admin.Dashboard') }}" class="b-brand text-primary">
+                    <img src="{{ asset('logo/logo.svg') }}" alt="logo" class="img-fluid" style="height: 100px;width:100px">
+                </a>
+            </div>
             <div class="navbar-content">
                 <div class="card pc-user-card">
                     <div class="card-body">
