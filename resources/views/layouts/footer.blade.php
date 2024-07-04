@@ -87,7 +87,7 @@
                 </li>
                 <li>
                     <div style="padding-left:4px;background-color:#191d2e;border-radius: 5px;">
-                        <a href="#" class="text-decoration-none text-white">
+                        <a href="{{ route('User.Store') }}" class="text-decoration-none text-white">
                             <span class="pl-4 d-flex align-items-center">
                                 <i class="bi bi-bag" style="font-size:25px"></i>
                                 <p style="margin-left: 15px;margin-top:12px;font-size:15px">Store</p>
