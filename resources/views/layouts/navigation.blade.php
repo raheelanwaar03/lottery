@@ -5,6 +5,7 @@
     <title>{{ env('APP_NAME') }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{ asset('logo/Logo.svg') }}" type="image/x-icon">
     <link rel="icon" href="{{ asset('admin/asset/images/favicon.svg') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -32,7 +33,7 @@
                 <a href="{{ route('Welcome') }}">
                     <img src="{{ asset('logo/logo.png') }}" alt="Logo" class="logo me-md-4">
                 </a>
-                <ul class="list-unstyled d-none d-md-flex mb-0 d-flex justify-content-start align-items-center gap-4">
+                <ul class="list-unstyled d-none d-md-flex mb-0 d-flex justify-content-center align-items-center gap-4">
                     <li><a href="#" class="text-white text-decoration-none fw-bold">All competitions</a></li>
                     <li><a href="#" class="text-white text-decoration-none fw-bold">Charity</a></li>
                 </ul>
