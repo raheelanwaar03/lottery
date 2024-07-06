@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section('content')
     <div class="container-fluid bg-theme-secondary d-none d-md-block py-2">
         <div class="container d-block d-md-flex justify-content-between align-items-center">
@@ -23,11 +24,12 @@
             <span class="badge bg-dark mt-5"><img src="{{ asset('assets/img/crown.svg') }}" alt="Crown"> JACKPOT
                 DRAW</span>
             <h1 class="text-white responsive-heading fw-bold">WIN A MERCEDES GLC AMG <br> LINE + PRIZE BUNDLE!</h1>
-            <h1 class="text-gradient-theme mb-4">100 Rs.</h1>
+            <h1 class="text-gradient-theme mb-4">Pkr 500</h1>
             <a href="#" class="btn fw-bold text-uppercase bg-gradient-theme px-5">Enter
                 now</a>
         </div>
     </section>
+
 
     <section id="competition" class="bg-theme-dark py-5">
         <div class="container">
@@ -39,7 +41,7 @@
                                 width="100%">
                             <div class="card bg-theme-dark info-card-container">
                                 <div class="card-body">
-                                    <h2>20k Rs. Ninja Instant Win Raffle</h2>
+                                    <h2>20k Pkr Ninja Instant Win Raffle</h2>
                                     <div class="progress w-100 bg-dark" style="height: 10px;">
                                         <div class="progress bg-theme w-75" style="height: 10px;"></div>
                                     </div>
@@ -54,7 +56,7 @@
                                 width="100%">
                             <div class="card bg-theme-dark info-card-container">
                                 <div class="card-body">
-                                    <h2>20k Rs. Ninja Instant Win Raffle</h2>
+                                    <h2>20k Pkr Ninja Instant Win Raffle</h2>
                                     <div class="progress w-100 bg-dark" style="height: 10px;">
                                         <div class="progress bg-theme w-75" style="height: 10px;"></div>
                                     </div>
@@ -69,7 +71,7 @@
                                 width="100%">
                             <div class="card bg-theme-dark info-card-container">
                                 <div class="card-body">
-                                    <h2>20k Rs. Ninja Instant Win Raffle</h2>
+                                    <h2>20k Pkr Ninja Instant Win Raffle</h2>
                                     <div class="progress w-100 bg-dark" style="height: 10px;">
                                         <div class="progress bg-theme w-75" style="height: 10px;"></div>
                                     </div>
@@ -97,7 +99,7 @@
                     <div class="d-md-flex">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="left-text text-center text-md-start" style="width: 300px">
-                                <h4>16.4 Million Pkr</h4>
+                                <h4>Pkr 16.4 Million</h4>
                                 <h6>won in prizes so far</h6>
                             </div>
                         </div>
@@ -142,95 +144,100 @@
                         <div class="badge bg-dark mb-3 mb-md-0 px-1 py-0 border border-1 pe-4 rounded-pill">
                             <div class="d-flex gap-0 align-items-center ">
                                 <i class="bi bi-dot text-warning " style="font-size: 30px;"></i>
-                                <p class="mb-0"> 20 active raffles</p>
+                                <p class="mb-0">0 active raffles</p>
                             </div>
                         </div>
                         <div class="badge bg-dark mb-3 mb-md-0 px-1 py-0 border border-1 pe-4 rounded-pill">
                             <div class="d-flex gap-0 align-items-center ">
                                 <i class="bi bi-dot text-danger " style="font-size: 30px;"></i>
-                                <p class="mb-0"> 2 ending soon</p>
+                                <p class="mb-0"> 0 ending soon</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                {{-- <div class="d-flex align-items-center py-3 gap-3 overflow-auto">
+                <div class="d-flex align-items-center py-3 gap-3 overflow-auto">
                     <div class="badge bg-dark">All</div>
                     <div class="badge bg-dark">Cash</div>
                     <div class="badge bg-dark">Tech</div>
                     <div class="badge bg-dark">Car</div>
                     <div class="badge bg-dark">Holiday</div>
                     <div class="badge bg-dark">Other</div>
-                </div> --}}
+                </div>
             </div>
             <div class="row mt-5">
-                @forelse ($lotteries as $lottery)
-                    <div class="col-6 col-md-3 mb-5">
-                        <div class="card bg-theme-secondary position-relative">
-                            <div class="position-absolute"
-                                style="top:-20px; width: 95%; left: 50%; transform: translateX(-50%);">
-                                <div class="bg-danger text-white rounded-pill text-center py-1 fs-7 fw-bold shadow py-2">
+                @forelse ($lotteries as $item)
+                    <div class="row mt-5">
+                        @forelse ($lotteries as $lottery)
+                            <div class="col-6 col-md-3 mb-5">
+                                <div class="card bg-theme-secondary position-relative">
+                                    <div class="position-absolute"
+                                        style="top:-20px; width: 95%; left: 50%; transform: translateX(-50%);">
+                                        <div
+                                            class="bg-danger text-white rounded-pill text-center py-1 fs-7 fw-bold shadow py-2">
 
-                                    <span class="d-flex justify-content-around align-items-center" style="font-size: 15px"><i class="bi bi-stopwatch"></i>
-                                        <div id="countdown{{ $lottery->id }}"></div>
-                                    </span>
+                                            <span class="d-flex justify-content-around align-items-center"
+                                                style="font-size: 15px"><i class="bi bi-stopwatch"></i>
+                                                <div id="countdown{{ $lottery->id }}"></div>
+                                            </span>
 
-                                    {{-- countdown --}}
+                                            {{-- countdown --}}
 
-                                    <script>
-                                        function startCountdown(days) {
-                                            const countdownElement = document.getElementById('countdown{{ $lottery->id }}');
-                                            const endDate = new Date().getTime() + days * 24 * 60 * 60 * 1000;
+                                            <script>
+                                                function startCountdown(days) {
+                                                    const countdownElement = document.getElementById('countdown{{ $lottery->id }}');
+                                                    const endDate = new Date().getTime() + days * 24 * 60 * 60 * 1000;
 
-                                            function updateCountdown() {
-                                                const now = new Date().getTime();
-                                                const distance = endDate - now;
+                                                    function updateCountdown() {
+                                                        const now = new Date().getTime();
+                                                        const distance = endDate - now;
 
-                                                if (distance < 0) {
-                                                    clearInterval(interval);
-                                                    countdownElement.innerHTML = "Countdown Ended";
-                                                    return;
+                                                        if (distance < 0) {
+                                                            clearInterval(interval);
+                                                            countdownElement.innerHTML = "Countdown Ended";
+                                                            return;
+                                                        }
+
+                                                        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                                        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                                        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                                                        countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                                                    }
+
+                                                    const interval = setInterval(updateCountdown, 1000);
+                                                    updateCountdown(); // initial call to display the countdown immediately
                                                 }
 
-                                                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                                                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                                                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                                                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                                                countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-                                            }
-
-                                            const interval = setInterval(updateCountdown, 1000);
-                                            updateCountdown(); // initial call to display the countdown immediately
-                                        }
-
-                                        // Example: Start countdown for 2 days
-                                        startCountdown({{ $lottery->time }});
-                                    </script>
+                                                // Example: Start countdown for 2 days
+                                                startCountdown({{ $lottery->time }});
+                                            </script>
+                                        </div>
+                                    </div>
+                                    <a href="{{ route('Product.Details', $lottery->id) }}">
+                                        <img src="{{ asset('lottery/' . $lottery->picture) }}" alt="Game Image"
+                                            width="100%">
+                                    </a>
+                                    <div class="card-body text-white">
+                                        <h4 class="text-center fs-6">{{ $lottery->title }}</h4>
+                                        <div class="text-center">
+                                            <button class="btn btn-warning">{{ $lottery->price }} Rs.</button>
+                                        </div>
+                                    </div>
+                                    <div class="buttons mt-4">
+                                        <a href="{{ route('Product.Details', $lottery->id) }}"
+                                            class="btn btn-sm btn-md-lg bg-gradient-theme px-3 fw-bold w-100">Enter
+                                            now</a>
+                                    </div>
                                 </div>
                             </div>
-                            <a href="{{ route('Product.Details', $lottery->id) }}">
-                                <img src="{{ asset('lottery/' . $lottery->picture) }}" alt="Game Image" width="100%">
-                            </a>
-                            <div class="card-body text-white">
-                                <h4 class="text-center fs-6">{{ $lottery->title }}</h4>
-                                <div class="text-center">
-                                    <button class="btn btn-warning">{{ $lottery->price }} Rs.</button>
-                                </div>
-                            </div>
-                            <div class="buttons mt-4">
-                                <a href="{{ route('Product.Details', $lottery->id) }}"
-                                    class="btn btn-sm btn-md-lg bg-gradient-theme px-3 fw-bold w-100">Enter
-                                    now</a>
-                            </div>
-                        </div>
-                    </div>
-                @empty
-                    <h3 class="text-center text-white">No Lottery</h3>
+                        @empty
+                            <h3 class="text-center text-white">No Lottery</h3>
+                        @endforelse
+                </div> @empty
+                    <h3 class="text-center text-white">Empty</h3>
                 @endforelse
             </div>
-
-        </div>
-
         </div>
     </section>
 @endsection
