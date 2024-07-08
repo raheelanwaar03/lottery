@@ -1,35 +1,49 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container-fluid bg-theme-secondary d-none d-md-block py-2">
-        <div class="container d-block d-md-flex justify-content-between align-items-center">
-            <div class="d-flex justify-content-start align-items-center gap-3 text-center text-md-end">
-                <p class="text-white mb-0" style="font-size: 10px;">Payments <br> Accepted</p>
-                <ul class="mb-0 list-unstyled d-flex justify-content-start align-items-center gap-2">
-                    <li><img src="{{ asset('assets/img/cards/Visa.svg') }}" alt="Payment" width="25"></li>
-                    <li><img src="{{ asset('assets/img/cards/Mastercard.svg') }}" alt="Payment" width="25"></li>
-                    <li><img src="{{ asset('assets/img/cards/ApplePay.svg') }}" alt="Payment" width="25"></li>
-                    <li><img src="{{ asset('assets/img/cards/PayPal.svg') }}" alt="Payment" width="25"></li>
-                </ul>
-            </div>
-            <div class="raiting mt-2 mt-md-0 text-center text-md-end">
-                <img src="{{ asset('assets/img/homeBannerTrust.svg') }}" alt="">
-            </div>
-        </div>
-    </div>
-
-    <section id="hero-section"
-        class="py-5 d-flex justify-content-center align-items-end align-items-md-center px-4 px-md-5 ">
+    <section id="hero-section" class="py-5 d-flex justify-content-center align-items-end align-items-md-center px-4 px-md-5 ">
         <div class="container-fluid text-center text-md-start">
-            <span class="badge bg-dark mt-5"><img src="{{ asset('assets/img/crown.svg') }}" alt="Crown"> JACKPOT
-                DRAW</span>
+            <span class="badge bg-dark mt-5"><img src="{{ asset('assets/img/crown.svg') }}" alt="Crown"> JACKPOT DRAW</span>
             <h1 class="text-white responsive-heading fw-bold">WIN A MERCEDES GLC AMG <br> LINE + PRIZE BUNDLE!</h1>
-            <h1 class="text-gradient-theme mb-4">Pkr 500</h1>
+            <h1 class="text-gradient-theme mb-4">£0.50</h1>
             <a href="#" class="btn fw-bold text-uppercase bg-gradient-theme px-5">Enter
                 now</a>
         </div>
     </section>
 
+    <section class="bg-theme-dark py-5 d-block d-md-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 p-0 px-2">
+                    <div class="card bg-theme-dark" style="border: 1px solid gray;">
+                        <div class="card-body py-1 text-center text-white">
+                            <i class="bi bi-gift fs-1 text-gradient-theme"></i>
+                            <h6 class="mb-0">$17.3</h6>
+                            <p class="mb-0" style="font-size:12px;">won in prizes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 p-0 px-2">
+                    <div class="card bg-theme-dark" style="border: 1px solid gray;">
+                        <div class="card-body py-1 text-center text-white">
+                            <i class="bi bi-trophy fs-1 text-gradient-theme"></i>
+                            <h6 class="mb-0">$17.3</h6>
+                            <p class="mb-0" style="font-size:12px;">won in prizes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 p-0 px-2">
+                    <div class="card bg-theme-dark" style="border: 1px solid gray;">
+                        <div class="card-body py-1 text-center text-white">
+                            <i class="bi bi-patch-check fs-1 text-gradient-theme"></i>
+                            <h6 class="mb-0">$17.3</h6>
+                            <p class="mb-0" style="font-size:12px;">won in prizes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="competition" class="bg-theme-dark py-5">
         <div class="container">
@@ -41,7 +55,7 @@
                                 width="100%">
                             <div class="card bg-theme-dark info-card-container">
                                 <div class="card-body">
-                                    <h2>20k Pkr Ninja Instant Win Raffle</h2>
+                                    <h2>£20k Ninja Instant Win Raffle</h2>
                                     <div class="progress w-100 bg-dark" style="height: 10px;">
                                         <div class="progress bg-theme w-75" style="height: 10px;"></div>
                                     </div>
@@ -56,7 +70,7 @@
                                 width="100%">
                             <div class="card bg-theme-dark info-card-container">
                                 <div class="card-body">
-                                    <h2>20k Pkr Ninja Instant Win Raffle</h2>
+                                    <h2>£20k Ninja Instant Win Raffle</h2>
                                     <div class="progress w-100 bg-dark" style="height: 10px;">
                                         <div class="progress bg-theme w-75" style="height: 10px;"></div>
                                     </div>
@@ -71,7 +85,7 @@
                                 width="100%">
                             <div class="card bg-theme-dark info-card-container">
                                 <div class="card-body">
-                                    <h2>20k Pkr Ninja Instant Win Raffle</h2>
+                                    <h2>£20k Ninja Instant Win Raffle</h2>
                                     <div class="progress w-100 bg-dark" style="height: 10px;">
                                         <div class="progress bg-theme w-75" style="height: 10px;"></div>
                                     </div>
@@ -99,7 +113,7 @@
                     <div class="d-md-flex">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="left-text text-center text-md-start" style="width: 300px">
-                                <h4>Pkr 16.4 Million</h4>
+                                <h4>£ 16.4 Million</h4>
                                 <h6>won in prizes so far</h6>
                             </div>
                         </div>
@@ -144,7 +158,7 @@
                         <div class="badge bg-dark mb-3 mb-md-0 px-1 py-0 border border-1 pe-4 rounded-pill">
                             <div class="d-flex gap-0 align-items-center ">
                                 <i class="bi bi-dot text-warning " style="font-size: 30px;"></i>
-                                <p class="mb-0">0 active raffles</p>
+                                <p class="mb-0"> 0 active raffles</p>
                             </div>
                         </div>
                         <div class="badge bg-dark mb-3 mb-md-0 px-1 py-0 border border-1 pe-4 rounded-pill">
@@ -166,78 +180,38 @@
             </div>
             <div class="row mt-5">
                 @forelse ($lotteries as $item)
-                    <div class="row mt-5">
-                        @forelse ($lotteries as $lottery)
-                            <div class="col-6 col-md-3 mb-5">
-                                <div class="card bg-theme-secondary position-relative">
-                                    <div class="position-absolute"
-                                        style="top:-20px; width: 95%; left: 50%; transform: translateX(-50%);">
-                                        <div
-                                            class="bg-danger text-white rounded-pill text-center py-1 fs-7 fw-bold shadow py-2">
-
-                                            <span class="d-flex justify-content-around align-items-center"
-                                                style="font-size: 15px"><i class="bi bi-stopwatch"></i>
-                                                <div id="countdown{{ $lottery->id }}"></div>
-                                            </span>
-
-                                            {{-- countdown --}}
-
-                                            <script>
-                                                function startCountdown(days) {
-                                                    const countdownElement = document.getElementById('countdown{{ $lottery->id }}');
-                                                    const endDate = new Date().getTime() + days * 24 * 60 * 60 * 1000;
-
-                                                    function updateCountdown() {
-                                                        const now = new Date().getTime();
-                                                        const distance = endDate - now;
-
-                                                        if (distance < 0) {
-                                                            clearInterval(interval);
-                                                            countdownElement.innerHTML = "Countdown Ended";
-                                                            return;
-                                                        }
-
-                                                        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                                                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                                                        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                                                        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                                                        countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-                                                    }
-
-                                                    const interval = setInterval(updateCountdown, 1000);
-                                                    updateCountdown(); // initial call to display the countdown immediately
-                                                }
-
-                                                // Example: Start countdown for 2 days
-                                                startCountdown({{ $lottery->time }});
-                                            </script>
+                    <div class="col-6 col-md-3 mb-5">
+                        <div class="card bg-theme-secondary position-relative">
+                            <div class="position-absolute"
+                                style="top:-25px; width: 80%; left: 50%; transform: translateX(-50%);">
+                                <div class="bg-light rounded-pill text-center py-1 text-dark fs-7 fw-bold shadow">Draw
+                                    Monday 10pm</div>
+                            </div>
+                            <img src="{{ asset('assets/img/games/1.webp') }}" alt="Game Image" width="100%">
+                            <div class="card-body text-white ">
+                                <h4 class="text-center fs-6">Win a Ninja 12in1 Multicooker</h4>
+                                <small class="text-start" style="font-size: 12px;">25% Sold</small>
+                                <div class="progress-bar bg-dark poisition-relative">
+                                    <div class="poisition-relative">
+                                        <div class="bg-theme" style="width: 25%; padding: 2px"></div>
+                                        <div class="position-absolute" style="bottom: 61px; left: 60px">
+                                            <i class="bi bi-dot d-none d-md-block text-warning fs-1"></i>
                                         </div>
-                                    </div>
-                                    <a href="{{ route('Product.Details', $lottery->id) }}">
-                                        <img src="{{ asset('lottery/' . $lottery->picture) }}" alt="Game Image"
-                                            width="100%">
-                                    </a>
-                                    <div class="card-body text-white">
-                                        <h4 class="text-center fs-6">{{ $lottery->title }}</h4>
-                                        <div class="text-center">
-                                            <button class="btn btn-warning">{{ $lottery->price }} Rs.</button>
-                                        </div>
-                                    </div>
-                                    <div class="buttons mt-4">
-                                        <a href="{{ route('Product.Details', $lottery->id) }}"
-                                            class="btn btn-sm btn-md-lg bg-gradient-theme px-3 fw-bold w-100">Enter
-                                            now</a>
                                     </div>
                                 </div>
+                                <div class="buttons mt-4">
+                                    <a href="#"
+                                        class="btn btn-sm btn-md-lg bg-gradient-theme px-3 fw-bold w-100">Enter
+                                        now</a>
+                                </div>
                             </div>
-                        @empty
-                            <h3 class="text-center text-white">No Lottery</h3>
-                        @endforelse
-                </div> @empty
+                        </div>
+                    </div>
+                @empty
                     <h3 class="text-center text-white">Empty</h3>
                 @endforelse
             </div>
+
         </div>
     </section>
 @endsection

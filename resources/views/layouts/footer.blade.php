@@ -5,10 +5,35 @@
             <img src="{{ asset('assets/img/appstore.svg') }}" alt="App Store" class="download-button" width="100">
         </div>
         <hr class="text-white my-5">
+        <div class="d-md-flex justify-content-between align-items-center">
+            <div class="text-center mb-4 mb-md-0">
+                <img src="{{ asset('assets/img/trust.svg') }}" alt="">
+            </div>
+            <div class="d-flex flex-column mb-4 mb-md-0 justify-content-start align-items-center gap-3">
+                <p class="text-white mb-0" style="font-size: 20px;">Payments we accept</p>
+                <ul class="mb-0 list-unstyled d-flex justify-content-start align-items-center gap-2">
+                    <li><img src="{{ asset('assets/img/cards/Visa.svg') }}" alt="Payment" width="50"></li>
+                    <li><img src="{{ asset('assets/img/cards/Mastercard.svg') }}" alt="Payment" width="50"></li>
+                    <li><img src="{{ asset('assets/img/cards/ApplePay.svg') }}" alt="Payment" width="50"></li>
+                    <li><img src="{{ asset('assets/img/cards/PayPal.svg') }}" alt="Payment" width="50"></li>
+                </ul>
+            </div>
+            <div class="d-flex flex-column">
+                <h5 class="text-white text-center text-md-start mt-3 mt-md-0">Follow us</h5>
+                <ul
+                    class="mb-0 list-unstyled fs-3 d-flex justify-content-around px-5 px-md-0 justify-content-md-center gap-2">
+                    <li><i class="bi bi-facebook text-white"></i></li>
+                    <li><i class="bi bi-messenger text-white"></i></li>
+                    <li><i class="bi bi-whatsapp text-white"></i></li>
+                    <li><i class="bi bi-facebook text-white"></i></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="text-white my-5">
         <div class="row justify-content-center">
             <div class="col-md-3">
                 <div class="text-center text-md-start mb-5">
-                    <img src="{{ asset('logo/logo.png') }}" alt="Logo" height="120px" width="120px">
+                    <img src="{{ asset('logo/logo.png') }}" alt="Logo" style="height: 150px;width:150px">
                 </div>
             </div>
             <div class="col-6 col-md-3 text-center text-md-start">
@@ -46,7 +71,7 @@
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs border-0 d-flex justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link bg-theme-dark text-white border-gray" data-bs-toggle="tab"
+                        <a class="nav-link active bg-theme-dark text-white border-gray" data-bs-toggle="tab"
                             href="#login">Sign
                             in</a>
                     </li>
@@ -61,7 +86,8 @@
                 <div class="tab-content">
                     <div class="tab-pane container active" id="login">
                         <h3 class="text-center my-4 text-white">Sign in</h3>
-                        <form action="#" method="POST">
+                        <form action="{{ route('login') }}" method="POST">
+                            @csrf
                             <div class="form-group mb-3">
                                 <label for="email" class="text-white mb-2">Enter your Email</label>
                                 <input type="email" name="email" id="email" placeholder="your email"
@@ -77,8 +103,7 @@
                             </div>
                             <div class="form-group">
                                 <button type="submit"
-                                    class="btn bg-gradient-theme text-dark py-2 fw-bold fs-5 w-100">Sign
-                                    In</button>
+                                    class="btn bg-gradient-theme text-dark py-2 fw-bold fs-5 w-100">Sign In</button>
                             </div>
                         </form>
 
@@ -98,7 +123,8 @@
                     </div>
                     <div class="tab-pane container" id="register">
                         <h3 class="text-center my-4 text-white">Sign up</h3>
-                        <form action="#" method="POST">
+                        <form action="{{ route('register') }}" method="POST">
+                            @csrf
                             <div class="form-group mb-3">
                                 <label for="name" class="text-white mb-2">Enter your Full Name</label>
                                 <input type="text" name="name" id="name" placeholder="your Full Name"
@@ -109,9 +135,30 @@
                                 <input type="email" name="email" id="email" placeholder="your email"
                                     class="form-control bg-dark  border-gray text-white bg-theme-dark">
                             </div>
+                            <div class="form-group mb-3">
+                                <label for="country" class="text-white mb-2">Country</label>
+                                <input type="text" name="country" id="country" placeholder="your country"
+                                    class="form-control bg-dark  border-gray text-white bg-theme-dark">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="province" class="text-white mb-2">Enter your Province</label>
+                                <input type="text" name="province" id="province" placeholder="your province"
+                                    class="form-control bg-dark  border-gray text-white bg-theme-dark">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="city" class="text-white mb-2">Enter your City</label>
+                                <input type="text" name="city" id="city" placeholder="your city"
+                                    class="form-control bg-dark  border-gray text-white bg-theme-dark">
+                            </div>
                             <div class="form-group">
                                 <label for="password" class="text-white mb-2">Enter your Password</label>
                                 <input type="password" name="password" id="password" placeholder="your password"
+                                    class="form-control bg-dark  border-gray text-white bg-theme-dark">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-white mb-2">Confirm Password</label>
+                                <input type="password" name="password_confirmation" id="password"
+                                    placeholder="Confirm password"
                                     class="form-control bg-dark  border-gray text-white bg-theme-dark">
                             </div>
                             <div class="form-group text-end my-3">
@@ -119,8 +166,7 @@
                             </div>
                             <div class="form-group">
                                 <button type="submit"
-                                    class="btn bg-gradient-theme text-dark py-2 fw-bold fs-5 w-100">Sign
-                                    In</button>
+                                    class="btn bg-gradient-theme text-dark py-2 fw-bold fs-5 w-100">Sign In</button>
                             </div>
                         </form>
 
@@ -228,9 +274,9 @@
         <div class="px-4 py-2 mt-4">
             <h6 class="text-uppercase text-light-gray fs-tiny fw-bold">My Points</h6>
             <div class="point-balance">
-                <h6>You have <span class="border border-theme rounded px-2">0</span> Coins</h6>
+                <h6>You have <span class="border border-theme rounded px-2">0</span> points</h6>
             </div>
-            <p class="text-light-gray"> Use your coins to redeem prizes in the </p>
+            <p class="text-light-gray"> Use your Raffolux points to redeem prizes in the </p>
         </div>
         <div class="px-4 py-2 text-white">
             <h6 class="fs-tiny fw-bold text-light-gray">MENU</h6>
@@ -240,7 +286,7 @@
                         <div class="card bg-light-gray card-body py-2 bg-none">
                             <div class="d-flex align-items-center gap-3">
                                 <i class="bi bi-house-door fs-5"></i>
-                                <h6 class="mb-0" style="font-size:12px">Home</h6>
+                                <h6 class="mb-0">Home</h6>
                             </div>
                         </div>
                     </a>
@@ -250,7 +296,7 @@
                         <div class="card bg-light-gray card-body py-2 bg-none">
                             <div class="d-flex align-items-center gap-3">
                                 <i class="bi bi-ticket-perforated fs-5"></i>
-                                <h6 class="mb-0" style="font-size:12px">My Tickets <sup
+                                <h6 class="mb-0">My Tickets <sup
                                         class="bg-theme px-2 py-0 rounded-pill text-dark">0</sup></h6>
                             </div>
                         </div>
@@ -262,31 +308,29 @@
                             <div class="d-flex align-items-center gap-3">
                                 <i class="bi bi-filter-circle fs-5"></i>
                                 <div class="d-flex justify-content-between align-items-center w-100">
-                                    <h6 class="mb-0" style="font-size:12px">My Credits </h6>
+                                    <h6 class="mb-0">My Credits </h6>
                                     <span class="px-2 py-0 text-theme text-end fs-tiny">0.00</span>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </li>
-                @if (auth()->user())
-                    <li class="">
-                        <a href="{{ route('User.Store') }}" class="text-decoration-none text-white">
-                            <div class="card bg-light-gray card-body py-2 bg-none">
-                                <div class="d-flex align-items-center gap-3">
-                                    <i class="bi bi-bag fs-5"></i>
-                                    <h6 class="mb-0" style="font-size:12px">Store</h6>
-                                </div>
+                <li class="">
+                    <a href="#" class="text-decoration-none text-white">
+                        <div class="card bg-light-gray card-body py-2 bg-none">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-bag fs-5"></i>
+                                <h6 class="mb-0">Store</h6>
                             </div>
-                        </a>
-                    </li>
-                @endif
+                        </div>
+                    </a>
+                </li>
                 <li class="">
                     <a href="#" class="text-decoration-none text-white">
                         <div class="card bg-light-gray card-body py-2 bg-none">
                             <div class="d-flex align-items-center gap-3">
                                 <i class="bi bi-trophy fs-5"></i>
-                                <h6 class="mb-0" style="font-size:12px">Winners</h6>
+                                <h6 class="mb-0">Winners</h6>
                             </div>
                         </div>
                     </a>
@@ -296,7 +340,7 @@
                         <div class="card bg-light-gray card-body py-2 bg-none">
                             <div class="d-flex align-items-center gap-3">
                                 <i class="bi bi-gift fs-5"></i>
-                                <h6 class="mb-0" style="font-size:12px">Refer a friend</h6>
+                                <h6 class="mb-0">Refer a friend</h6>
                             </div>
                         </div>
                     </a>
@@ -306,7 +350,7 @@
                         <div class="card bg-light-gray card-body py-2 bg-none">
                             <div class="d-flex align-items-center gap-3">
                                 <i class="bi bi-box2-heart fs-5"></i>
-                                <h6 class="mb-0" style="font-size:12px">Charity</h6>
+                                <h6 class="mb-0">Charity</h6>
                             </div>
                         </div>
                     </a>
@@ -317,35 +361,32 @@
                         <div class="card bg-light-gray card-body py-2 bg-none">
                             <div class="d-flex align-items-center gap-3">
                                 <i class="bi bi-person fs-5"></i>
-                                <h6 class="mb-0" style="font-size:12px">Personal info</h6>
+                                <h6 class="mb-0">Personal info</h6>
                             </div>
                         </div>
                     </a>
                 </li>
-                <h6 class="fs-tiny fw-bold text-light-gray" style="font-size:12px">SITE INFORMATION</h6>
+                <h6 class="fs-tiny fw-bold text-light-gray">SITE INFORMATION</h6>
                 <li class="">
                     <a href="#" class="text-decoration-none text-white">
                         <div class="card bg-light-gray card-body py-2 bg-none">
                             <div class="d-flex align-items-center gap-3">
                                 <i class="bi bi-question-circle fs-5"></i>
-                                <h6 class="mb-0" style="font-size:12px">Help & FAQs</h6>
+                                <h6 class="mb-0">Help & FAQs</h6>
                             </div>
                         </div>
                     </a>
                 </li>
-                @if (auth()->user())
                 <li class="">
-                    <form action="{{ route('logout') }}" method="POST">
-                        @csrf
+                    <a href="#" class="text-decoration-none text-white">
                         <div class="card bg-light-gray card-body py-2 bg-none">
                             <div class="d-flex align-items-center gap-3">
-                                <button class="bg-transparent text-white" style="border: none;font-size:12px">Logout</button>
                                 <i class="bi bi-box-arrow-right fs-5"></i>
+                                <h6 class="mb-0">Logout</h6>
                             </div>
                         </div>
-                    </form>
+                    </a>
                 </li>
-                @endif
             </ul>
             <div class="d-flex mt-4 mb-5 justify-content-center align-items-center gap-1">
                 <a href="#" class="fs-tiny text-decoration-none text-white">Terms</a>

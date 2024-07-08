@@ -5,7 +5,8 @@
     <title>{{ env('APP_NAME') }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="{{ asset('logo/Logo.svg') }}" type="image/x-icon">
+    {{-- add favicon --}}
+    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
@@ -20,10 +21,7 @@
                 <a href="javascript:void(0)" class="btn d-block d-md-none bg-gradient-theme me-3 py-1 fw-bold me-md-0"
                     data-bs-toggle="modal" data-bs-target="#authModal">Sign
                     In</a>
-                <a href="{{ route('Welcome') }}">
-                    <img src="{{ asset('logo/logo.png') }}" style="margin-left: 20px;" alt="Logo"
-                        class="logo me-md-4">
-                </a>
+                <img src="{{ asset('logo/logo.png') }}" alt="Logo" class="logo me-md-4">
                 <ul class="list-unstyled d-none d-md-flex mb-0 d-flex justify-content-start align-items-center gap-4">
                     <li><a href="#" class="text-white text-decoration-none fw-bold">All competitions</a></li>
                     <li><a href="#" class="text-white text-decoration-none fw-bold">Charity</a></li>
@@ -46,6 +44,22 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-theme-secondary d-none d-md-block py-2">
+        <div class="container d-block d-md-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-start align-items-center gap-3 text-center text-md-end">
+                <p class="text-white mb-0" style="font-size: 10px;">Payments <br> Accepted</p>
+                <ul class="mb-0 list-unstyled d-flex justify-content-start align-items-center gap-2">
+                    <li><img src="{{ asset('assets/img/cards/Visa.svg') }}" alt="Payment" width="25"></li>
+                    <li><img src="{{ asset('assets/img/cards/Mastercard.svg') }}" alt="Payment" width="25"></li>
+                    <li><img src="{{ asset('assets/img/cards/ApplePay.svg') }}" alt="Payment" width="25"></li>
+                    <li><img src="{{ asset('assets/img/cards/PayPal.svg') }}" alt="Payment" width="25"></li>
+                </ul>
+            </div>
+            <div class="raiting mt-2 mt-md-0 text-center text-md-end">
+                <img src="{{ asset('assets/img/homeBannerTrust.svg') }}" alt="">
             </div>
         </div>
     </div>
