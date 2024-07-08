@@ -5,31 +5,6 @@
             <img src="{{ asset('assets/img/appstore.svg') }}" alt="App Store" class="download-button" width="100">
         </div>
         <hr class="text-white my-5">
-        <div class="d-md-flex justify-content-between align-items-center">
-            <div class="text-center mb-4 mb-md-0">
-                <img src="{{ asset('assets/img/trust.svg') }}" alt="">
-            </div>
-            <div class="d-flex flex-column mb-4 mb-md-0 justify-content-start align-items-center gap-3">
-                <p class="text-white mb-0" style="font-size: 20px;">Payments we accept</p>
-                <ul class="mb-0 list-unstyled d-flex justify-content-start align-items-center gap-2">
-                    <li><img src="{{ asset('assets/img/cards/Visa.svg') }}" alt="Payment" width="50"></li>
-                    <li><img src="{{ asset('assets/img/cards/Mastercard.svg') }}" alt="Payment" width="50"></li>
-                    <li><img src="{{ asset('assets/img/cards/ApplePay.svg') }}" alt="Payment" width="50"></li>
-                    <li><img src="{{ asset('assets/img/cards/PayPal.svg') }}" alt="Payment" width="50"></li>
-                </ul>
-            </div>
-            <div class="d-flex flex-column">
-                <h5 class="text-white text-center text-md-start mt-3 mt-md-0">Follow us</h5>
-                <ul
-                    class="mb-0 list-unstyled fs-3 d-flex justify-content-around px-5 px-md-0 justify-content-md-center gap-2">
-                    <li><i class="bi bi-facebook text-white"></i></li>
-                    <li><i class="bi bi-messenger text-white"></i></li>
-                    <li><i class="bi bi-whatsapp text-white"></i></li>
-                    <li><i class="bi bi-facebook text-white"></i></li>
-                </ul>
-            </div>
-        </div>
-        <hr class="text-white my-5">
         <div class="row justify-content-center">
             <div class="col-md-3">
                 <div class="text-center text-md-start mb-5">
@@ -276,13 +251,13 @@
             <div class="point-balance">
                 <h6>You have <span class="border border-theme rounded px-2">0</span> points</h6>
             </div>
-            <p class="text-light-gray"> Use your Raffolux points to redeem prizes in the </p>
+            <p class="text-light-gray"> Use your Jeetomax coins to redeem prizes in the </p>
         </div>
         <div class="px-4 py-2 text-white">
             <h6 class="fs-tiny fw-bold text-light-gray">MENU</h6>
             <ul class="list-unstyled d-flex flex-column gap-1 mb-0">
                 <li class="">
-                    <a href="#" class="text-decoration-none text-white">
+                    <a href="{{ route('Welcome') }}" class="text-decoration-none text-white">
                         <div class="card bg-light-gray card-body py-2 bg-none">
                             <div class="d-flex align-items-center gap-3">
                                 <i class="bi bi-house-door fs-5"></i>
@@ -315,16 +290,18 @@
                         </div>
                     </a>
                 </li>
-                <li class="">
-                    <a href="#" class="text-decoration-none text-white">
-                        <div class="card bg-light-gray card-body py-2 bg-none">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="bi bi-bag fs-5"></i>
-                                <h6 class="mb-0">Store</h6>
+                @if (auth()->user())
+                    <li class="">
+                        <a href="{{ route('User.Store') }}" class="text-decoration-none text-white">
+                            <div class="card bg-light-gray card-body py-2 bg-none">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-bag fs-5"></i>
+                                    <h6 class="mb-0">Store</h6>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </li>
+                        </a>
+                    </li>
+                @endif
                 <li class="">
                     <a href="#" class="text-decoration-none text-white">
                         <div class="card bg-light-gray card-body py-2 bg-none">
@@ -377,16 +354,21 @@
                         </div>
                     </a>
                 </li>
-                <li class="">
-                    <a href="#" class="text-decoration-none text-white">
-                        <div class="card bg-light-gray card-body py-2 bg-none">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="bi bi-box-arrow-right fs-5"></i>
-                                <h6 class="mb-0">Logout</h6>
-                            </div>
-                        </div>
-                    </a>
-                </li>
+                @if (auth()->user())
+                    <li class="">
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <a href="#" class="text-decoration-none text-white">
+                                <div class="card bg-light-gray card-body py-2 bg-none">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="bi bi-box-arrow-right fs-5"></i>
+                                        <h6 class="mb-0">Logout</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </form>
+                    </li>
+                @endif
             </ul>
             <div class="d-flex mt-4 mb-5 justify-content-center align-items-center gap-1">
                 <a href="#" class="fs-tiny text-decoration-none text-white">Terms</a>

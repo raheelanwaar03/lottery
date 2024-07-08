@@ -18,22 +18,42 @@
     <div class="container-fluid py-3 px-md-3 bg-theme-dark text-white text-center">
         <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center justify-content-between">
-                <a href="javascript:void(0)" class="btn d-block d-md-none bg-gradient-theme me-3 py-1 fw-bold me-md-0"
-                    data-bs-toggle="modal" data-bs-target="#authModal">Sign
-                    In</a>
-                <img src="{{ asset('logo/logo.png') }}" alt="Logo" class="logo me-md-4">
+                @if (auth()->user())
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit"
+                            class="btn text-white d-block d-md-none bg-gradient-theme me-3 py-1 fw-bold me-md-0">Logout</button>
+                    </form>
+                @else
+                    <a href="javascript:void(0)"
+                        class="btn d-block d-md-none bg-gradient-theme me-3 py-1 fw-bold me-md-0" data-bs-toggle="modal"
+                        data-bs-target="#authModal">Sign
+                        In</a>
+                @endif
+                <a href="{{ route('Welcome') }}">
+                    <img src="{{ asset('logo/logo.png') }}" alt="Logo" class="logo me-md-4">
+                </a>
                 <ul class="list-unstyled d-none d-md-flex mb-0 d-flex justify-content-start align-items-center gap-4">
                     <li><a href="#" class="text-white text-decoration-none fw-bold">All competitions</a></li>
                     <li><a href="#" class="text-white text-decoration-none fw-bold">Charity</a></li>
                 </ul>
             </div>
             <div class="action-buttons d-flex justify-content-start align-items-center gap-4">
-                <div class="auth-buttons d-flex d-none d-md-flex justify-content-start align-items-center gap-4">
-                    <a href="javascript:void(0)" class="btn btn-outline-light px-4" data-bs-toggle="modal"
-                        data-bs-target="#authModal">Sign in</a>
-                    <a href="javascript:void(0)" class="btn bg-gradient-theme px-3" data-bs-toggle="modal"
-                        data-bs-target="#authModal">Sign Up</a>
-                </div>
+                @if (auth()->user())
+                    <div class="auth-buttons d-flex d-none d-md-flex justify-content-start align-items-center gap-4">
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button class="btn bg-gradient-theme text-white px-3" type="submit">Logout</a>
+                        </form>
+                    </div>
+                @else
+                    <div class="auth-buttons d-flex d-none d-md-flex justify-content-start align-items-center gap-4">
+                        <a href="javascript:void(0)" class="btn btn-outline-light px-4" data-bs-toggle="modal"
+                            data-bs-target="#authModal">Sign in</a>
+                        <a href="javascript:void(0)" class="btn bg-gradient-theme px-3" data-bs-toggle="modal"
+                            data-bs-target="#authModal">Sign Up</a>
+                    </div>
+                @endif
                 <div class="cart-button d-flex justify-content-end align-items-center gap-4">
                     <div class="cart">
                         <i class="bi bi-cart3 text-gradient-theme fs-2"></i>
