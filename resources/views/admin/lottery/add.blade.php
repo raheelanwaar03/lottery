@@ -30,23 +30,23 @@
                                 <div class="form-group">
                                     <label for="price">Price</label>
                                     <input type="number" name="price" step="0.001" id="price" class="form-control"
-                                        placeholder="Lottery Entery Price">
+                                        placeholder="Lottery Entery Price" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="title">Title</label>
                                     <input type="text" name="title" id="title" class="form-control"
-                                        placeholder="Lottery title">
+                                        placeholder="Lottery title" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="time">Time</label>
                                     <input type="text" name="time" id="time" class="form-control"
-                                        placeholder="Lottery time">
+                                        placeholder="Lottery time" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="picture">Picture</label>
+                                    <label for="image">Lottery Image</label>
                                     <div class="dropzone">
-                                        <div class="fallback"><input name="picture" type="file">
-                                        </div>
+                                        <input name="image" required hidden type="file" id="selectImage">
+                                        <label for="selectImage" class="btn btn-primary">Select Image</label>
                                     </div>
                                 </div>
                                 <div class="m-t-20"><button class="btn btn-primary">Add</button></div>

@@ -30,18 +30,18 @@
                                 <div class="form-group">
                                     <label for="title">Title</label>
                                     <input type="text" name="title" id="title" class="form-control"
-                                        placeholder="Lottery title">
+                                        placeholder="Lottery title" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="coins">Coins</label>
                                     <input type="number" name="coins" step="0.001" id="coins" class="form-control"
-                                        placeholder="Lottery Entery coins">
+                                        placeholder="Lottery Entery coins" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="image">Product Image</label>
                                     <div class="dropzone">
-                                        <div class="fallback"><input name="image" type="file">
-                                        </div>
+                                        <input name="image" hidden type="file" id="selectImage">
+                                        <label for="selectImage" class="btn btn-primary">Select Image</label>
                                     </div>
                                 </div>
                                 <div class="m-t-20"><button class="btn btn-primary">Add</button></div>

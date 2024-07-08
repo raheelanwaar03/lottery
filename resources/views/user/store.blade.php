@@ -127,7 +127,7 @@
                                                             </span>
                                                         </div>
                                                         <div class="prize-img">
-                                                            <img src="{{ asset('product' . $item->image) }}" alt="Credit"
+                                                            <img src="{{ asset('product/' . $item->image) }}" alt="Credit"
                                                                 width="70px">
                                                         </div>
                                                     </div>

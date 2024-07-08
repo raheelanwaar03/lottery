@@ -15,7 +15,7 @@ class AdminLotteryController extends Controller
 
     public function store(Request $request)
     {
-        $image = $request->picture;
+        $image = $request->image;
         $imageName = rand(111111, 999999) . '.' . $image->getClientOriginalExtension();
         $image->move(public_path('lottery'), $imageName);
 
@@ -25,7 +25,7 @@ class AdminLotteryController extends Controller
         $lottery->time = $request->time;
         $lottery->picture = $imageName;
         $lottery->save();
-        return redirect()->back()->with('success', 'New Lottery Added');
+        return redirect()->route('Admin.All.Lottery')->with('success', 'New Lottery Added');
     }
 
     public function all()

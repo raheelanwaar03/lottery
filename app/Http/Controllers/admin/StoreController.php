@@ -31,7 +31,7 @@ class StoreController extends Controller
         $store->coins = $request->coins;
         $store->image = $imageName;
         $store->save();
-        return redirect()->route('Admin.Add.Product')->with('success', 'Product Added Successfully');
+        return redirect()->route('Admin.All.Products')->with('success', 'Product Added Successfully');
     }
 
     public function allProduct()
