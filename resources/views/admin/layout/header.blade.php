@@ -34,7 +34,8 @@
         <div class="navbar-wrapper">
             <div class="m-header">
                 <a href="{{ route('Admin.Dashboard') }}" class="b-brand text-primary">
-                    <img src="{{ asset('logo/logo.svg') }}" alt="logo" class="img-fluid" style="height: 100px;width:100px">
+                    <img src="{{ asset('logo/logo.svg') }}" alt="logo" class="img-fluid"
+                        style="height: 100px;width:100px">
                 </a>
             </div>
             <div class="navbar-content">
@@ -72,8 +73,8 @@
                                 </svg> </span><span class="pc-mtext">Users</span> <span class="pc-arrow"><i
                                     data-feather="chevron-right"></i></span></a>
                         <ul class="pc-submenu">
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/admins/course-dashboard.html">All Users</a></li>
+                            <li class="pc-item"><a class="pc-link" href="{{ route('Admin.All.Users') }}">All Users</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link">

@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Route;
 Route::name('Admin.')->prefix('Admin/')->middleware('auth', 'admin')->group(function () {
 
     Route::get('Dashboard', [AdminController::class, 'index'])->name('Dashboard');
+    // all Users
+    Route::get('All/Users', [AdminController::class, 'users'])->name('All.Users');
+    Route::get('Edit/User/{id}', [AdminController::class, 'editUser'])->name('Edit.User');
+    Route::post('Update/User/{id}', [AdminController::class, 'updateUser'])->name('Update.User');
     // Add Lotteries
     Route::get('/Add/Lottery', [AdminLotteryController::class, 'add'])->name('Add.Lottery');
     Route::post('/Store/Lottery', [AdminLotteryController::class, 'store'])->name('Store.Lottery');
