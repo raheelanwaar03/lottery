@@ -21,15 +21,17 @@
                             <div class="tab-content">
                                 <div id="store" class="container tab-pane active"><br>
                                     <div class="point-box border border-warning rounded text-center text-white p-2">
-                                        You have <span class="badge bg-theme">0</span> Point
+                                        You have <span class="badge bg-theme">0</span> Coin
                                     </div>
                                     <div class="offers">
-                                        <h5 class="text-start text-secondary fw-bold my-4">Coins</h5>
+                                        <h5 class="text-start text-secondary fw-bold my-4">Coin Ads</h5>
                                     </div>
                                     <div class="row">
                                         @forelse ($coins as $item)
-                                            <a href="#" class="text-decoration-none">
-                                                <div class="col-md-3" title="Buy Coin">
+                                            <div class="col-md-3"
+                                                title="Buy {{ $item->qty }} Coins in Just {{ $item->price }}">
+                                                <a href="{{ route('User.Buy.Coins', $item->id) }}"
+                                                    class="text-decoration-none">
                                                     <div class="card bg-warning mb-3">
                                                         <div class="card-body d-flex justify-content-between">
                                                             <div class="prize-info">
@@ -47,8 +49,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </a>
+                                                </a>
+                                            </div>
                                         @empty
                                             <h3 class="text-center text-white">Datebase is Empty :)</h3>
                                         @endforelse
