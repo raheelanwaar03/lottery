@@ -266,6 +266,21 @@
                         </div>
                     </a>
                 </li>
+                @if (auth()->user())
+                    <li class="">
+                        <a href="{{ route('User.Coins') }}" class="text-decoration-none text-white">
+                            <div class="card bg-light-gray card-body py-2 bg-none">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-filter-circle fs-5"></i>
+                                    <div class="d-flex justify-content-between align-items-center w-100">
+                                        <h6 class="mb-0">My Credits </h6>
+                                        <span class="px-2 py-0 text-theme text-end fs-tiny">0.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                @endif
                 <li class="">
                     <a href="#" class="text-decoration-none text-white">
                         <div class="card bg-light-gray card-body py-2 bg-none">
@@ -273,19 +288,6 @@
                                 <i class="bi bi-ticket-perforated fs-5"></i>
                                 <h6 class="mb-0">My Tickets <sup
                                         class="bg-theme px-2 py-0 rounded-pill text-dark">0</sup></h6>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="">
-                    <a href="#" class="text-decoration-none text-white">
-                        <div class="card bg-light-gray card-body py-2 bg-none">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="bi bi-filter-circle fs-5"></i>
-                                <div class="d-flex justify-content-between align-items-center w-100">
-                                    <h6 class="mb-0">My Credits </h6>
-                                    <span class="px-2 py-0 text-theme text-end fs-tiny">0.00</span>
-                                </div>
                             </div>
                         </div>
                     </a>
