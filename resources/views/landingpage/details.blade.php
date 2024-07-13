@@ -1,31 +1,34 @@
 @extends('layouts.app')
 @section('content')
     <section id="product-container" class="bg-theme-dark pb-5">
-        <div class="mobile-bottom-checkout bg-theme-dark d-block d-md-none">
-            <div class="qty-box px-3 mt-3">
-                <button class="btn btn-minus btn-dark py-2 text-white" onclick="changeQty(-1)">-</button>
-                <input type="text" id="qtyInput" class="form-control py-2 bg-dark text-white w-100" value="1" readonly>
-                <button class="btn btn-plus btn-dark py-2 text-white" onclick="changeQty(1)">+</button>
-            </div>
-            <div class="form-group">
-                <button class="btn bg-gradient-theme mt-4 py-3 fw-bold w-100">
-                    <div class="d-flex justify-content-between">
-                        <h3 class="mb-0">Enter Now</h3>
-                        <h3 class="mb-0">{{ $lottery->price }} Rs.</h3>
-                    </div>
-                </button>
-            </div>
-            <script>
-                function changeQty(change) {
-                    var qtyInput = document.getElementById('qtyInput');
-                    var currentQty = parseInt(qtyInput.value);
-                    var newQty = currentQty + change;
-                    if (newQty > 0) {
-                        qtyInput.value = newQty;
+        <form action="{{ route('User.Purchase.Lottery', $lottery->id) }}" method="POST">
+            @csrf
+            <div class="mobile-bottom-checkout bg-theme-dark d-block d-md-none">
+                <div class="qty-box px-3 mt-3">
+                    <p class="btn btn-minus mt-3 btn-dark py-2 text-white" onclick="changeQty(-1)">-</p>
+                    <input type="text" name="ticket_qty" id="qtyInput" class="form-control py-2 bg-dark text-white w-100"
+                        value="1" readonly>
+                    <p class="btn btn-plus btn-dark mt-3 py-2 text-white" onclick="changeQty(1)">+</p>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn bg-gradient-theme mt-4 py-3 fw-bold w-100">
+                        <div class="d-flex justify-content-center">
+                            <h3 class="mb-0">Enter Now</h3>
+                        </div>
+                    </button>
+                </div>
+                <script>
+                    function changeQty(change) {
+                        var qtyInput = document.getElementById('qtyInput');
+                        var currentQty = parseInt(qtyInput.value);
+                        var newQty = currentQty + change;
+                        if (newQty > 0) {
+                            qtyInput.value = newQty;
+                        }
                     }
-                }
-            </script>
-        </div>
+                </script>
+            </div>
+        </form>
         <div class="d-block d-md-none">
             <div class="">
                 <img src="{{ asset('lottery/' . $lottery->picture) }}" alt="Product Image" width="100%" class="">
@@ -49,7 +52,8 @@
                                         </div>
                                         <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
                                             <div class="card-body text-white bg-theme-dark pb-5">
-                                                <h6>Unlock a world of possibilities with our thrilling £500 cash raffle
+                                                <h6>Unlock a world of possibilities with our thrilling {{ $lottery->price }}
+                                                    Coins cash raffle
                                                     bonanza!</h6>
                                                 <p>Imagine the windfall you could experience – whether you're dreaming of a
                                                     spontaneous getaway, that latest tech gadget, or perhaps boosting your
@@ -57,14 +61,16 @@
                                                     it's your chance to make those dreams come a little closer to reality.
                                                 </p>
                                                 <p>Every ticket you secure increases your odds, drawing you nearer to that
-                                                    delightful £500 prize. Are you a first-time participant? Or perhaps a
+                                                    delightful {{ $lottery->price }} Coins prize. Are you a first-time
+                                                    participant? Or perhaps a
                                                     seasoned raffle enthusiast? No matter your experience, this is the
                                                     perfect opportunity to dive into the excitement.</p>
                                                 <p>As the anticipation builds, picture the moment you could be named the
                                                     lucky winner. Will you splurge on a treat? Or save and invest? The
                                                     choice is yours!</p>
                                                 <p>Don't let this chance slip through your fingers. Dive in, dream big, and
-                                                    stand a chance to be our next £500 sensation. #Epic500PoundWin</p>
+                                                    stand a chance to be our next {{ $lottery->price }} Coins sensation.
+                                                    #Epic500PoundWin</p>
                                             </div>
                                         </div>
                                     </div>
@@ -77,7 +83,7 @@
                                         <div id="collapseTwo" class="collapse show" data-bs-parent="#accordion">
                                             <div class="card-body text-white bg-theme-dark pb-5">
                                                 <ul>
-                                                    <li>£500</li>
+                                                    <li>{{ $lottery->price }} Coins</li>
                                                     <li>Tax-Free Cash</li>
                                                     <li>Direct Bank Transfer</li>
                                                 </ul>
@@ -99,7 +105,9 @@
                                                         out.</li>
                                                     <li>The draw will take place as soon as all tickets are sold OR the
                                                         raffle expires.</li>
-                                                    <li>The raffle will expire at 22:00 on 13/06/2024.</li>
+                                                    <li>The raffle will expire at <div id="countdown{{ $lottery->id }}">
+                                                        </div>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -116,7 +124,7 @@
                             <div class="text-center">
                                 <h3>{{ $lottery->title }}</h3>
                                 <div class="badge bg-dark mt-3 mb-4 fs-3">
-                                    {{ $lottery->price }} Rs.
+                                    {{ $lottery->price }} Coins.
                                 </div>
                             </div>
                             <div class="icon-group d-flex justify-content-around align-items-center">
@@ -145,42 +153,74 @@
                                 <p class="fs-7">See terms for <a href="#"
                                         class="text-gradient-theme text-decoration-none">free postal entry</span></p>
                             </div>
-                            <div class="checkout-ticket">
-                                <div class="form-group">
-                                    <select name="ticket_qty" id="ticket_qty"
-                                        class="form-select bg-theme-secondary text-white">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <button class="btn btn-warning mt-4 py-3 fw-bold w-100">Enter Now
-                                        {{ $lottery->price }} Rs.</button>
-                                </div>
+                            <div class="d-none d-md-block">
+                                <form action="{{ route('User.Purchase.Lottery', $lottery->id) }}" method="POST">
+                                    @csrf
+                                    <div class="checkout-ticket">
+                                        <div class="form-group">
+                                            <select name="ticket_qty" id="ticket_qty"
+                                                class="form-select bg-theme-secondary text-white">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                                        </div>
+                                        {{-- hide on mobile screen --}}
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-warning mt-4 py-3 fw-bold w-100">Enter
+                                                Now</button>
+                                        </div>
+                                </form>
                             </div>
-                            <div class="review">
-                                {{-- <div class="text-center mt-4">
+                        </div>
+                        <div class="review">
+                            {{-- <div class="text-center mt-4">
                                     <img src="{{ asset('assets/img/trust.svg') }}" alt="Trust">
                                 </div> --}}
-                                <div class="text-white text-start mt-4">
-                                    <p>Instant draw Thursday 13th Jun at 10PM via Random.org, an independent true random
-                                        software.</p>
-                                    <p>This competition will close early if all tickets sell out and the draw will take
-                                        place on that same day!</p>
-                                </div>
+                            <div class="text-white text-start mt-4">
+                                <p>Instant draw Thursday 13th Jun at 10PM via Random.org, an independent true random
+                                    software.</p>
+                                <p>This competition will close early if all tickets sell out and the draw will take
+                                    place on that same day!</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
     </section>
+
+    <script>
+        function startCountdown(days) {
+            const countdownElement = document.getElementById('countdown{{ $lottery->id }}');
+            const endDate = new Date().getTime() + days * 24 * 60 * 60 * 1000;
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = endDate - now;
+                if (distance < 0) {
+                    clearInterval(interval);
+                    countdownElement.innerHTML = "Countdown Ended";
+                    return;
+                }
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }
+            const interval = setInterval(updateCountdown, 1000);
+            updateCountdown(); // initial call to display the countdown immediately
+        }
+        // Example: Start countdown for 2 days
+        startCountdown({{ $lottery->time }});
+    </script>
 @endsection
