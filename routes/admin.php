@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\AdminCoinController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\AdminLotteryController;
+use App\Http\Controllers\admin\AllTranscations;
 use App\Http\Controllers\admin\StoreController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,4 +36,6 @@ Route::name('Admin.')->prefix('Admin/')->middleware('auth', 'admin')->group(func
     Route::get('Edit/Product/{id}', [StoreController::class, 'editProduct'])->name('Edit.Product');
     Route::post('Update/Product/{id}', [StoreController::class, 'updateProduct'])->name('Update.Product');
     Route::get('Delete/Product/{id}', [StoreController::class, 'deleteProduct'])->name('Delete.Product');
+    // Transcations
+    Route::get('Pending/Coin/Transcations', [AllTranscations::class, 'coinTranscations'])->name('Pending.Coin.Transcations');
 });

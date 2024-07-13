@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
+use App\Models\admin\Lottery;
 use App\Models\admin\Store;
 use App\Models\AdminCoins;
 use App\Models\user\PurchasedCoins;
@@ -12,7 +13,8 @@ class UserController extends Controller
 {
     public function index()
     {
-        return view('user.dashboard');
+        $lotteries = Lottery::get();
+        return view('landingpage.welcome', compact('lotteries'));
     }
 
     public function store()
@@ -42,9 +44,10 @@ class UserController extends Controller
             'image' => 'required',
         ]);
         // save image in different variable
-        $image = $request->file('image');
-        $imageName = rand(111111, 999999) . $image->getClientOriginalName();
-        $image->move(public_path('screen_shots'), $imageName);
+        $image = $request->image;
+        $imageName = rand(111111, 999999) . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('screen_shot'), $imageName);
+
         $data = new PurchasedCoins();
         $data->user_id = auth()->user()->id;
         $data->qty = $coin->qty;

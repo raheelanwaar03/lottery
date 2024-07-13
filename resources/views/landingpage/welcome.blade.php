@@ -190,7 +190,6 @@
                                         style="font-size: 15px"><i class="bi bi-stopwatch"></i>
                                         <div id="countdown{{ $lottery->id }}"></div>
                                     </span>
-
                                     {{-- countdown --}}
                                     <script>
                                         function startCountdown(days) {

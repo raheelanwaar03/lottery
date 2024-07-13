@@ -114,39 +114,17 @@
                                     Product</a></li>
                         </ul>
                     </li>
-                    {{-- <li class="pc-item pc-caption"><label>UI Components</label> <svg class="pc-icon">
-                            <use xlink:href="#custom-box-1"></use>
-                        </svg></li>
-                    <li class="pc-item"><a href="https://ableproadmin.com/elements/bc_alert.html" class="pc-link"
-                            target="_blank"><span class="pc-micon"><svg class="pc-icon">
-                                    <use xlink:href="#custom-box-1"></use>
-                                </svg> </span><span class="pc-mtext">Components</span></a></li>
-                    <li class="pc-item"><a href="https://ableproadmin.com/elements/animation.html"
-                            class="pc-link"><span class="pc-micon"><svg class="pc-icon">
-                                    <use xlink:href="#custom-flag"></use>
-                                </svg> </span><span class="pc-mtext">Animation</span></a></li>
                     <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link"><span class="pc-micon"><svg
                                     class="pc-icon">
                                     <use xlink:href="#custom-mouse-circle"></use>
-                                </svg> </span><span class="pc-mtext">Icons</span><span class="pc-arrow"><i
+                                </svg> </span><span class="pc-mtext">Coin Transcations</span><span class="pc-arrow"><i
                                     data-feather="chevron-right"></i></span></a>
                         <ul class="pc-submenu">
                             <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/elements/icon-feather.html">Feather</a></li>
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/elements/icon-fontawesome.html">Font Awesome 5</a>
-                            </li>
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/elements/icon-material.html">Material</a></li>
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/elements/icon-tabler.html">Tabler</a></li>
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/elements/icon-phosphor.html">Phosphor</a></li>
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/elements/icon-custom.html">Custom</a></li>
+                                    href="{{ route('Admin.Pending.Coin.Transcations') }}">Pending Transcations</a></li>
                         </ul>
                     </li>
-                    <li class="pc-item pc-caption"><label>Forms</label> <svg class="pc-icon">
+                    {{-- <li class="pc-item pc-caption"><label>Forms</label> <svg class="pc-icon">
                             <use xlink:href="#custom-element-plus"></use>
                         </svg></li>
                     <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link"><span class="pc-micon"><svg
