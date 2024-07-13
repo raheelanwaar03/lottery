@@ -35,7 +35,7 @@
                 </a>
                 <ul class="list-unstyled d-none d-md-flex mb-0 d-flex justify-content-start align-items-center gap-4">
                     <li><a href="#" class="text-white text-decoration-none fw-bold">All competitions</a></li>
-                    <li><a href="#" class="text-white text-decoration-none fw-bold">Charity</a></li>
+                    <li><a href="{{ route('Welcome') }}" class="text-white text-decoration-none fw-bold">Dashboard</a></li>
                 </ul>
             </div>
             <div class="action-buttons d-flex justify-content-start align-items-center gap-4">

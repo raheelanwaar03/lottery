@@ -11,7 +11,8 @@ Route::name('User.')->prefix('User/')->middleware('auth', 'user')->group(functio
     Route::get('Store', [UserController::class, 'store'])->name('Store');
     Route::get('Coins', [UserController::class, 'coins'])->name('Coins');
     Route::get('Buy/Coins/{id}', [UserController::class, 'buyCoins'])->name('Buy.Coins');
-    Route::post('Coin/Data/{id}', [UserController::class, 'coinData'])->name('Purchased.Coins');
+    Route::get('Purchased/Coins', [UserController::class, 'purchasedCoins'])->name('Purchased.Coins');
+    Route::post('Coin/Data/{id}', [UserController::class, 'coinData'])->name('Purchase.Coins');
     // take part in lottery
     Route::post('Purchase/Lottery/{id}', [PurchaseLottery::class, 'purchaseLottery'])->name('Purchase.Lottery');
 });

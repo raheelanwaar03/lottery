@@ -324,16 +324,18 @@
                         </div>
                     </a>
                 </li>
-                <li class="">
-                    <a href="#" class="text-decoration-none text-white">
-                        <div class="card bg-light-gray card-body py-2 bg-none">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="bi bi-box2-heart fs-5"></i>
-                                <h6 class="mb-0">Charity</h6>
+                @if (auth()->user())
+                    <li class="">
+                        <a href="{{ route('User.Purchased.Coins') }}" class="text-decoration-none text-white">
+                            <div class="card bg-light-gray card-body py-2 bg-none">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-cash-coin fs-5"></i>
+                                    <h6 class="mb-0">Coin Payments</h6>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </li>
+                        </a>
+                    </li>
+                @endif
                 <h6 class="fs-tiny fw-bold text-light-gray">ACCOUNT SETTINGS</h6>
                 <li class="">
                     <a href="#" class="text-decoration-none text-white">

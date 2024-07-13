@@ -29,7 +29,7 @@
                                 <p style="margin-top:10px;" id="text-to-copy">432 123 786</p><span id="copy-button"><i
                                         class="bi bi-clipboard"></i></span>
                             </div>
-                            <form action="{{ route('User.Purchased.Coins', $coin->id) }}" method="POST"
+                            <form action="{{ route('User.Purchase.Coins', $coin->id) }}" method="POST"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group mt-5">

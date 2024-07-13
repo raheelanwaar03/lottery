@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('qty');
             $table->string('tid');
             $table->string('image');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

@@ -54,4 +54,10 @@ class UserController extends Controller
         $data->save();
         return redirect()->route('User.Coins')->with('success', 'Your request submit Successfully');
     }
+
+    public function purchasedCoins()
+    {
+        $coins = PurchasedCoins::where('user_id', auth()->user()->id)->get();
+        return view('user.coinPayments', compact('coins'));
+    }
 }
