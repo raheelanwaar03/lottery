@@ -180,17 +180,12 @@
             </div>
             <div class="row mt-5">
                 @forelse ($lotteries as $lottery)
-                    <div class="col-md-3 col-lg-4 mb-5">
+                    <div class="col-6 col-md-3 mb-5">
                         <div class="card bg-theme-secondary position-relative">
                             <div class="position-absolute"
-                                style="top:-20px; width: 95%; left: 50%; transform: translateX(-50%);">
-                                <div class="bg-danger text-white rounded-pill text-center py-1 fs-7 fw-bold shadow py-2">
-
-                                    <span class="d-flex justify-content-around align-items-center"
-                                        style="font-size: 15px"><i class="bi bi-stopwatch"></i>
-                                        <div id="countdown{{ $lottery->id }}"></div>
-                                    </span>
-                                    {{-- countdown --}}
+                                style="top:-25px; width: 80%; left: 50%; transform: translateX(-50%);">
+                                <div class="bg-light rounded-pill text-center py-1 text-dark fs-7 fw-bold shadow">
+                                    <div id="countdown{{ $lottery->id }}"></div>
                                     <script>
                                         function startCountdown(days) {
                                             const countdownElement = document.getElementById('countdown{{ $lottery->id }}');
@@ -219,7 +214,71 @@
                                 </div>
                             </div>
                             <a href="{{ route('Product.Details', $lottery->id) }}">
-                                <img src="{{ asset('lottery/' . $lottery->picture) }}" class="h-70 mw-75 img-fluid">
+                                <img src="{{ asset('lottery/' . $lottery->picture) }}" class="image">
+                            </a>
+                            <div class="card-body text-white">
+                                <h4 class="text-center" style="font-size:20px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">{{ $lottery->title }}</h4>
+                                <div class="d-flex justify-content-center text-black">
+                                    <span style="background-color:#ffbd0a;padding:1px 10px 1px 10px;border-radius: 5px;">
+                                        <b>100</b>
+                                        <img src="{{ asset('assets/img/cred.webp') }}" height="15px" width="15px">
+                                    </span>
+                                </div>
+                                <div class="buttons mt-4">
+                                    <a href="{{ route('Product.Details', $lottery->id) }}"
+                                        class="btn btn-sm btn-md-lg bg-gradient-theme px-3 fw-bold w-100">Enter
+                                        now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                    <h3 class="text-center text-white">Empty</h3>
+                @endforelse
+            </div>
+
+            {{-- <div class="row mt-5">
+                @forelse ($lotteries as $lottery)
+                    <div class="col-md-3 col-lg-4 mb-5">
+                        <div class="card bg-theme-secondary position-relative">
+                            <div class="position-absolute"
+                                style="top:-20px; width: 95%; left: 50%; transform: translateX(-50%);">
+                                <div class="bg-danger text-white rounded-pill text-center py-1 fs-7 fw-bold shadow py-2">
+
+                                    <span class="d-flex justify-content-around align-items-center"
+                                        style="font-size: 15px"><i class="bi bi-stopwatch"></i>
+                                        <div id="countdown{{ $lottery->id }}"></div>
+                                    </span>
+                                    <script>
+                                        function startCountdown(days) {
+                                            const countdownElement = document.getElementById('countdown{{ $lottery->id }}');
+                                            const endDate = new Date().getTime() + days * 24 * 60 * 60 * 1000;
+
+                                            function updateCountdown() {
+                                                const now = new Date().getTime();
+                                                const distance = endDate - now;
+                                                if (distance < 0) {
+                                                    clearInterval(interval);
+                                                    countdownElement.innerHTML = "Countdown Ended";
+                                                    return;
+                                                }
+                                                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                                                countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                                            }
+                                            const interval = setInterval(updateCountdown, 1000);
+                                            updateCountdown(); // initial call to display the countdown immediately
+                                        }
+                                        // Example: Start countdown for 2 days
+                                        startCountdown({{ $lottery->time }});
+                                    </script>
+                                </div>
+                            </div>
+                            <a href="{{ route('Product.Details', $lottery->id) }}">
+                                <img src="{{ asset('lottery/' . $lottery->picture) }}" class="img-fluid"
+                                    style="height:300px;width:300px">
                             </a>
                             <div class="card-body text-white">
                                 <h4 class="text-center fs-6">{{ $lottery->title }}</h4>
@@ -237,8 +296,22 @@
                 @empty
                     <h3 class="text-center text-white">Empty</h3>
                 @endforelse
-            </div>
+            </div> --}}
 
         </div>
     </section>
+
+    <style>
+        .image {
+            width: 100%;
+            height: 220px;
+        }
+
+        @media (max-width: 470px) {
+            .image {
+                width: 162px;
+                height: 162px;
+            }
+        }
+    </style>
 @endsection
