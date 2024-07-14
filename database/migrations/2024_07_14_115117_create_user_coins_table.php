@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('purchased_coins', function (Blueprint $table) {
+        Schema::create('user_coins', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('price');
-            $table->string('qty');
-            $table->string('tid');
-            $table->string('image');
-            $table->string('status')->default('pending');
+            $table->string('coins');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
@@ -29,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('purchased_coins');
+        Schema::dropIfExists('user_coins');
     }
 };

@@ -38,4 +38,7 @@ Route::name('Admin.')->prefix('Admin/')->middleware('auth', 'admin')->group(func
     Route::get('Delete/Product/{id}', [StoreController::class, 'deleteProduct'])->name('Delete.Product');
     // Transcations
     Route::get('Pending/Coin/Transcations', [AllTranscations::class, 'coinTranscations'])->name('Pending.Coin.Transcations');
+    Route::get('Make/Transcation/Approve/{id}', [AllTranscations::class, 'makeTranscationApproved'])->name('Make.Transcation.Approved');
+    Route::get('Edit/Transcation/{id}', [AllTranscations::class, 'editTranscation'])->name('Edit.Transcation');
+    Route::post('Update/Transcation/{id}', [AllTranscations::class, 'update_coin_qty'])->name('Update.Coin.Qty');
 });

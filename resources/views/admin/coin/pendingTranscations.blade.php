@@ -51,15 +51,16 @@
                                                     style="width: 50px;height: 50px;border-radius: 50%;">
                                             </td>
                                             <td>
-                                                <a href="#" class="btn btn-sm btn-success"><i class="fa fa-check"
+                                                <a href="{{ route('Admin.Make.Transcation.Approved', $item->id) }}"
+                                                    class="btn btn-sm btn-success"><i class="fa fa-check"
                                                         aria-hidden="true"></i>
                                                 </a>
                                                 <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"
                                                         aria-hidden="true"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-warning btn-sm"><i
-                                                        class="fa fa-address-card" aria-hidden="true"></i>
-
+                                                <a href="{{ route('Admin.Edit.Transcation', $item->id) }}"
+                                                    class="btn btn-warning btn-sm"><i class="fa fa-address-card"
+                                                        aria-hidden="true"></i>
                                                 </a>
                                             </td>
                                         </tr>

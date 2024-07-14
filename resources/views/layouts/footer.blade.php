@@ -271,10 +271,11 @@
                         <a href="{{ route('User.Coins') }}" class="text-decoration-none text-white">
                             <div class="card bg-light-gray card-body py-2 bg-none">
                                 <div class="d-flex align-items-center gap-3">
-                                    <i class="bi bi-filter-circle fs-5"></i>
+                                    <i class="bi bi-coin fs-5"></i>
                                     <div class="d-flex justify-content-between align-items-center w-100">
-                                        <h6 class="mb-0">My Credits </h6>
-                                        <span class="px-2 py-0 text-theme text-end fs-tiny">0.00</span>
+                                        <h6 class="mb-0">My Coins </h6>
+                                        <span class="px-2 py-0 text-theme text-end fs-tiny"> {{ $user_coins }}
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -360,9 +361,10 @@
                 </li>
                 @if (auth()->user())
                     <li class="">
-                        <form action="{{ route('logout') }}" method="POST">
+                        <form action="{{ route('logout') }}" id="my_form" method="POST">
                             @csrf
-                            <a href="#" class="text-decoration-none text-white">
+                            <a onclick="document.getElementById('my_form').submit();"
+                                class="text-decoration-none text-white">
                                 <div class="card bg-light-gray card-body py-2 bg-none">
                                     <div class="d-flex align-items-center gap-3">
                                         <i class="bi bi-box-arrow-right fs-5"></i>

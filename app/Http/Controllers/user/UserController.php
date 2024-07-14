@@ -7,14 +7,21 @@ use App\Models\admin\Lottery;
 use App\Models\admin\Store;
 use App\Models\AdminCoins;
 use App\Models\user\PurchasedCoins;
+use App\Models\user\UserCoins;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
     public function index()
     {
-        $lotteries = Lottery::get();
-        return view('landingpage.welcome', compact('lotteries'));
+                // check if user login then sum coins
+                $lotteries = Lottery::get();
+                if (!auth()->user()) {
+                    return view('landingpage.welcome', compact('lotteries'));
+                }
+                $user_coins = UserCoins::where('user_id', auth()->user()->id)->get();
+                $user_coins = $user_coins->sum('coins');
+                return view('landingpage.welcome', compact('lotteries', 'user_coins'));
     }
 
     public function store()
