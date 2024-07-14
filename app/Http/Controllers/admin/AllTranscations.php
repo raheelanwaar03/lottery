@@ -21,6 +21,17 @@ class AllTranscations extends Controller
         $transcation = PurchasedCoins::find($id);
         $transcation->status = 'approved';
         $transcation->save();
+        $user = UserCoins::find($transcation->user_id);
+        if ($user == null) {
+            $user = new UserCoins();
+            $user->user_id = $transcation->user_id;
+            $user->coins = $transcation->qty;
+            $user->save();
+        }
+        $user->coins += $transcation->qty;
+        $user->save();
+        // add to user coin wallet
+
         return redirect()->back()->with('success', 'Transcation Approved');
     }
     public function editTranscation($id)
@@ -33,11 +44,18 @@ class AllTranscations extends Controller
     {
         $transcation = PurchasedCoins::find($id);
         $transcation->qty = $request->qty;
+        $transcation->status = 'approved';
         $transcation->save();
+
         // add coins on user coin wallet
-        $user = new UserCoins();
-        $user->user_id = $transcation->user_id;
-        $user->coins = $request->qty;
+        $user = UserCoins::find($transcation->user_id);
+        if ($user == null) {
+            $user = new UserCoins();
+            $user->user_id = $transcation->user_id;
+            $user->coins = $transcation->qty;
+            $user->save();
+        }
+        $user->coins += $transcation->qty;
         $user->save();
         return redirect()->route('Admin.Pending.Coin.Transcations')->with('success', 'Transcation Updated');
     }

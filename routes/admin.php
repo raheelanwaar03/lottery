@@ -22,6 +22,8 @@ Route::name('Admin.')->prefix('Admin/')->middleware('auth', 'admin')->group(func
     Route::get('/Edit/Lottery/{id}', [AdminLotteryController::class, 'edit'])->name('Edit.Lottery');
     Route::post('/Update/Lottery/{id}', [AdminLotteryController::class, 'update'])->name('Update.Lottery');
     Route::get('/Delete/Lottery/{id}', [AdminLotteryController::class, 'delete'])->name('Delete.Lottery');
+    Route::get('All/Participants',[AdminLotteryController::class,'participants'])->name('All.Participants');
+    Route::get('Make/Winner/{user_name}',[AdminLotteryController::class,'makeWinner'])->name('Make.Winner');
     // Coins Routes
     Route::get('Add/Coin', [AdminCoinController::class, 'add'])->name('Add.Coins');
     Route::get('All/Coin', [AdminCoinController::class, 'all'])->name('All.Coins');

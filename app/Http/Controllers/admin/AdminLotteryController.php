@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\admin\Lottery;
+use App\Models\user\PurchasaeLottery;
 use Illuminate\Http\Request;
 
 class AdminLotteryController extends Controller
@@ -68,5 +69,16 @@ class AdminLotteryController extends Controller
         $lottery = Lottery::find($id);
         $lottery->delete();
         return redirect()->back()->with('success', 'Lottery Deleted');
+    }
+
+    public function participants()
+    {
+        $participants = PurchasaeLottery::get();
+        return view('admin.lottery.participants', compact('participants'));
+    }
+
+    public function makeWinner($user_name)
+    {
+        return "$user_name is Winner";
     }
 }

@@ -88,6 +88,8 @@
                             <li class="pc-item"><a class="pc-link" href="{{ route('Admin.Add.Lottery') }}">Add</a></li>
                             <li class="pc-item"><a class="pc-link" href="{{ route('Admin.All.Lottery') }}">All</a>
                             </li>
+                            <li class="pc-item"><a class="pc-link"
+                                    href="{{ route('Admin.All.Participants') }}">Participants</a></li>
                         </ul>
                     </li>
                     <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link"><span class="pc-micon"><svg
@@ -121,37 +123,11 @@
                                     data-feather="chevron-right"></i></span></a>
                         <ul class="pc-submenu">
                             <li class="pc-item"><a class="pc-link"
-                                    href="{{ route('Admin.Pending.Coin.Transcations') }}">Pending Transcations</a></li>
+                                    href="{{ route('Admin.Pending.Coin.Transcations') }}">Pending Transcations</a>
+                            </li>
                         </ul>
                     </li>
-                    {{-- <li class="pc-item pc-caption"><label>Forms</label> <svg class="pc-icon">
-                            <use xlink:href="#custom-element-plus"></use>
-                        </svg></li>
-                    <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link"><span class="pc-micon"><svg
-                                    class="pc-icon">
-                                    <use xlink:href="#custom-element-plus"></use>
-                                </svg> </span><span class="pc-mtext">Forms Elements</span><span class="pc-arrow"><i
-                                    data-feather="chevron-right"></i></span></a>
-                        <ul class="pc-submenu">
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/forms/form_elements.html">Form Basic</a></li>
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/forms/form_floating.html">Form Floating</a></li>
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/forms/form2_basic.html">Form Options</a></li>
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/forms/form2_input_group.html">Input Groups</a></li>
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/forms/form2_checkbox.html">Checkbox</a></li>
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/forms/form2_radio.html">Radio</a></li>
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/forms/form2_switch.html">Switch</a></li>
-                            <li class="pc-item"><a class="pc-link"
-                                    href="https://ableproadmin.com/forms/form2_megaoption.html">Mega option</a></li>
-                        </ul>
-                    </li>
-                    <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link"><span class="pc-micon"><svg
+                    {{-- <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link"><span class="pc-micon"><svg
                                     class="pc-icon">
                                     <use xlink:href="#custom-cpu-charge"></use>
                                 </svg> </span><span class="pc-mtext">Forms Plugins</span><span class="pc-arrow"><i

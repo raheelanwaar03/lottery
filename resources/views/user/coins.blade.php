@@ -21,7 +21,7 @@
                             <div class="tab-content">
                                 <div id="store" class="container tab-pane active"><br>
                                     <div class="point-box border border-warning rounded text-center text-white p-2">
-                                        You have <span class="badge bg-theme">0</span> Coin
+                                        You have <span class="badge bg-theme">{{ $user_coins }}</span> Coin
                                     </div>
                                     <div class="offers">
                                         <h5 class="text-start text-secondary fw-bold my-4">Coin Ads</h5>
