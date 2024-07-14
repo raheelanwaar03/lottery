@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('purchasae_lotteries', function (Blueprint $table) {
             $table->id();
+            $table->string('user_id');
+            $table->string('user_name');
+            $table->string('lottery_id');
+            $table->string('ticket_qty');
+            $table->string('price');
+            $table->string('total_price');
             $table->timestamps();
         });
     }

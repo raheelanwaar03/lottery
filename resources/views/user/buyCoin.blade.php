@@ -34,7 +34,7 @@
                                 @csrf
                                 <div class="form-group mt-5">
                                     <label for="tid" class="mb-2">Transaction ID <span>*</span></label>
-                                    <input type="text" name="tid" id="tid"
+                                    <input type="number" name="tid" id="tid"
                                         class="form-control form-control-lg border-0">
                                 </div>
                                 <div class="form-group">

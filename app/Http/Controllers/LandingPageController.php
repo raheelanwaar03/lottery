@@ -29,7 +29,12 @@ class LandingPageController extends Controller
 
     public function details()
     {
-        return view('landingpage.details');
+        if (!auth()->user()) {
+            return view('landingpage.details');
+        }
+        $user_coins = UserCoins::where('user_id', auth()->user()->id)->get();
+        $user_coins = $user_coins->sum('coins');
+        return view('landingpage.details', compact('user_coins'));
     }
 
     public function aboutUs()
@@ -40,6 +45,11 @@ class LandingPageController extends Controller
     public function detail($id)
     {
         $lottery = Lottery::find($id);
-        return view('landingpage.details', compact('lottery'));
+        if (!auth()->user()) {
+            return view('landingpage.details', compact('lottery'));
+        }
+        $user_coins = UserCoins::where('user_id', auth()->user()->id)->get();
+        $user_coins = $user_coins->sum('coins');
+        return view('landingpage.details', compact('lottery', 'user_coins'));
     }
 }

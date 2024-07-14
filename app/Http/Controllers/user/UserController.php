@@ -14,14 +14,14 @@ class UserController extends Controller
 {
     public function index()
     {
-                // check if user login then sum coins
-                $lotteries = Lottery::get();
-                if (!auth()->user()) {
-                    return view('landingpage.welcome', compact('lotteries'));
-                }
-                $user_coins = UserCoins::where('user_id', auth()->user()->id)->get();
-                $user_coins = $user_coins->sum('coins');
-                return view('landingpage.welcome', compact('lotteries', 'user_coins'));
+        // check if user login then sum coins
+        $lotteries = Lottery::get();
+        if (!auth()->user()) {
+            return view('landingpage.welcome', compact('lotteries'));
+        }
+        $user_coins = UserCoins::where('user_id', auth()->user()->id)->get();
+        $user_coins = $user_coins->sum('coins');
+        return view('landingpage.welcome', compact('lotteries', 'user_coins'));
     }
 
     public function store()
@@ -32,14 +32,18 @@ class UserController extends Controller
 
     public function coins()
     {
+        $user_coins = UserCoins::where('user_id', auth()->user()->id)->get();
+        $user_coins = $user_coins->sum('coins');
         $coins = AdminCoins::get();
-        return view('user.coins', compact('coins'));
+        return view('user.coins', compact('coins', 'user_coins'));
     }
 
     public function buyCoins($id)
     {
+        $user_coins = UserCoins::where('user_id', auth()->user()->id)->get();
+        $user_coins = $user_coins->sum('coins');
         $coin = AdminCoins::find($id);
-        return view('user.buyCoin', compact('coin'));
+        return view('user.buyCoin', compact('coin', 'user_coins'));
     }
 
     public function coinData(Request $request, $id)
@@ -62,12 +66,14 @@ class UserController extends Controller
         $data->tid = $request->tid;
         $data->image = $imageName;
         $data->save();
-        return redirect()->route('User.Coins')->with('success', 'Your request submit Successfully');
+        return redirect()->route('User.Purchased.Coins')->with('success', 'Your request submit Successfully');
     }
 
     public function purchasedCoins()
     {
+        $user_coins = UserCoins::where('user_id', auth()->user()->id)->get();
+        $user_coins = $user_coins->sum('coins');
         $coins = PurchasedCoins::where('user_id', auth()->user()->id)->get();
-        return view('user.coinPayments', compact('coins'));
+        return view('user.coinPayments', compact('coins', 'user_coins'));
     }
 }
