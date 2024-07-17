@@ -26,8 +26,10 @@ class UserController extends Controller
 
     public function store()
     {
-        $products = Store::all();
-        return view('user.store', compact('products'));
+        $user_coins = UserCoins::where('user_id', auth()->user()->id)->get();
+        $user_coins = $user_coins->sum('coins');
+        $products = Store::get();
+        return view('user.store', compact('products','user_coins'));
     }
 
     public function coins()
