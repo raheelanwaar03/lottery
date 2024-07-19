@@ -28,3 +28,4 @@ function coinAd()
     $coinAd = AdminCoins::all()->count();
     return $coinAd;
 }
+

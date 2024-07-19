@@ -31,7 +31,8 @@
                         In</a>
                 @endif
                 <a href="{{ route('Welcome') }}">
-                    <img src="{{ asset('logo/logo.png') }}" alt="Logo" class="logo me-md-4">
+                    <img src="{{ asset('logo/logo.png') }}" style="height: 50px;width:50px;" alt="Logo"
+                        class="logo me-md-4">
                 </a>
                 <ul class="list-unstyled d-none d-md-flex mb-0 d-flex justify-content-start align-items-center gap-4">
                     <li><a href="#" class="text-white text-decoration-none fw-bold">All competitions</a></li>

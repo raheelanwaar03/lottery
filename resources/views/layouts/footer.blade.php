@@ -8,7 +8,7 @@
         <div class="row justify-content-center">
             <div class="col-md-3">
                 <div class="text-center text-md-start mb-5">
-                    <img src="{{ asset('logo/logo.png') }}" alt="Logo" style="height: 150px;width:150px">
+                    <img src="{{ asset('logo/logo.png') }}" alt="Logo" style="height: 150px;width:200px">
                 </div>
             </div>
             <div class="col-6 col-md-3 text-center text-md-start">
@@ -165,73 +165,6 @@
         </div>
     </div>
 </div>
-
-<!-- side menu -->
-<div class="offcanvas offcanvas-end" id="sidemenu">
-    <div class="offcanvas-body bg-theme-dark">
-        <div class="d-flex justify-content-end">
-            <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas"></button>
-        </div>
-        <div class="text-white">
-            <h4>Menu</h4>
-            <ul class="list-unstyled d-flex flex-column gap-3 mb-0 mt-5">
-                <li>
-                    <a href="#" class="text-decoration-none text-white">
-                        <div class="card card-body py-2 bg-theme-dark border border-dark">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="bi bi-house-door fs-3"></i>
-                                <h6 class="mb-0">Home</h6>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="text-decoration-none text-white">
-                        <div class="card card-body py-2 bg-theme-dark border border-dark">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="bi bi-house-door fs-3"></i>
-                                <h6 class="mb-0">Home</h6>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="text-decoration-none text-white">
-                        <div class="card card-body py-2 bg-theme-dark border border-dark">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="bi bi-house-door fs-3"></i>
-                                <h6 class="mb-0">Home</h6>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="text-decoration-none text-white">
-                        <div class="card card-body py-2 bg-theme-dark border border-dark">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="bi bi-house-door fs-3"></i>
-                                <h6 class="mb-0">Home</h6>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            <div class="social-icons">
-                <div class="d-flex flex-column">
-                    <h5 class="text-white text-center text-md-start mt-3 mt-md-0">Follow us</h5>
-                    <ul
-                        class="mb-0 list-unstyled fs-3 d-flex justify-content-around px-5 px-md-0 justify-content-md-center gap-2">
-                        <li><i class="bi bi-facebook text-white"></i></li>
-                        <li><i class="bi bi-messenger text-white"></i></li>
-                        <li><i class="bi bi-whatsapp text-white"></i></li>
-                        <li><i class="bi bi-facebook text-white"></i></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- Logged In Sidemenu -->
 <div class="offcanvas offcanvas-end" id="sidemenuLoggedIn">
     <div class="offcanvas-body text-white p-0 bg-theme-dark">

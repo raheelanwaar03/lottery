@@ -5,7 +5,7 @@
         <div class="container-fluid text-center text-md-start">
             <span class="badge bg-dark mt-5"><img src="{{ asset('assets/img/crown.svg') }}" alt="Crown"> JACKPOT DRAW</span>
             <h1 class="text-white responsive-heading fw-bold">WIN A MERCEDES GLC AMG <br> LINE + PRIZE BUNDLE!</h1>
-            <h1 class="text-gradient-theme mb-4">£0.50</h1>
+            <h1 class="text-gradient-theme mb-4">500 PKR</h1>
             <a href="#" class="btn fw-bold text-uppercase bg-gradient-theme px-5">Enter
                 now</a>
         </div>
@@ -18,7 +18,7 @@
                     <div class="card bg-theme-dark" style="border: 1px solid gray;">
                         <div class="card-body py-1 text-center text-white">
                             <i class="bi bi-gift fs-1 text-gradient-theme"></i>
-                            <h6 class="mb-0">$17.3</h6>
+                            <h6 class="mb-0">1500 PKR</h6>
                             <p class="mb-0" style="font-size:12px;">won in prizes</p>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                     <div class="card bg-theme-dark" style="border: 1px solid gray;">
                         <div class="card-body py-1 text-center text-white">
                             <i class="bi bi-trophy fs-1 text-gradient-theme"></i>
-                            <h6 class="mb-0">$17.3</h6>
+                            <h6 class="mb-0">1500 PKR</h6>
                             <p class="mb-0" style="font-size:12px;">won in prizes</p>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                     <div class="card bg-theme-dark" style="border: 1px solid gray;">
                         <div class="card-body py-1 text-center text-white">
                             <i class="bi bi-patch-check fs-1 text-gradient-theme"></i>
-                            <h6 class="mb-0">$17.3</h6>
+                            <h6 class="mb-0">1500 PKR</h6>
                             <p class="mb-0" style="font-size:12px;">won in prizes</p>
                         </div>
                     </div>
@@ -45,63 +45,47 @@
         </div>
     </section>
 
-    <section id="competition" class="bg-theme-dark py-5">
+    <section id="competition" class="bg-theme-dark pb-3">
         <div class="container">
-            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <h4 class="text-white">Featured Products</h4>
+            <div id="demo">
                 <div class="carousel-inner overflow-visible">
-                    <div class="carousel-item active">
-                        <div class="competion-box postion-relative">
-                            <img src="{{ asset('assets/img/competition/1.webp') }}" alt="Los Angeles" class="d-block"
-                                width="100%">
-                            <div class="card bg-theme-dark info-card-container">
-                                <div class="card-body">
-                                    <h2>£20k Ninja Instant Win Raffle</h2>
-                                    <div class="progress w-100 bg-dark" style="height: 10px;">
-                                        <div class="progress bg-theme w-75" style="height: 10px;"></div>
+                    <div class="row">
+                        <div class="col-12 my-3 col-md-6 col-lg-4">
+                            <div class="card bg-theme-dark" style="border-radius: 13px">
+                                <div class="card-body py-1 text-center text-white">
+                                    <div class="competion-box postion-relative">
+                                        <img src="{{ asset('assets/img/competition/1.webp') }}" alt="Los Angeles"
+                                            class="d-block" style="border-radius: 15px;height:300px;width:100%;">
+                                        <p style="margin-top:-35px;">20K PKR Ninja Instant Win Raffle</p>
                                     </div>
-                                    <small>2633 tickets sold</small>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="competion-box postion-relative">
-                            <img src="{{ asset('assets/img/competition/2.webp') }}" alt="Los Angeles" class="d-block"
-                                width="100%">
-                            <div class="card bg-theme-dark info-card-container">
-                                <div class="card-body">
-                                    <h2>£20k Ninja Instant Win Raffle</h2>
-                                    <div class="progress w-100 bg-dark" style="height: 10px;">
-                                        <div class="progress bg-theme w-75" style="height: 10px;"></div>
+                        <div class="col-12 my-3 col-md-6 col-lg-4">
+                            <div class="card bg-theme-dark" style="border-radius: 13px">
+                                <div class="card-body py-1 text-center text-white">
+                                    <div class="competion-box postion-relative">
+                                        <img src="{{ asset('assets/img/competition/2.webp') }}" alt="Los Angeles"
+                                            class="d-block" style="border-radius: 15px;height:300px;width:100%;">
+                                        <p style="margin-top:-35px;">20K PKR Ninja Instant Win Raffle</p>
                                     </div>
-                                    <small>2633 tickets sold</small>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="competion-box postion-relative">
-                            <img src="{{ asset('assets/img/competition/3.webp') }}" alt="Los Angeles" class="d-block"
-                                width="100%">
-                            <div class="card bg-theme-dark info-card-container">
-                                <div class="card-body">
-                                    <h2>£20k Ninja Instant Win Raffle</h2>
-                                    <div class="progress w-100 bg-dark" style="height: 10px;">
-                                        <div class="progress bg-theme w-75" style="height: 10px;"></div>
+                        <div class="col-12 col-md-6 col-lg-4 my-3">
+                            <div class="card bg-theme-dark" style="border-radius: 13px">
+                                <div class="card-body py-1 text-center text-white">
+                                    <div class="competion-box postion-relative">
+                                        <img src="{{ asset('assets/img/competition/3.webp') }}" alt="Los Angeles" class="d-block"
+                                            style="border-radius: 15px;height:300px;width:100%;">
+                                        <p style="margin-top:-35px;">20K PKR Ninja Instant Win Raffle</p>
                                     </div>
-                                    <small>2633 tickets sold</small>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Left and right controls/icons -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
             </div>
         </div>
     </section>
@@ -113,7 +97,7 @@
                     <div class="d-md-flex">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="left-text text-center text-md-start" style="width: 300px">
-                                <h4>£ 16.4 Million</h4>
+                                <h4>16.4 Million</h4>
                                 <h6>won in prizes so far</h6>
                             </div>
                         </div>
@@ -158,7 +142,7 @@
                         <div class="badge bg-dark mb-3 mb-md-0 px-1 py-0 border border-1 pe-4 rounded-pill">
                             <div class="d-flex gap-0 align-items-center ">
                                 <i class="bi bi-dot text-warning " style="font-size: 30px;"></i>
-                                <p class="mb-0"> 0 active raffles</p>
+                                <p class="mb-0"> {{ lotteries() }} active raffles</p>
                             </div>
                         </div>
                         <div class="badge bg-dark mb-3 mb-md-0 px-1 py-0 border border-1 pe-4 rounded-pill">
@@ -217,7 +201,9 @@
                                 <img src="{{ asset('lottery/' . $lottery->picture) }}" class="image">
                             </a>
                             <div class="card-body text-white">
-                                <h4 class="text-center" style="font-size:20px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">{{ $lottery->title }}</h4>
+                                <h4 class="text-center"
+                                    style="font-size:20px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                                    {{ $lottery->title }}</h4>
                                 <div class="d-flex justify-content-center text-black">
                                     <span style="background-color:#ffbd0a;padding:1px 10px 1px 10px;border-radius: 5px;">
                                         <b>100</b>
