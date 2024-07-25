@@ -45,48 +45,55 @@
         </div>
     </section>
 
-    <section id="competition" class="bg-theme-dark pb-3">
-        <div class="container">
-            <h4 class="text-white">Featured Products</h4>
-            <div id="demo">
-                <div class="carousel-inner overflow-visible">
-                    <div class="row">
-                        <div class="col-12 my-3 col-md-6 col-lg-4">
-                            <div class="card bg-theme-dark" style="border-radius: 13px">
-                                <div class="card-body py-1 text-center text-white">
-                                    <div class="competion-box postion-relative">
-                                        <img src="{{ asset('assets/img/competition/1.webp') }}" alt="Los Angeles"
-                                            class="d-block" style="border-radius: 15px;height:300px;width:100%;">
-                                        <p style="margin-top:-35px;">20K PKR Ninja Instant Win Raffle</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 my-3 col-md-6 col-lg-4">
-                            <div class="card bg-theme-dark" style="border-radius: 13px">
-                                <div class="card-body py-1 text-center text-white">
-                                    <div class="competion-box postion-relative">
-                                        <img src="{{ asset('assets/img/competition/2.webp') }}" alt="Los Angeles"
-                                            class="d-block" style="border-radius: 15px;height:300px;width:100%;">
-                                        <p style="margin-top:-35px;">20K PKR Ninja Instant Win Raffle</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4 my-3">
-                            <div class="card bg-theme-dark" style="border-radius: 13px">
-                                <div class="card-body py-1 text-center text-white">
-                                    <div class="competion-box postion-relative">
-                                        <img src="{{ asset('assets/img/competition/3.webp') }}" alt="Los Angeles" class="d-block"
-                                            style="border-radius: 15px;height:300px;width:100%;">
-                                        <p style="margin-top:-35px;">20K PKR Ninja Instant Win Raffle</p>
-                                    </div>
-                                </div>
+    <section id="competition mt-4" class="bg-theme-dark pb-3">
+        <div class="container bg-theme-dark pt-lg-4">
+            <h4 style="color:white;" class="fw-bold">FEATURED COMPETITIONS
+            </h4>
+        </div>
+        <div class="row">
+            <div class="col-12 my-3 col-md-6 col-lg-12">
+                <div class="card bg-theme-dark" style="border-radius: 13px">
+                    <div class="card-body py-1 text-center text-white">
+                        <div class="competion-box postion-relative">
+                            <img src="{{ asset('assets/img/competition/1.webp') }}" alt="Los Angeles" class="d-block"
+                                style="border-radius: 15px;height:300px;width:100%;">
+                            <div class="d-flex justify-content-around align-items-center" style="margin-top:-35px;">
+                                <p style="font-size: 10px;font-weight:bold">Ticket Price <br>
+                                    <span>200 PKR</span>
+                                </p>
+                                <p style="font-size:10px;font-weight:bold">Raffle ends <br>
+                                    <span style="color:red;">06 days</span>
+                                </p>
+                                <a href="{{ route('Product.Details', $lottery->id) }}"> style="margin-top:-17px"
+                                    class="btn btn-sm btn-md-lg bg-gradient-theme fw-bold">Enter
+                                    Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            {{-- <div class="col-12 my-3 col-md-6 col-lg-4">
+                        <div class="card bg-theme-dark" style="border-radius: 13px">
+                            <div class="card-body py-1 text-center text-white">
+                                <div class="competion-box postion-relative">
+                                    <img src="{{ asset('assets/img/competition/2.webp') }}" alt="Los Angeles"
+                                        class="d-block" style="border-radius: 15px;height:300px;width:100%;">
+                                    <p style="margin-top:-35px;">20K PKR Ninja Instant Win Raffle</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 my-3">
+                        <div class="card bg-theme-dark" style="border-radius: 13px">
+                            <div class="card-body py-1 text-center text-white">
+                                <div class="competion-box postion-relative">
+                                    <img src="{{ asset('assets/img/competition/3.webp') }}" alt="Los Angeles"
+                                        class="d-block" style="border-radius: 15px;height:300px;width:100%;">
+                                    <p style="margin-top:-35px;">20K PKR Ninja Instant Win Raffle</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> --}}
         </div>
     </section>
 
