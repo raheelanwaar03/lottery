@@ -4,6 +4,7 @@ use App\Http\Controllers\admin\AdminCoinController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\AdminLotteryController;
 use App\Http\Controllers\admin\AllTranscations;
+use App\Http\Controllers\admin\FeaturedLotteries;
 use App\Http\Controllers\admin\StoreController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,10 @@ Route::name('Admin.')->prefix('Admin/')->middleware('auth', 'admin')->group(func
     Route::get('All/Users', [AdminController::class, 'users'])->name('All.Users');
     Route::get('Edit/User/{id}', [AdminController::class, 'editUser'])->name('Edit.User');
     Route::post('Update/User/{id}', [AdminController::class, 'updateUser'])->name('Update.User');
+    // Featured Lotteries
+    Route::get('Featured/Product', [FeaturedLotteries::class, 'addFeatured'])->name('Add.Featured.Lotteries');
+    Route::get('All/Featured/Product', [FeaturedLotteries::class, 'allFeatured'])->name('All.Featured.Lotteries');
+    Route::post('Store/Featured/Product', [FeaturedLotteries::class, 'storeFeatured'])->name('store.Featured.Lotteries');
     // Add Lotteries
     Route::get('/Add/Lottery', [AdminLotteryController::class, 'add'])->name('Add.Lottery');
     Route::post('/Store/Lottery', [AdminLotteryController::class, 'store'])->name('Store.Lottery');
@@ -22,8 +27,8 @@ Route::name('Admin.')->prefix('Admin/')->middleware('auth', 'admin')->group(func
     Route::get('/Edit/Lottery/{id}', [AdminLotteryController::class, 'edit'])->name('Edit.Lottery');
     Route::post('/Update/Lottery/{id}', [AdminLotteryController::class, 'update'])->name('Update.Lottery');
     Route::get('/Delete/Lottery/{id}', [AdminLotteryController::class, 'delete'])->name('Delete.Lottery');
-    Route::get('All/Participants',[AdminLotteryController::class,'participants'])->name('All.Participants');
-    Route::get('Make/Winner/{user_name}',[AdminLotteryController::class,'makeWinner'])->name('Make.Winner');
+    Route::get('All/Participants', [AdminLotteryController::class, 'participants'])->name('All.Participants');
+    Route::get('Make/Winner/{user_name}', [AdminLotteryController::class, 'makeWinner'])->name('Make.Winner');
     // Coins Routes
     Route::get('Add/Coin', [AdminCoinController::class, 'add'])->name('Add.Coins');
     Route::get('All/Coin', [AdminCoinController::class, 'all'])->name('All.Coins');

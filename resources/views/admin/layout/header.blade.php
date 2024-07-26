@@ -90,6 +90,12 @@
                             </li>
                             <li class="pc-item"><a class="pc-link"
                                     href="{{ route('Admin.All.Participants') }}">Participants</a></li>
+                            <li class="pc-item"><a class="pc-link"
+                                    href="{{ route('Admin.Add.Featured.Lotteries') }}">Featured
+                                    Lotteries</a></li>
+                            <li class="pc-item"><a class="pc-link"
+                                    href="{{ route('Admin.All.Featured.Lotteries') }}">All Featured
+                                    Lotteries</a></li>
                         </ul>
                     </li>
                     <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link"><span class="pc-micon"><svg
