@@ -45,23 +45,38 @@
         </div>
     </section>
 
-    <section id="competition mt-4" class="bg-theme-dark pb-3">
+    <section id="competition" class="bg-theme-dark pb-3">
         <div class="container bg-theme-dark pt-lg-4">
-            <h4 style="color:white;" class="fw-bold">FEATURED COMPETITIONS
+            <h4 style="color:white;" class="fw-bold">FEATURED JACKPOTS
             </h4>
-        </div>
-        <div class="row">
-            <div class="col-12 my-3 col-md-6 col-lg-12">
-                <div class="card bg-theme-dark" style="border-radius: 13px">
-                    <div class="card-body py-1 text-center text-white">
-                        <div class="competion-box postion-relative">
-                            <img src="{{ asset('assets/img/competition/1.webp') }}" alt="Los Angeles" class="d-block"
-                                style="border-radius: 15px;height:300px;width:100%;">
-                            <div class="d-flex justify-content-around align-items-center" style="margin-top:-35px;">
-                                <p style="font-size: 10px;font-weight:bold">Ticket Price <br>
+            <div class="row">
+                <div class="col-md-12 m-1">
+                    <div class="competion-box postion-relative">
+                        <img src="{{ asset('assets/img/competition/1.webp') }}" class="d-block"
+                            style="border-radius: 15px;height:410px;width:100%;">
+                        <div class="d-flex justify-content-around align-items-center" style="margin-top:-35px;">
+                            <p style="font-size: 10px;font-weight:bold;color:white;">Ticket Price <br>
+                                <span>200 PKR</span>
+                            </p>
+                            <p style="font-size:10px;font-weight:bold;color:white;">Raffle ends <br>
+                                <span style="color:red;">06 days</span>
+                            </p>
+                            <a href="#" style="margin-top:-17px"
+                                class="btn btn-sm btn-md-lg bg-gradient-theme fw-bold">Enter
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 m-1">
+                    <div class="competion-box postion-absolute">
+                        <img src="{{ asset('assets/img/competition/2.webp') }}" class="d-block"
+                            style="border-radius: 15px;height:410px;width:100%;">
+                        <div class="col-md-12">
+                            <div class="d-flex justify-content-around align-items-center" style="background-color:rgb(76, 76, 90)">
+                                <p style="font-size: 10px;font-weight:bold;color:white;">Ticket Price <br>
                                     <span>200 PKR</span>
                                 </p>
-                                <p style="font-size:10px;font-weight:bold">Raffle ends <br>
+                                <p style="font-size:10px;font-weight:bold;color:white;">Raffle ends <br>
                                     <span style="color:red;">06 days</span>
                                 </p>
                                 <a href="#" style="margin-top:-17px"
@@ -71,25 +86,20 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 my-3 col-md-6 col-lg-4 d-lg-block d-xl-none">
-                <div class="card bg-theme-dark" style="border-radius: 13px">
-                    <div class="card-body py-1 text-center text-white">
-                        <div class="competion-box postion-relative">
-                            <img src="{{ asset('assets/img/competition/2.webp') }}" alt="Los Angeles" class="d-block"
-                                style="border-radius: 15px;height:300px;width:100%;">
-                            <p style="margin-top:-35px;">20K PKR Ninja Instant Win Raffle</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 my-3 d-lg-block d-xl-none">
-                <div class="card bg-theme-dark" style="border-radius: 13px">
-                    <div class="card-body py-1 text-center text-white">
-                        <div class="competion-box postion-relative">
-                            <img src="{{ asset('assets/img/competition/3.webp') }}" alt="Los Angeles" class="d-block"
-                                style="border-radius: 15px;height:300px;width:100%;">
-                            <p style="margin-top:-35px;">20K PKR Ninja Instant Win Raffle</p>
+                <div class="col-md-12 m-1">
+                    <div class="competion-box postion-relative">
+                        <img src="{{ asset('assets/img/competition/3.webp') }}" class="d-block"
+                            style="border-radius: 15px;height:410px;width:100%;">
+                        <div class="d-flex justify-content-around align-items-center" style="margin-top:-35px;">
+                            <p style="font-size: 10px;font-weight:bold;color:white;">Ticket Price <br>
+                                <span>200 PKR</span>
+                            </p>
+                            <p style="font-size:10px;font-weight:bold;color:white;">Raffle ends <br>
+                                <span style="color:red;">06 days</span>
+                            </p>
+                            <a href="#" style="margin-top:-17px"
+                                class="btn btn-sm btn-md-lg bg-gradient-theme fw-bold">Enter
+                                Now</a>
                         </div>
                     </div>
                 </div>
