@@ -1,11 +1,74 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
-    <section id="hero-section" class="py-5 d-flex justify-content-center align-items-end align-items-md-center px-4 px-md-5 ">
+<head>
+    <title>Bootstrap 5 Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <div class="container-fluid py-3 px-md-3 bg-theme-dark text-white text-center">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center justify-content-between">
+                <a href="javascript:void(0)" class="btn d-block d-md-none bg-gradient-theme me-3 py-1 fw-bold me-md-0"
+                    data-bs-toggle="modal" data-bs-target="#authModal">Sign
+                    In</a>
+                <img src="{{ asset('assets/img/logo.svg') }}" alt="Logo" class="logo me-md-4">
+                <ul class="list-unstyled d-none d-md-flex mb-0 d-flex justify-content-start align-items-center gap-4">
+                    <li><a href="#" class="text-white text-decoration-none fw-bold">All competitions</a></li>
+                    <li><a href="#" class="text-white text-decoration-none fw-bold">Charity</a></li>
+                </ul>
+            </div>
+            <div class="action-buttons d-flex justify-content-start align-items-center gap-4">
+                <div class="auth-buttons d-flex d-none d-md-flex justify-content-start align-items-center gap-4">
+                    <a href="javascript:void(0)" class="btn btn-outline-light px-4" data-bs-toggle="modal"
+                        data-bs-target="#authModal">Sign in</a>
+                    <a href="javascript:void(0)" class="btn bg-gradient-theme px-3" data-bs-toggle="modal"
+                        data-bs-target="#authModal">Sign Up</a>
+                </div>
+                <div class="cart-button d-flex justify-content-end align-items-center gap-4">
+                    <div class="cart">
+                        <i class="bi bi-cart3 text-gradient-theme fs-2"></i>
+                    </div>
+                    <div class="nav-menu">
+                        <a href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#sidemenuLoggedIn">
+                            <i class="bi bi-list text-gradient-theme fs-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-theme-secondary d-none d-md-block py-2">
+        <div class="container d-block d-md-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-start align-items-center gap-3 text-center text-md-end">
+                <p class="text-white mb-0" style="font-size: 10px;">Payments <br> Accepted</p>
+                <ul class="mb-0 list-unstyled d-flex justify-content-start align-items-center gap-2">
+                    <li><img src="{{ asset('assets/img/cards/Visa.svg') }}" alt="Payment" width="25"></li>
+                    <li><img src="{{ asset('assets/img/cards/Mastercard.svg') }}" alt="Payment" width="25"></li>
+                    <li><img src="{{ asset('assets/img/cards/ApplePay.svg') }}" alt="Payment" width="25"></li>
+                    <li><img src="{{ asset('assets/img/cards/PayPal.svg') }}" alt="Payment" width="25"></li>
+                </ul>
+            </div>
+            <div class="raiting mt-2 mt-md-0 text-center text-md-end">
+                <img src="{{ asset('assets/img/homeBannerTrust.svg') }}" alt="">
+            </div>
+        </div>
+    </div>
+
+    <section id="hero-section"
+        class="py-5 d-flex justify-content-center align-items-end align-items-md-center px-4 px-md-5 ">
         <div class="container-fluid text-center text-md-start">
-            <span class="badge bg-dark mt-5"><img src="{{ asset('assets/img/crown.svg') }}" alt="Crown"> JACKPOT DRAW</span>
+            <span class="badge bg-dark mt-5"><img src="{{ asset('assets/img/crown.svg') }}" alt="Crown"> JACKPOT
+                DRAW</span>
             <h1 class="text-white responsive-heading fw-bold">WIN A MERCEDES GLC AMG <br> LINE + PRIZE BUNDLE!</h1>
-            <h1 class="text-gradient-theme mb-4">500 PKR</h1>
+            <h1 class="text-gradient-theme mb-4">£0.50</h1>
             <a href="#" class="btn fw-bold text-uppercase bg-gradient-theme px-5">Enter
                 now</a>
         </div>
@@ -18,7 +81,7 @@
                     <div class="card bg-theme-dark" style="border: 1px solid gray;">
                         <div class="card-body py-1 text-center text-white">
                             <i class="bi bi-gift fs-1 text-gradient-theme"></i>
-                            <h6 class="mb-0">1500 PKR</h6>
+                            <h6 class="mb-0">$17.3</h6>
                             <p class="mb-0" style="font-size:12px;">won in prizes</p>
                         </div>
                     </div>
@@ -27,7 +90,7 @@
                     <div class="card bg-theme-dark" style="border: 1px solid gray;">
                         <div class="card-body py-1 text-center text-white">
                             <i class="bi bi-trophy fs-1 text-gradient-theme"></i>
-                            <h6 class="mb-0">1500 PKR</h6>
+                            <h6 class="mb-0">$17.3</h6>
                             <p class="mb-0" style="font-size:12px;">won in prizes</p>
                         </div>
                     </div>
@@ -36,7 +99,7 @@
                     <div class="card bg-theme-dark" style="border: 1px solid gray;">
                         <div class="card-body py-1 text-center text-white">
                             <i class="bi bi-patch-check fs-1 text-gradient-theme"></i>
-                            <h6 class="mb-0">1500 PKR</h6>
+                            <h6 class="mb-0">$17.3</h6>
                             <p class="mb-0" style="font-size:12px;">won in prizes</p>
                         </div>
                     </div>
@@ -45,61 +108,99 @@
         </div>
     </section>
 
-    <section id="competition" class="bg-theme-dark pb-3">
-        <div class="container bg-theme-dark pt-lg-4">
-            <h4 style="color:white;" class="fw-bold">FEATURED JACKPOTS
-            </h4>
+    <section id="brands" class="py-2 d-none d-md-block">
+        <div class="scroll-area">
+            <?php
+            $loop = 0;
+            for ($i = 1; $i < 22; $i++) {
+                if ($i == 21) {
+                    $i = 1;
+                    $loop++;
+                }
+                if ($loop == 5) {
+                    $i = 22;
+                }
+                ?>
+            <img src="{{ asset('assets/img/brands/2.png') }}" alt="Brand" class="me-4" width="50"
+                <?php echo $i; ?>>
+
+            <?php
+            }
+            ?>
+        </div>
+    </section>
+
+    <section id="competition" class="bg-theme-dark pb-5">
+        <div class="container">
             <div class="row">
-                <div class="col-md-12 m-1">
-                    <div class="competion-box postion-relative">
-                        <img src="{{ asset('assets/img/competition/1.webp') }}" class="d-block"
-                            style="border-radius: 15px;height:410px;width:100%;">
-                        <div class="d-flex justify-content-around align-items-center" style="margin-top:-35px;">
-                            <p style="font-size: 10px;font-weight:bold;color:white;">Ticket Price <br>
-                                <span>200 PKR</span>
-                            </p>
-                            <p style="font-size:10px;font-weight:bold;color:white;">Raffle ends <br>
-                                <span style="color:red;">06 days</span>
-                            </p>
-                            <a href="#" style="margin-top:-17px"
-                                class="btn btn-sm btn-md-lg bg-gradient-theme fw-bold">Enter
-                                Now</a>
+                <h3 class="text-white">FEATURED JACKPOTS</h3>
+            </div>
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner overflow-visible">
+                    <div class="carousel-item active">
+                        <div class="competion-box postion-relative">
+                            <img src="{{ asset('assets/img/competition/1.webp') }}" alt="Los Angeles" class="d-block"
+                                width="100%">
+                            <div class="card bg-theme-dark info-card-container">
+                                <div class="card-body">
+                                    <h2>£20k Ninja Instant Win Raffle</h2>
+                                    <div class="progress w-100 bg-dark" style="height: 10px;">
+                                        <div class="progress bg-theme w-75" style="height: 10px;"></div>
+                                    </div>
+                                    <small>2633 tickets sold</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-12 m-1">
-                    <div class="competion-box postion-absolute">
-                        <img src="{{ asset('assets/img/competition/2.webp') }}" class="d-block"
-                            style="border-radius: 15px;height:410px;width:100%;">
-                        <div class="col-md-12">
-                            <div class="d-flex justify-content-around align-items-center" style="background-color:rgb(76, 76, 90)">
-                                <p style="font-size: 10px;font-weight:bold;color:white;">Ticket Price <br>
-                                    <span>200 PKR</span>
-                                </p>
-                                <p style="font-size:10px;font-weight:bold;color:white;">Raffle ends <br>
-                                    <span style="color:red;">06 days</span>
-                                </p>
-                                <a href="#" style="margin-top:-17px"
-                                    class="btn btn-sm btn-md-lg bg-gradient-theme fw-bold">Enter
-                                    Now</a>
+                    <div class="carousel-item">
+                        <div class="competion-box postion-relative">
+                            <img src="{{ asset('assets/img/competition/2.webp') }}" alt="Los Angeles"
+                                class="d-block" width="100%">
+                            <div class="card bg-theme-dark info-card-container">
+                                <div class="card-body">
+                                    <h2>£20k Ninja Instant Win Raffle</h2>
+                                    <div class="progress w-100 bg-dark" style="height: 10px;">
+                                        <div class="progress bg-theme w-75" style="height: 10px;"></div>
+                                    </div>
+                                    <small>2633 tickets sold</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="competion-box postion-relative">
+                            <img src="{{ asset('assets/img/competition/3.webp') }}" alt="Los Angeles"
+                                class="d-block" width="100%">
+                            <div class="card bg-theme-dark info-card-container">
+                                <div class="card-body">
+                                    <h2>£20k Ninja Instant Win Raffle</h2>
+                                    <div class="progress w-100 bg-dark" style="height: 10px;">
+                                        <div class="progress bg-theme w-75" style="height: 10px;"></div>
+                                    </div>
+                                    <small>2633 tickets sold</small>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 m-1">
-                    <div class="competion-box postion-relative">
-                        <img src="{{ asset('assets/img/competition/3.webp') }}" class="d-block"
-                            style="border-radius: 15px;height:410px;width:100%;">
-                        <div class="d-flex justify-content-around align-items-center" style="margin-top:-35px;">
-                            <p style="font-size: 10px;font-weight:bold;color:white;">Ticket Price <br>
-                                <span>200 PKR</span>
-                            </p>
-                            <p style="font-size:10px;font-weight:bold;color:white;">Raffle ends <br>
-                                <span style="color:red;">06 days</span>
-                            </p>
-                            <a href="#" style="margin-top:-17px"
-                                class="btn btn-sm btn-md-lg bg-gradient-theme fw-bold">Enter
-                                Now</a>
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-theme-dark py-4 d-none d-md-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card bg-theme-secondary">
+                        <div class="card-body">
+                            <img src="{{ asset('assets/img/review.png') }}" alt="TrustPoilot" width="100%">
                         </div>
                     </div>
                 </div>
@@ -114,7 +215,7 @@
                     <div class="d-md-flex">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="left-text text-center text-md-start" style="width: 300px">
-                                <h4>16.4 Million</h4>
+                                <h4>£ 16.4 Million</h4>
                                 <h6>won in prizes so far</h6>
                             </div>
                         </div>
@@ -159,13 +260,13 @@
                         <div class="badge bg-dark mb-3 mb-md-0 px-1 py-0 border border-1 pe-4 rounded-pill">
                             <div class="d-flex gap-0 align-items-center ">
                                 <i class="bi bi-dot text-warning " style="font-size: 30px;"></i>
-                                <p class="mb-0"> {{ lotteries() }} active raffles</p>
+                                <p class="mb-0"> 20 active raffles</p>
                             </div>
                         </div>
                         <div class="badge bg-dark mb-3 mb-md-0 px-1 py-0 border border-1 pe-4 rounded-pill">
                             <div class="d-flex gap-0 align-items-center ">
                                 <i class="bi bi-dot text-danger " style="font-size: 30px;"></i>
-                                <p class="mb-0"> 0 ending soon</p>
+                                <p class="mb-0"> 2 ending soon</p>
                             </div>
                         </div>
                     </div>
@@ -180,141 +281,460 @@
                 </div>
             </div>
             <div class="row mt-5">
-                @forelse ($lotteries as $lottery)
-                    <div class="col-6 col-md-3 mb-5">
-                        <div class="card bg-theme-secondary position-relative">
-                            <div class="position-absolute"
-                                style="top:-25px; width: 80%; left: 50%; transform: translateX(-50%);">
-                                <div class="bg-light rounded-pill text-center py-1 text-dark fs-7 fw-bold shadow">
-                                    <div id="countdown{{ $lottery->id }}"></div>
-                                    <script>
-                                        function startCountdown(days) {
-                                            const countdownElement = document.getElementById('countdown{{ $lottery->id }}');
-                                            const endDate = new Date().getTime() + days * 24 * 60 * 60 * 1000;
-
-                                            function updateCountdown() {
-                                                const now = new Date().getTime();
-                                                const distance = endDate - now;
-                                                if (distance < 0) {
-                                                    clearInterval(interval);
-                                                    countdownElement.innerHTML = "Countdown Ended";
-                                                    return;
-                                                }
-                                                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                                                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                                                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                                                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                                                countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-                                            }
-                                            const interval = setInterval(updateCountdown, 1000);
-                                            updateCountdown(); // initial call to display the countdown immediately
-                                        }
-                                        // Example: Start countdown for 2 days
-                                        startCountdown({{ $lottery->time }});
-                                    </script>
+                <?php
+                for ($i = 0; $i < 4; $i++) {
+                    ?>
+                <div class="col-6 col-md-3 mb-5">
+                    <div class="card bg-theme-secondary position-relative">
+                        <div class="position-absolute"
+                            style="top:-25px; width: 80%; left: 50%; transform: translateX(-50%);">
+                            <div class="bg-light rounded-pill text-center py-1 text-dark fs-7 fw-bold shadow">Draw
+                                Monday 10pm</div>
+                        </div>
+                        <img src="{{ asset('assets/img/games/1.webp') }}" alt="Game Image" width="100%">
+                        <div class="card-body text-white ">
+                            <h4 class="text-center fs-6">Win a Ninja 12in1 Multicooker</h4>
+                            <small class="text-start" style="font-size: 12px;">25% Sold</small>
+                            <div class="progress-bar bg-dark poisition-relative">
+                                <div class="poisition-relative">
+                                    <div class="bg-theme" style="width: 25%; padding: 2px"></div>
+                                    <div class="position-absolute" style="bottom: 61px; left: 60px">
+                                        <i class="bi bi-dot d-none d-md-block text-warning fs-1"></i>
+                                    </div>
                                 </div>
                             </div>
-                            <a href="{{ route('Product.Details', $lottery->id) }}">
-                                <img src="{{ asset('lottery/' . $lottery->picture) }}" class="image">
-                            </a>
-                            <div class="card-body text-white">
-                                <h4 class="text-center"
-                                    style="font-size:20px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
-                                    {{ $lottery->title }}</h4>
-                                <div class="d-flex justify-content-center text-black">
-                                    <span style="background-color:#ffbd0a;padding:1px 10px 1px 10px;border-radius: 5px;">
-                                        <b>100</b>
-                                        <img src="{{ asset('assets/img/cred.webp') }}" height="15px" width="15px">
-                                    </span>
-                                </div>
-                                <div class="buttons mt-4">
-                                    <a href="{{ route('Product.Details', $lottery->id) }}"
-                                        class="btn btn-sm btn-md-lg bg-gradient-theme px-3 fw-bold w-100">Enter
-                                        now</a>
-                                </div>
+                            <div class="buttons mt-4">
+                                <a href="#"
+                                    class="btn btn-sm btn-md-lg bg-gradient-theme px-3 fw-bold w-100">Enter
+                                    now</a>
                             </div>
                         </div>
                     </div>
-                @empty
-                    <h3 class="text-center text-white">Empty</h3>
-                @endforelse
+                </div>
+                <?php } ?>
             </div>
-
-            {{-- <div class="row mt-5">
-                @forelse ($lotteries as $lottery)
-                    <div class="col-md-3 col-lg-4 mb-5">
-                        <div class="card bg-theme-secondary position-relative">
-                            <div class="position-absolute"
-                                style="top:-20px; width: 95%; left: 50%; transform: translateX(-50%);">
-                                <div class="bg-danger text-white rounded-pill text-center py-1 fs-7 fw-bold shadow py-2">
-
-                                    <span class="d-flex justify-content-around align-items-center"
-                                        style="font-size: 15px"><i class="bi bi-stopwatch"></i>
-                                        <div id="countdown{{ $lottery->id }}"></div>
-                                    </span>
-                                    <script>
-                                        function startCountdown(days) {
-                                            const countdownElement = document.getElementById('countdown{{ $lottery->id }}');
-                                            const endDate = new Date().getTime() + days * 24 * 60 * 60 * 1000;
-
-                                            function updateCountdown() {
-                                                const now = new Date().getTime();
-                                                const distance = endDate - now;
-                                                if (distance < 0) {
-                                                    clearInterval(interval);
-                                                    countdownElement.innerHTML = "Countdown Ended";
-                                                    return;
-                                                }
-                                                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                                                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                                                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                                                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                                                countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-                                            }
-                                            const interval = setInterval(updateCountdown, 1000);
-                                            updateCountdown(); // initial call to display the countdown immediately
-                                        }
-                                        // Example: Start countdown for 2 days
-                                        startCountdown({{ $lottery->time }});
-                                    </script>
-                                </div>
-                            </div>
-                            <a href="{{ route('Product.Details', $lottery->id) }}">
-                                <img src="{{ asset('lottery/' . $lottery->picture) }}" class="img-fluid"
-                                    style="height:300px;width:300px">
-                            </a>
-                            <div class="card-body text-white">
-                                <h4 class="text-center fs-6">{{ $lottery->title }}</h4>
-                                <div class="text-center">
-                                    <h6 class="">{{ $lottery->price }} Rs.</h6>
-                                </div>
-                                <div class="buttons mt-4">
-                                    <a href="{{ route('Product.Details', $lottery->id) }}"
-                                        class="btn btn-sm btn-md-lg bg-gradient-theme px-3 fw-bold w-100">Enter
-                                        now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @empty
-                    <h3 class="text-center text-white">Empty</h3>
-                @endforelse
-            </div> --}}
 
         </div>
     </section>
 
-    <style>
-        .image {
-            width: 100%;
-            height: 220px;
-        }
+    <footer class="bg-dark">
+        <div class="container py-4">
+            <div class="d-flex justify-content-center align-items-center py-2 gap-3">
+                <img src="{{ asset('assets/img/googleplay.svg') }}" alt="Play Store" class="download-button"
+                    width="100">
+                <img src="{{ asset('assets/img/appstore.svg') }}" alt="App Store" class="download-button"
+                    width="100">
+            </div>
+            <hr class="text-white my-5">
+            <div class="d-md-flex justify-content-between align-items-center">
+                <div class="text-center mb-4 mb-md-0">
+                    <img src="{{ asset('assets/img/trust.svg') }}" alt="">
+                </div>
+                <div class="d-flex flex-column mb-4 mb-md-0 justify-content-start align-items-center gap-3">
+                    <p class="text-white mb-0" style="font-size: 20px;">Payments we accept</p>
+                    <ul class="mb-0 list-unstyled d-flex justify-content-start align-items-center gap-2">
+                        <li><img src="{{ asset('assets/img/cards/Visa.svg') }}" alt="Payment" width="50"></li>
+                        <li><img src="{{ asset('assets/img/cards/Mastercard.svg') }}" alt="Payment" width="50">
+                        </li>
+                        <li><img src="{{ asset('assets/img/cards/ApplePay.svg') }}" alt="Payment" width="50">
+                        </li>
+                        <li><img src="{{ asset('assets/img/cards/PayPal.svg') }}" alt="Payment" width="50">
+                        </li>
+                        <li><img src="{{ asset('assets/img/cards/Google+Pay.svg') }}" alt="Payment" width="50">
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex flex-column">
+                    <h5 class="text-white text-center text-md-start mt-3 mt-md-0">Follow us</h5>
+                    <ul
+                        class="mb-0 list-unstyled fs-3 d-flex justify-content-around px-5 px-md-0 justify-content-md-center gap-2">
+                        <li><i class="bi bi-facebook text-white"></i></li>
+                        <li><i class="bi bi-messenger text-white"></i></li>
+                        <li><i class="bi bi-whatsapp text-white"></i></li>
+                        <li><i class="bi bi-facebook text-white"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="text-white my-5">
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <div class="text-center text-md-start mb-5">
+                        <img src="{{ asset('assets/img/logo-light.svg') }}" alt="Logo" width="200">
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 text-center text-md-start">
+                    <h4 class="text-white my-4">Website</h4>
+                    <ul class="list-unstyled mb-0 text-white">
+                        <li>My Raffles</li>
+                        <li>News & Blog</li>
+                        <li>Account</li>
+                        <li>Responsible Play</li>
+                        <li>Winners Gallery</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 text-center text-md-start">
+                    <h4 class="text-white my-4">Categories</h4>
+                    <ul class="list-unstyled mb-0 text-white">
+                        <li>My Raffles</li>
+                        <li>News & Blog</li>
+                        <li>Account</li>
+                        <li>Responsible Play</li>
+                        <li>Winners Gallery</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 text-center text-md-start">
+                    <h4 class="text-white my-4">Contact</h4>
+                    <ul class="list-unstyled mb-0 text-white">
+                        <li>My Raffles</li>
+                        <li>News & Blog</li>
+                        <li>Account</li>
+                        <li>Responsible Play</li>
+                        <li>Winners Gallery</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="text-white my-5">
+            <div class="d-md-flex text-center text-md-start justify-content-between align-items-center">
+                <p class="text-white mb-0">Copyright © 2024. All rights reserved. </p>
+                <div class="privacy d-flex gap-4 justify-content-center justify-content-md-betwen">
+                    <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+                    <a href="#" class="text-white text-decoration-none">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-        @media (max-width: 470px) {
-            .image {
-                width: 162px;
-                height: 162px;
-            }
-        }
-    </style>
-@endsection
+    <!-- Login Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal body -->
+                <div class="modal-body bg-theme-dark">
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn-close bg-white text-white"
+                            data-bs-dismiss="modal"></button>
+                    </div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs border-0 d-flex justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active bg-theme-dark text-white border-gray" data-bs-toggle="tab"
+                                href="#login">Sign
+                                in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link bg-theme-dark text-white border-gray" data-bs-toggle="tab"
+                                href="#register">Sign
+                                Up</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane container active" id="login">
+                            <h3 class="text-center my-4 text-white">Sign in</h3>
+                            <form action="#" method="POST">
+                                <div class="form-group mb-3">
+                                    <label for="email" class="text-white mb-2">Enter your Email</label>
+                                    <input type="email" name="email" id="email" placeholder="your email"
+                                        class="form-control bg-dark text-white border-gray bg-theme-dark">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="text-white mb-2">Enter your Password</label>
+                                    <input type="password" name="password" id="password"
+                                        placeholder="your password"
+                                        class="form-control bg-dark text-white border-gray bg-theme-dark">
+                                </div>
+                                <div class="form-group text-end my-3">
+                                    <a href="#" class="text-theme text-decoration-none ">Forgot Password?</a>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit"
+                                        class="btn bg-gradient-theme text-dark py-2 fw-bold fs-5 w-100">Sign
+                                        In</button>
+                                </div>
+                            </form>
+
+                            <p class="text-center my-4 text-white">Sign in via social account</p>
+                            <div class="d-flex flex-column gap-2">
+                                <button
+                                    class="bg-theme-dark border-1 py-2 border-gray rounded outline-0 d-flex justify-content-center gap-2">
+                                    <img src="/{{ asset('assets/img/google.svg') }}" alt="Google Login">
+                                    <p class="mb-0 text-white">Sign in with Google</p>
+                                </button>
+                                <button
+                                    class="bg-theme-dark border-1 py-2 border-gray rounded outline-0 d-flex justify-content-center gap-2">
+                                    <img src="/{{ asset('assets/img/facebook.svg') }}" alt="Facebook Login">
+                                    <p class="mb-0 text-white">Sign in with Facebook</p>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tab-pane container" id="register">
+                            <h3 class="text-center my-4 text-white">Sign up</h3>
+                            <form action="#" method="POST">
+                                <div class="form-group mb-3">
+                                    <label for="name" class="text-white mb-2">Enter your Full Name</label>
+                                    <input type="text" name="name" id="name" placeholder="your Full Name"
+                                        class="form-control bg-dark border-gray text-white bg-theme-dark">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="email" class="text-white mb-2">Enter your Email</label>
+                                    <input type="email" name="email" id="email" placeholder="your email"
+                                        class="form-control bg-dark  border-gray text-white bg-theme-dark">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="text-white mb-2">Enter your Password</label>
+                                    <input type="password" name="password" id="password"
+                                        placeholder="your password"
+                                        class="form-control bg-dark  border-gray text-white bg-theme-dark">
+                                </div>
+                                <div class="form-group text-end my-3">
+                                    <a href="#" class="text-theme text-decoration-none ">Forgot Password?</a>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit"
+                                        class="btn bg-gradient-theme text-dark py-2 fw-bold fs-5 w-100">Sign
+                                        In</button>
+                                </div>
+                            </form>
+
+                            <p class="text-center my-4 text-white">Sign up via social account</p>
+                            <div class="d-flex flex-column gap-2">
+                                <button
+                                    class="bg-theme-dark border-1 py-2  border-gray rounded outline-0 d-flex justify-content-center gap-2">
+                                    <img src="/{{ asset('assets/img/google.svg') }}" alt="Google Login">
+                                    <p class="mb-0 text-white">Sign up with Google</p>
+                                </button>
+                                <button
+                                    class="bg-theme-dark border-1 py-2  border-gray rounded outline-0 d-flex justify-content-center gap-2">
+                                    <img src="/{{ asset('assets/img/facebook.svg') }}" alt="Facebook Login">
+                                    <p class="mb-0 text-white">Sign up with Facebook</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- side menu -->
+    <div class="offcanvas offcanvas-end" id="sidemenu">
+        <div class="offcanvas-body bg-theme-dark">
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="text-white">
+                <h4>Menu</h4>
+                <ul class="list-unstyled d-flex flex-column gap-3 mb-0 mt-5">
+                    <li>
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card card-body py-2 bg-theme-dark border border-dark">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-house-door fs-3"></i>
+                                    <h6 class="mb-0">Home</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card card-body py-2 bg-theme-dark border border-dark">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-house-door fs-3"></i>
+                                    <h6 class="mb-0">Home</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card card-body py-2 bg-theme-dark border border-dark">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-house-door fs-3"></i>
+                                    <h6 class="mb-0">Home</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card card-body py-2 bg-theme-dark border border-dark">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-house-door fs-3"></i>
+                                    <h6 class="mb-0">Home</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="social-icons">
+                    <div class="d-flex flex-column">
+                        <h5 class="text-white text-center text-md-start mt-3 mt-md-0">Follow us</h5>
+                        <ul
+                            class="mb-0 list-unstyled fs-3 d-flex justify-content-around px-5 px-md-0 justify-content-md-center gap-2">
+                            <li><i class="bi bi-facebook text-white"></i></li>
+                            <li><i class="bi bi-messenger text-white"></i></li>
+                            <li><i class="bi bi-whatsapp text-white"></i></li>
+                            <li><i class="bi bi-facebook text-white"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logged In Sidemenu -->
+    <div class="offcanvas offcanvas-end" id="sidemenuLoggedIn">
+        <div class="offcanvas-body text-white p-0 bg-theme-dark">
+            <div class="bg-dark px-4 py-2">
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <h6 class="text-white fw-bold">Hi Shakeel</h6>
+                <p> You have tickets in <span class="text-theme">0 active raffle</span></p>
+            </div>
+            <div class="px-4 py-2 mt-4">
+                <h6 class="text-uppercase text-light-gray fs-tiny fw-bold">My Points</h6>
+                <div class="point-balance">
+                    <h6>You have <span class="border border-theme rounded px-2">0</span> points</h6>
+                </div>
+                <p class="text-light-gray"> Use your Raffolux points to redeem prizes in the </p>
+            </div>
+            <div class="px-4 py-2 text-white">
+                <h6 class="fs-tiny fw-bold text-light-gray">MENU</h6>
+                <ul class="list-unstyled d-flex flex-column gap-1 mb-0">
+                    <li class="">
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card bg-light-gray card-body py-2 bg-none">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-house-door fs-5"></i>
+                                    <h6 class="mb-0">Home</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card bg-light-gray card-body py-2 bg-none">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-ticket-perforated fs-5"></i>
+                                    <h6 class="mb-0">My Tickets <sup
+                                            class="bg-theme px-2 py-0 rounded-pill text-dark">0</sup></h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card bg-light-gray card-body py-2 bg-none">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-filter-circle fs-5"></i>
+                                    <div class="d-flex justify-content-between align-items-center w-100">
+                                        <h6 class="mb-0">My Credits </h6>
+                                        <span class="px-2 py-0 text-theme text-end fs-tiny">0.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card bg-light-gray card-body py-2 bg-none">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-bag fs-5"></i>
+                                    <h6 class="mb-0">Store</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card bg-light-gray card-body py-2 bg-none">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-trophy fs-5"></i>
+                                    <h6 class="mb-0">Winners</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card bg-light-gray card-body py-2 bg-none">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-gift fs-5"></i>
+                                    <h6 class="mb-0">Refer a friend</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card bg-light-gray card-body py-2 bg-none">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-box2-heart fs-5"></i>
+                                    <h6 class="mb-0">Charity</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <h6 class="fs-tiny fw-bold text-light-gray">ACCOUNT SETTINGS</h6>
+                    <li class="">
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card bg-light-gray card-body py-2 bg-none">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-person fs-5"></i>
+                                    <h6 class="mb-0">Personal info</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <h6 class="fs-tiny fw-bold text-light-gray">SITE INFORMATION</h6>
+                    <li class="">
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card bg-light-gray card-body py-2 bg-none">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-question-circle fs-5"></i>
+                                    <h6 class="mb-0">Help & FAQs</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="text-decoration-none text-white">
+                            <div class="card bg-light-gray card-body py-2 bg-none">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-box-arrow-right fs-5"></i>
+                                    <h6 class="mb-0">Logout</h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="d-flex mt-4 mb-5 justify-content-center align-items-center gap-1">
+                    <a href="#" class="fs-tiny text-decoration-none text-white">Terms</a>
+                    <span>|</span>
+                    <a href="#" class="fs-tiny text-decoration-none text-white">Privacy</a>
+                    <span>|</span>
+                    <a href="#" class="fs-tiny text-decoration-none text-white">Responsible Play</a>
+                </div>
+                <div class="social-icons">
+                    <div class="d-flex flex-column">
+                        <h5 class="text-white text-center text-md-start mt-3 mt-md-0">Follow us</h5>
+                        <ul
+                            class="mb-0 list-unstyled fs-3 d-flex justify-content-around px-5 px-md-0 justify-content-md-center gap-2">
+                            <li><i class="bi bi-facebook text-white"></i></li>
+                            <li><i class="bi bi-messenger text-white"></i></li>
+                            <li><i class="bi bi-whatsapp text-white"></i></li>
+                            <li><i class="bi bi-facebook text-white"></i></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

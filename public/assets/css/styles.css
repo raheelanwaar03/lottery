@@ -223,3 +223,15 @@
     background-color: #070b1a;
     color: #070b1a !important;
 }
+
+.position-type {
+    position: relative;
+    left: 12px;
+    top: -75px;
+    color: #070b1a;
+    font-weight: 500;
+}
+
+.weight {
+    font-weight: bolder;
+}
