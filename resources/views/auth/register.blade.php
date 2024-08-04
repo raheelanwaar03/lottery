@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+    <x-alert />
     <section class="bg-theme-dark py-2">
         <div class="container mt-5">
             <div class="card bg-dark mb-4">
@@ -46,6 +47,7 @@
                                     <input type="password" name="password_confirmation" id="password_confirmation"
                                         class="form-control bg-dark text-white" required>
                                 </div>
+                                <input type="hidden" name="referral" value="{{ $referral }}">
                                 <div class="form-group mt-4">
                                     <button type="submit" class="btn bg-gradient-theme btn-lg w-100">Create
                                         Account</button>

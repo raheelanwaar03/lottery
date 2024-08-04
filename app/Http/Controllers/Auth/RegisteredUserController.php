@@ -17,9 +17,9 @@ class RegisteredUserController extends Controller
     /**
      * Display the registration view.
      */
-    public function create(): View
+    public function create($referral = 'default'): View
     {
-        return view('auth.register');
+        return view('auth.register', compact('referral'));
     }
 
     /**
@@ -33,8 +33,9 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'country' => ['required'],
-            'provinec' => ['required'],
+            'province' => ['required'],
             'city' => ['required'],
+            'referral' => ['required'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
@@ -44,9 +45,10 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'country' => $request->country,
-            'provinec' => $request->provinec,
+            'province' => $request->province,
             'city' => $request->city,
             'user_id' => $user_id,
+            'referral' => $request->referral,
             'password' => Hash::make($request->password),
         ]);
 

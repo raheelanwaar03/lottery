@@ -248,8 +248,9 @@
                         </div>
                     </a>
                 </li>
+                @if (auth()->user())
                 <li class="">
-                    <a href="#" class="text-decoration-none text-white">
+                    <a href="{{ route('User.Refer.New.Friend') }}" class="text-decoration-none text-white">
                         <div class="card bg-light-gray card-body py-2 bg-none">
                             <div class="d-flex align-items-center gap-3">
                                 <i class="bi bi-gift fs-5"></i>
@@ -258,6 +259,7 @@
                         </div>
                     </a>
                 </li>
+                @endif
                 @if (auth()->user())
                     <li class="">
                         <a href="{{ route('User.Purchased.Coins') }}" class="text-decoration-none text-white">

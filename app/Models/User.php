@@ -31,7 +31,7 @@ class User extends Authenticatable
         'balance',
         'email',
         'country',
-        'provinec',
+        'province',
         'city',
         'referral',
         'role',
