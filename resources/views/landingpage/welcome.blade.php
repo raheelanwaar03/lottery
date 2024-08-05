@@ -1,5 +1,22 @@
 @extends('layouts.app')
 @section('content')
+    <style>
+        .featured {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 400px) {
+            .featured {
+                width: 100%;
+                height: 300px;
+            }
+            .slide{
+                margin-bottom: -25px;
+            }
+
+        }
+    </style>
+
     <section id="hero-section" class="py-5 d-flex justify-content-center align-items-end align-items-md-center px-4 px-md-5 ">
         <div class="container-fluid text-center text-md-start">
             <span class="badge bg-dark mt-5"><img src="{{ asset('assets/img/crown.svg') }}" alt="Crown"> JACKPOT
@@ -76,15 +93,13 @@
                 <div class="carousel-inner overflow-visible">
                     <div class="carousel-item active">
                         <div class="competion-box postion-relative">
-                            <img src="{{ asset('assets/img/competition/1.webp') }}" alt="Los Angeles" class="d-block"
-                                width="100%">
-                            <div class="card bg-theme-dark info-card-container">
-                                <div class="card-body">
-                                    <h2>£20k Ninja Instant Win Raffle</h2>
-                                    <div class="progress w-100 bg-dark" style="height: 10px;">
-                                        <div class="progress bg-theme w-75" style="height: 10px;"></div>
-                                    </div>
-                                    <small>2633 tickets sold</small>
+                            <img src="{{ asset('assets/img/competition/1.webp') }}" class="d-block featured"
+                                style="border-radius: 10px;">
+                            <div class="card bg-theme-dark opacity-50" style="margin-top:-60px">
+                                <div class="card-body d-flex justify-content-between align-items-center">
+                                    <p class="text-white fw-bolder" style="color:white">£20k Raffle</p>
+                                    <p class="text-danger opacity-100">5 days</p>
+                                    <a href="#" class="btn btn-warning opacity-100">Enter Now</a>
                                 </div>
                             </div>
                         </div>
@@ -96,10 +111,6 @@
                             <div class="card bg-theme-dark info-card-container">
                                 <div class="card-body">
                                     <h2>£20k Ninja Instant Win Raffle</h2>
-                                    <div class="progress w-100 bg-dark" style="height: 10px;">
-                                        <div class="progress bg-theme w-75" style="height: 10px;"></div>
-                                    </div>
-                                    <small>2633 tickets sold</small>
                                 </div>
                             </div>
                         </div>
