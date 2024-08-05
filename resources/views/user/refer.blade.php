@@ -175,13 +175,11 @@
         <div class="content">
             <h2>Your Referral Link</h2>
             <div class="user-info">
-                <div class="card" style="background-color:#1a1f3b;color:white">
+                <div class="card" onclick="copyLink()" title="Click To Copy" style="background-color:#1a1f3b;color:white">
                     {{-- make a attractive design of copying referral link in card --}}
-                    <div class="card-body d-flex justify-content-around align-items-center">
-                        <h4 class="link">{{ route('register', ['referral' => Auth::user()->user_id]) }}</h4>
-                        <span class="direction">
-                            <i class="fas fa-clipboard" style="font-size: 20px;cursor: pointer;" onclick="copyLink()"></i>
-                        </span>
+                    <p class="text-center my-2">Click To Copy!</p>
+                    <div class="card-body d-flex justify-content-around align-items-center" style="word-wrap: break-word;">
+                        <p class="link">{{ route('register', ['referral' => Auth::user()->user_id]) }}</p>
                     </div>
                 </div>
                 <script>

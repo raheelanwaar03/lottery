@@ -1,4 +1,4 @@
-<footer class="bg-dark">
+<footer class="bg-light-dark">
     <div class="container py-4">
         <div class="d-flex justify-content-center align-items-center py-2 gap-3">
             <img src="{{ asset('assets/img/googleplay.svg') }}" alt="Play Store" class="download-button" width="100">
@@ -249,16 +249,16 @@
                     </a>
                 </li>
                 @if (auth()->user())
-                <li class="">
-                    <a href="{{ route('User.Refer.New.Friend') }}" class="text-decoration-none text-white">
-                        <div class="card bg-light-gray card-body py-2 bg-none">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="bi bi-gift fs-5"></i>
-                                <h6 class="mb-0">Refer a friend</h6>
+                    <li class="">
+                        <a href="{{ route('User.Refer.New.Friend') }}" class="text-decoration-none text-white">
+                            <div class="card bg-light-gray card-body py-2 bg-none">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-gift fs-5"></i>
+                                    <h6 class="mb-0">Refer a friend</h6>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </li>
+                        </a>
+                    </li>
                 @endif
                 @if (auth()->user())
                     <li class="">
