@@ -40,7 +40,7 @@
                                 </div>
                                 <div class="form-group my-2">
                                     <label for="about">About The Draw lottery</label>
-                                    <textarea name="about" id="classic" class="form-control" rows="10" required></textarea>
+                                    <textarea name="about" id="classic1" class="form-control" rows="10" required></textarea>
                                 </div>
                                 <div class="form-group my-2">
                                     <label for="details">Details</label>
@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="form-group my-2">
                                     <label for="terms">Draw Terms</label>
-                                    <textarea name="terms" id="classic" class="form-control" rows="5" placeholder="Draw Terms" required></textarea>
+                                    <textarea name="terms" id="classic2" class="form-control" rows="5" placeholder="Draw Terms" required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="time">Time</label>
@@ -77,5 +77,7 @@
     <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
     <script>
         CKEDITOR.replace('classic');
+        CKEDITOR.replace('classic1');
+        CKEDITOR.replace('classic2');
     </script>
 @endsection

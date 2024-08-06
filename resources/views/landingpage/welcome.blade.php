@@ -98,13 +98,15 @@
                     @forelse ($items as $item)
                         <div class="carousel-item {{ $item->id == 1 ? 'active' : '' }}">
                             <div class="competion-box">
-                                <img src="{{ asset('featured/' . $item->picture) }}" class="d-block featured"
-                                    style="border-radius: 10px;">
+                                <a href="{{ route('Featured.Product.Details', $item->id) }}">
+                                    <img src="{{ asset('featured/' . $item->picture) }}" class="d-block featured"
+                                        style="border-radius: 10px;">
+                                </a>
                                 <div class="card bg-theme-dark bg-transparent text-clear" style="margin-top:-60px;">
                                     <div class="card-body d-flex justify-content-between align-items-center">
                                         <p class="text-white fw-bolder" style="color:white">{{ $item->title }}</p>
-                                        <p class="text-danger">5 days</p><a href="#" class="btn btn-warning"
-                                            style="margin-top: -10px">Enter Now</a>
+                                        <p class="text-danger">5 days</p><a href="{{ route('Product.Details', $item->id) }}"
+                                            class="btn btn-warning" style="margin-top: -10px">Enter Now</a>
                                     </div>
                                 </div>
                             </div>

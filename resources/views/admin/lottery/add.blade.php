@@ -48,11 +48,11 @@
                                 </div>
                                 <div class="form-group my-2">
                                     <label for="details">Details</label>
-                                    <textarea name="details" id="classic" class="form-control" rows="5" placeholder="Details" required></textarea>
+                                    <textarea name="details" id="classic1" class="form-control" rows="5" placeholder="Details" required></textarea>
                                 </div>
                                 <div class="form-group my-2">
                                     <label for="terms">Draw Terms</label>
-                                    <textarea name="terms" id="classic" class="form-control" rows="5" placeholder="Draw Terms" required></textarea>
+                                    <textarea name="terms" id="classic2" class="form-control" rows="5" placeholder="Draw Terms" required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="image">Lottery Image</label>
@@ -74,6 +74,8 @@
 @section('scripts')
     <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
     <script>
-        CKEDITOR.replace('classic', 'classic1', 'classic2');
+        CKEDITOR.replace('classic');
+        CKEDITOR.replace('classic1');
+        CKEDITOR.replace('classic2');
     </script>
 @endsection

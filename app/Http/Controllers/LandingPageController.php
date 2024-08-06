@@ -52,4 +52,15 @@ class LandingPageController extends Controller
         $user_coins = $user_coins->sum('coins');
         return view('landingpage.details', compact('lottery', 'user_coins'));
     }
+
+    public function featured_item($id)
+    {
+        $lottery = featuredLotteries::find($id);
+        if (!auth()->user()) {
+            return view('landingpage.featured_item', compact('lottery'));
+        }
+        $user_coins = UserCoins::where('user_id', auth()->user()->id)->get();
+        $user_coins = $user_coins->sum('coins');
+        return view('landingpage.featured_item', compact('lottery', 'user_coins'));
+    }
 }

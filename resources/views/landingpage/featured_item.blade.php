@@ -31,14 +31,14 @@
         </form>
         <div class="d-block d-md-none">
             <div class="">
-                <img src="{{ asset('lottery/' . $lottery->picture) }}" alt="Product Image" width="100%" class="">
+                <img src="{{ asset('featured/' . $lottery->picture) }}" alt="Product Image" width="100%" class="">
             </div>
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-8 order-md-1 order-2 mt-4">
                     <div class="d-none d-md-block">
-                        <img src="{{ asset('lottery/' . $lottery->picture) }}" alt="Product Image" width="100%"
+                        <img src="{{ asset('featured/' . $lottery->picture) }}" alt="Product Image" width="100%"
                             class="rounded">
                     </div>
                     <div class="row">

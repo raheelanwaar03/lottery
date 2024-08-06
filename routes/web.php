@@ -10,6 +10,7 @@ Route::get('/Cart', [LandingPageController::class, 'cart'])->name('Cart');
 Route::get('/Details', [LandingPageController::class, 'details'])->name('Details');
 Route::get('/AboutUs', [LandingPageController::class, 'aboutUs'])->name('AboutUs');
 Route::get('/Product/Detail/{id}', [LandingPageController::class, 'detail'])->name('Product.Details');
+Route::get('/Featured/Product/Detail/{id}', [LandingPageController::class, 'featured_item'])->name('Featured.Product.Details');
 
 
 Route::middleware('auth')->group(function () {
