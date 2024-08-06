@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string('price');
             $table->string('time');
             $table->string('picture');
-            $table->string('about_draw');
-            $table->string('details');
-            $table->string('draw_terms');
+            $table->text('about_draw');
+            $table->text('details');
+            $table->text('draw_terms');
             $table->timestamps();
         });
     }
