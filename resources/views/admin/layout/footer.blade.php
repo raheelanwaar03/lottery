@@ -47,6 +47,8 @@
 <script>
     main_layout_change('vertical');
 </script>
-</body><!-- [Body] end -->
+@yield('scripts')
+
+</body>
 
 </html>

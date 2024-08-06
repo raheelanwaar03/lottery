@@ -24,6 +24,9 @@ class AdminLotteryController extends Controller
         $lottery->title = $request->title;
         $lottery->price = $request->price;
         $lottery->time = $request->time;
+        $lottery->about_draw = $request->about;
+        $lottery->details = $request->details;
+        $lottery->draw_terms = $request->terms;
         $lottery->picture = $imageName;
         $lottery->save();
         return redirect()->route('Admin.All.Lottery')->with('success', 'New Lottery Added');

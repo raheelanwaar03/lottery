@@ -1,9 +1,15 @@
 @extends('layouts.app')
-@section('content')
+
+@section('links')
     <style>
         .featured {
             width: 100%;
-            position: relative;
+            height: 520px;
+        }
+
+        .img-same {
+            width: 100%;
+            height: 280px;
         }
 
         @media only screen and (max-width: 400px) {
@@ -15,9 +21,16 @@
             .slide {
                 margin-bottom: -25px;
             }
+
+            .img-same {
+                height: 186px;
+                width: 100%;
+            }
         }
     </style>
+@endsection
 
+@section('content')
     <section id="hero-section" class="py-5 d-flex justify-content-center align-items-end align-items-md-center px-4 px-md-5 ">
         <div class="container-fluid text-center text-md-start"><span class="badge bg-dark mt-5"><img
                     src="{{ asset('assets/img/crown.svg') }}" alt="Crown">JACKPOT DRAW</span>
@@ -82,43 +95,23 @@
             </div>
             <div id="demo" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner overflow-visible">
-                    <div class="carousel-item active">
-                        <div class="competion-box">
-                            <img src="{{ asset('assets/img/competition/1.webp') }}" class="d-block featured"
-                                style="border-radius: 10px;">
-                            <div class="card bg-theme-dark bg-transparent text-clear" style="margin-top:-60px;">
-                                <div class="card-body d-flex justify-content-between align-items-center">
-                                    <p class="text-white fw-bolder" style="color:white">£20k Raffle</p>
-                                    <p class="text-danger opacity-100">5 days</p><a href="#"
-                                        class="btn btn-warning opacity-100">Enter Now</a>
+                    @forelse ($items as $item)
+                        <div class="carousel-item {{ $item->id == 1 ? 'active' : '' }}">
+                            <div class="competion-box">
+                                <img src="{{ asset('featured/' . $item->picture) }}" class="d-block featured"
+                                    style="border-radius: 10px;">
+                                <div class="card bg-theme-dark bg-transparent text-clear" style="margin-top:-60px;">
+                                    <div class="card-body d-flex justify-content-between align-items-center">
+                                        <p class="text-white fw-bolder" style="color:white">{{ $item->title }}</p>
+                                        <p class="text-danger">5 days</p><a href="#" class="btn btn-warning"
+                                            style="margin-top: -10px">Enter Now</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="competion-box postion-relative"><img src="{{ asset('assets/img/competition/2.webp') }}"
-                                class="d-block featured" style="border-radius: 10px;">
-                            <div class="card bg-theme-dark bg-transparent" style="margin-top:-60px">
-                                <div class="card-body d-flex justify-content-between align-items-center">
-                                    <p class="text-white fw-bolder" style="color:white">£20k Raffle</p>
-                                    <p class="text-danger opacity-100">5 days</p><a href="#"
-                                        class="btn btn-warning opacity-100">Enter Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="competion-box postion-relative"><img src="{{ asset('assets/img/competition/3.webp') }}"
-                                class="d-block featured" style="border-radius: 10px;">
-                            <div class="card bg-theme-dark bg-transparent" style="margin-top:-60px">
-                                <div class="card-body d-flex justify-content-between align-items-center">
-                                    <p class="text-white fw-bolder" style="color:white">£20k Raffle</p>
-                                    <p class="text-danger opacity-100">5 days</p><a href="#"
-                                        class="btn btn-warning opacity-100">Enter Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @empty
+                        <h3>Null</h3>
+                    @endforelse
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev"><span
                         class="carousel-control-prev-icon"></span></button><button class="carousel-control-next"
@@ -178,7 +171,7 @@
                         <div class="badge bg-dark mb-3 mb-md-0 px-1 py-0 border border-1 pe-4 rounded-pill">
                             <div class="d-flex gap-0 align-items-center "><i class="bi bi-dot text-warning "
                                     style="font-size: 30px;"></i>
-                                <p class="mb-0">20 active raffles</p>
+                                <p class="mb-0">{{ lotteries() }} active raffles</p>
                             </div>
                         </div>
                         <div class="badge bg-dark mb-3 mb-md-0 px-1 py-0 border border-1 pe-4 rounded-pill">
@@ -199,31 +192,64 @@
                 </div>
             </div>
             <div class="row mt-5">
-                @foreach ($lotteries as $item)
+                @forelse ($lotteries as $lottery)
                     <div class="col-6 col-md-3 mb-5">
                         <div class="card bg-theme-secondary position-relative">
                             <div class="position-absolute"
                                 style="top:-25px; width: 80%; left: 50%; transform: translateX(-50%);">
-                                <div class="bg-light rounded-pill text-center py-1 text-dark fs-7 fw-bold shadow">Draw
-                                    Monday 10pm</div>
-                            </div><img src="{{ asset('assets/img/games/1.webp') }}" alt="Game Image" width="100%">
-                            <div class="card-body text-white ">
-                                <h4 class="text-center fs-6">Win a Ninja 12in1 Multicooker</h4><small class="text-start"
-                                    style="font-size: 12px;">25% Sold</small>
-                                <div class="progress-bar bg-dark poisition-relative">
-                                    <div class="poisition-relative">
-                                        <div class="bg-theme" style="width: 25%; padding: 2px"></div>
-                                        <div class="position-absolute" style="bottom: 61px; left: 60px"><i
-                                                class="bi bi-dot d-none d-md-block text-warning fs-1"></i></div>
-                                    </div>
+                                <div class="bg-light rounded-pill text-center py-1 text-dark fs-7 fw-bold shadow">
+                                    <div id="countdown{{ $lottery->id }}"></div>
+                                    <script>
+                                        function startCountdown(days) {
+                                            const countdownElement = document.getElementById('countdown{{ $lottery->id }}');
+                                            const endDate = new Date().getTime() + days * 24 * 60 * 60 * 1000;
+
+                                            function updateCountdown() {
+                                                const now = new Date().getTime();
+                                                const distance = endDate - now;
+                                                if (distance < 0) {
+                                                    clearInterval(interval);
+                                                    countdownElement.innerHTML = "Countdown Ended";
+                                                    return;
+                                                }
+                                                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                                                countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                                            }
+                                            const interval = setInterval(updateCountdown, 1000);
+                                            updateCountdown(); // initial call to display the countdown immediately
+                                        }
+                                        // Example: Start countdown for 2 days
+                                        startCountdown({{ $lottery->time }});
+                                    </script>
                                 </div>
-                                <div class="buttons mt-4"><a href="{{ route('Product.Details', $item->id) }}"
-                                        class="btn btn-sm btn-md-lg bg-gradient-theme px-3 fw-bold w-100">Enter now</a>
+                            </div>
+                            <a href="{{ route('Product.Details', $lottery->id) }}">
+                                <img src="{{ asset('lottery/' . $lottery->picture) }}" class="img-same">
+                            </a>
+                            <div class="card-body text-white bg-light-dark">
+                                <h4 class="text-center"
+                                    style="font-size:20px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                                    {{ $lottery->title }}</h4>
+                                <div class="d-flex justify-content-center text-black">
+                                    <span style="background-color:#ffbd0a;padding:1px 10px 1px 10px;border-radius: 5px;">
+                                        <b>100</b>
+                                        <img src="{{ asset('assets/img/cred.webp') }}" height="15px" width="15px">
+                                    </span>
+                                </div>
+                                <div class="buttons mt-4">
+                                    <a href="{{ route('Product.Details', $lottery->id) }}"
+                                        class="btn btn-sm btn-md-lg bg-gradient-theme px-3 fw-bold w-100">Enter
+                                        now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @empty
+                    <h3 class="text-center text-white">Empty</h3>
+                @endforelse
             </div>
         </div>
     </section>

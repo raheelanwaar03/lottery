@@ -37,22 +37,22 @@
                                     <input type="text" name="title" id="title" class="form-control"
                                         placeholder="Lottery title" required>
                                 </div>
-                                <div class="form-group">
-                                    <label for="time">Time</label>
-                                    <input type="text" name="time" id="time" class="form-control"
+                                <div class="form-group my-2">
+                                    <label for="time">Expire Date</label>
+                                    <input type="datetime-local" name="time" id="time" class="form-control"
                                         placeholder="Lottery time" required>
                                 </div>
-                                <div class="form-group">
-                                    <label for="about">About The Draw</label>
-                                    <textarea name="about" id="about_draw" class="form-control" rows="5" placeholder="About The Draw" required></textarea>
+                                <div class="form-group my-2">
+                                    <label for="about">About The Draw lottery</label>
+                                    <textarea name="about" id="classic" class="form-control" rows="10" required></textarea>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group my-2">
                                     <label for="details">Details</label>
-                                    <textarea name="details" id="details" class="form-control" rows="5" placeholder="Details" required></textarea>
+                                    <textarea name="details" id="classic" class="form-control" rows="5" placeholder="Details" required></textarea>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group my-2">
                                     <label for="terms">Draw Terms</label>
-                                    <textarea name="terms" id="terms" class="form-control" rows="5" placeholder="Draw Terms" required></textarea>
+                                    <textarea name="terms" id="classic" class="form-control" rows="5" placeholder="Draw Terms" required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="image">Lottery Image</label>
@@ -69,4 +69,11 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('classic', 'classic1', 'classic2');
+    </script>
 @endsection

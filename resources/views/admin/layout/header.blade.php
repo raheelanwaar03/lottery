@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{{ asset('admin/asset/css/style-preset.css') }}">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css">
 
+    @yield('links')
 
 </head>
 
