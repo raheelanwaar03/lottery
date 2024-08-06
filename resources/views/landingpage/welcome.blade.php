@@ -3,6 +3,7 @@
     <style>
         .featured {
             width: 100%;
+            position: relative;
         }
 
         @media only screen and (max-width: 400px) {
@@ -14,7 +15,6 @@
             .slide {
                 margin-bottom: -25px;
             }
-
         }
     </style>
 
@@ -83,9 +83,10 @@
             <div id="demo" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner overflow-visible">
                     <div class="carousel-item active">
-                        <div class="competion-box postion-relative"><img src="{{ asset('assets/img/competition/1.webp') }}"
-                                class="d-block featured" style="border-radius: 10px;">
-                            <div class="card bg-theme-dark opacity-50 text-clear" style="margin-top:-60px">
+                        <div class="competion-box">
+                            <img src="{{ asset('assets/img/competition/1.webp') }}" class="d-block featured"
+                                style="border-radius: 10px;">
+                            <div class="card bg-theme-dark bg-transparent text-clear" style="margin-top:-60px;">
                                 <div class="card-body d-flex justify-content-between align-items-center">
                                     <p class="text-white fw-bolder" style="color:white">£20k Raffle</p>
                                     <p class="text-danger opacity-100">5 days</p><a href="#"
@@ -97,7 +98,7 @@
                     <div class="carousel-item">
                         <div class="competion-box postion-relative"><img src="{{ asset('assets/img/competition/2.webp') }}"
                                 class="d-block featured" style="border-radius: 10px;">
-                            <div class="card bg-theme-dark opacity-50" style="margin-top:-60px">
+                            <div class="card bg-theme-dark bg-transparent" style="margin-top:-60px">
                                 <div class="card-body d-flex justify-content-between align-items-center">
                                     <p class="text-white fw-bolder" style="color:white">£20k Raffle</p>
                                     <p class="text-danger opacity-100">5 days</p><a href="#"
@@ -109,7 +110,7 @@
                     <div class="carousel-item">
                         <div class="competion-box postion-relative"><img src="{{ asset('assets/img/competition/3.webp') }}"
                                 class="d-block featured" style="border-radius: 10px;">
-                            <div class="card bg-theme-dark opacity-50" style="margin-top:-60px">
+                            <div class="card bg-theme-dark bg-transparent" style="margin-top:-60px">
                                 <div class="card-body d-flex justify-content-between align-items-center">
                                     <p class="text-white fw-bolder" style="color:white">£20k Raffle</p>
                                     <p class="text-danger opacity-100">5 days</p><a href="#"
